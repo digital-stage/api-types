@@ -1,0 +1,15 @@
+export type RouterId = any;
+export type DeviceId = any;
+export type UserId = any;
+export type StageId = any;
+export type GroupId = any;
+export type CustomizedGroupId = any;
+export type StageMemberId = any;
+export type CustomizedStageMemberId = any;
+export type RemoteAudioTrackId = any;
+export type CustomizedAudioTrackPositionId = any;
+export type CustomizedAudioTrackVolumeId = any;
+export type RemoteVideoTrackId = any;
+export type CustomizedVideoTTrackId = any;
+export type LocalAudioTrackId = any;
+export type LocalVideoTrackId = any;
