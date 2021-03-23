@@ -1,6 +1,6 @@
 interface VolumeProperties {
-    volume: number
-    muted: boolean;
+  volume: number;
+  muted: boolean;
 }
 
 export default VolumeProperties;

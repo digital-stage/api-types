@@ -1,9 +1,9 @@
 import RemoteAudioTrack from "../AudioTrack";
 
 interface MediasoupAudioTrack extends RemoteAudioTrack {
-    type: "mediasoup";
+  type: "mediasoup";
 
-    producerId: string;
+  producerId: string;
 }
 
 export default MediasoupAudioTrack;

@@ -1,8 +1,8 @@
 import RemoteVideoTrack from "../VideoTrack";
 
 interface MediasoupVideoTrack extends RemoteVideoTrack {
-    type: "mediasoup";
+  type: "mediasoup";
 
-    producerId: string;
+  producerId: string;
 }
 export default MediasoupVideoTrack;

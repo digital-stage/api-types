@@ -1,5 +1,3 @@
-interface SoundCard {
-
-}
+interface SoundCard {}
 
 export default SoundCard;
