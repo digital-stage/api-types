@@ -1,7 +1,7 @@
-import {LocalVideoTrackId} from "../IdTypes";
+import { LocalVideoTrackId } from "../IdTypes";
 
 interface LocalVideoTrack {
-    id: LocalVideoTrackId;
+  _id: LocalVideoTrackId;
 }
 
 export default LocalVideoTrack;

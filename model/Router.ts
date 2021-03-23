@@ -1,11 +1,11 @@
-import {RouterId} from "../IdTypes";
+import { RouterId } from "../IdTypes";
 
 interface Router {
-    id: RouterId;
+  _id: RouterId;
 
-    type: string;
+  type: string;
 
-    [additional: string]: any;
+  [additional: string]: any;
 }
 
 export default Router;

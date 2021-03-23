@@ -1,17 +1,17 @@
-import {StageId, UserId} from "../IdTypes";
+import { StageId, UserId } from "../IdTypes";
 
 interface Stage {
-    id: StageId;
+  _id: StageId;
 
-    name: string;
-    description: string;
+  name: string;
+  description: string;
 
-    admins: UserId[];
-    soundEditors: UserId[];
+  admins: UserId[];
+  soundEditors: UserId[];
 
-    iconUrl: string | null;
+  iconUrl: string | null;
 
-    [additional: string]: any
+  [additional: string]: any;
 }
 
 export default Stage;

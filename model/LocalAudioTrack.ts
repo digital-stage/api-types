@@ -1,5 +1,5 @@
 interface LocalAudioTrack {
-    id: LocalAudioTrack;
+  _id: LocalAudioTrack;
 }
 
 export default LocalAudioTrack;

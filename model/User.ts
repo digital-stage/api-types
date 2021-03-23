@@ -1,12 +1,15 @@
-import {UserId} from "../IdTypes";
+import { UserId } from "../IdTypes";
 
 interface User {
-    id: UserId;
-    name: string;
+  _id: UserId;
+  name: string;
 
-    avatarUrl: string | null;
+  avatarUrl: string | null;
 
-    canCreateStage: boolean;
+  canCreateStage: boolean;
+
+  stageId: string | null;
+  groupId: string | null; // Redundancy, but needed for performance issues
 }
 
 export default User;

@@ -1,4 +1,4 @@
-export type IdType = string;
+export type IdType = any;
 
 export type RouterId = IdType;
 export type DeviceId = IdType;

@@ -1,27 +1,27 @@
-import {DeviceId, UserId} from "../IdTypes";
+import { DeviceId, UserId } from "../IdTypes";
 
 interface Device {
-    id: DeviceId;
-    userId: UserId;
+  _id: DeviceId;
+  userId: UserId;
 
-    /**
-     * This identifies the type of the device. Regarding to the type additional items may be available.
-     */
-    type: string;
+  /**
+   * This _identifies the type of the device. Regarding to the type additional items may be available.
+   */
+  type: string;
 
-    online: boolean;
+  online: boolean;
 
-    canAudio: boolean;
-    canVideo: boolean;
-    receiveAudio: boolean;
-    receiveVideo: boolean;
+  canAudio: boolean;
+  canVideo: boolean;
+  receiveAudio: boolean;
+  receiveVideo: boolean;
 
-    /**
-     * Use this to identify existing devices on connect, on native clients you might use the mac address, on browser a cookie ID
-     */
-    uuid: string;
+  /**
+   * Use this to _identify existing devices on connect, on native clients you might use the mac address, on browser a cookie _id
+   */
+  uuid: string;
 
-    [additional: string]: any
+  [additional: string]: any;
 }
 
 export default Device;
