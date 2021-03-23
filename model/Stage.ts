@@ -2,11 +2,12 @@ import {StageId, UserId} from "../IdTypes";
 
 interface Stage {
     id: StageId;
-    admins: UserId[];
-    soundEditors: UserId[];
 
     name: string;
     description: string;
+
+    admins: UserId[];
+    soundEditors: UserId[];
 
     iconUrl: string | null;
 

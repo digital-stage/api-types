@@ -1,18 +1,10 @@
 import {RemoteAudioTrackId, StageMemberId} from "../IdTypes";
+import ThreeDimensionalProperties from "./ThreeDimensionalProperties";
+import VolumeProperties from "./VolumeProperties";
 
-interface RemoteAudioTrack {
+interface RemoteAudioTrack extends ThreeDimensionalProperties, VolumeProperties {
     id: RemoteAudioTrackId;
     stageMemberId: StageMemberId;
-
-    volume: number;
-    muted: boolean;
-
-    x: number;
-    y: number;
-    z: number;
-    rX: number;
-    rY: number;
-    rZ: number;
 
     /**
      * The type of the producing device
