@@ -1,28 +1,26 @@
-import {
-  LocalAudioTrackId,
-  RemoteAudioTrackId,
-  StageMemberId,
-} from "../IdTypes";
 import ThreeDimensionalProperties from "./ThreeDimensionalProperties";
 import VolumeProperties from "./VolumeProperties";
 
-interface RemoteAudioTrack
+interface RemoteAudioTrack<IdType = string>
   extends ThreeDimensionalProperties,
     VolumeProperties {
-  _id: RemoteAudioTrackId;
-  localAudioTrackId: LocalAudioTrackId;
-  stageMemberId: StageMemberId;
+  _id: IdType;
+  localAudioTrackId: IdType;
+  stageMemberId: IdType;
+  stageId: IdType;
+  userId: IdType;
+
+  online: boolean;
 
   /**
    * The type of the producing device
    */
   type: string;
+
   /**
-   * Type specific payload
+   * Additional type specific payload
    */
-  data: {
-    [id: string]: any;
-  };
+  [id: string]: any;
 }
 
 export default RemoteAudioTrack;

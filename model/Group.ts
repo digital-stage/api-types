@@ -1,10 +1,11 @@
-import { GroupId, StageId } from "../IdTypes";
 import ThreeDimensionalProperties from "./ThreeDimensionalProperties";
 import VolumeProperties from "./VolumeProperties";
 
-interface Group extends ThreeDimensionalProperties, VolumeProperties {
-  _id: GroupId;
-  stageId: StageId;
+interface Group<IdType = string>
+  extends ThreeDimensionalProperties,
+    VolumeProperties {
+  _id: IdType;
+  stageId: IdType;
   name: string;
   description: string;
 

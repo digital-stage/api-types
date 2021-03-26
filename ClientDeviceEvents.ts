@@ -1,4 +1,4 @@
-const ClientEvents = {
+const ClientDeviceEvents = {
   ConnectAsRouter: "router",
   ConnectWithToken: "token",
   ChangeUser: "change-user",
@@ -7,4 +7,4 @@ const ClientEvents = {
   ChangeStage: "change-stage",
   RemoveStage: "remove-stage",
 };
-export default ClientEvents;
+export default ClientDeviceEvents;

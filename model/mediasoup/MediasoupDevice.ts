@@ -1,26 +1,24 @@
 import Device from "../Device";
 
-export type WebMediaDeviceId = any;
-
-export interface WebMediaDevice {
-  _id: WebMediaDeviceId;
+export interface WebMediaDevice<IdType = string> {
+  _id: IdType;
   label: string;
 }
 
-interface MediasoupDevice extends Device {
+interface MediasoupDevice<IdType = string> extends Device<IdType> {
   type: "mediasoup";
 
   canMediasoup: true;
 
   // WebRTC video device
-  inputVideoDevices: WebMediaDevice[];
-  inputVideoDeviceId?: WebMediaDeviceId;
+  inputVideoDevices: IdType[];
+  inputVideoDeviceId?: IdType;
 
   // WebRTC audio device
-  inputAudioDevices: WebMediaDevice[];
-  inputAudioDeviceId?: WebMediaDevice;
-  outputAudioDevices: WebMediaDevice[];
-  outputAudioDeviceId?: WebMediaDevice;
+  inputAudioDevices: IdType[];
+  inputAudioDeviceId?: IdType;
+  outputAudioDevices: IdType[];
+  outputAudioDeviceId?: IdType;
 
   egoVolume: number;
 }

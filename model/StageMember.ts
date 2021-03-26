@@ -1,15 +1,17 @@
-import { GroupId, StageId, StageMemberId, UserId } from "../IdTypes";
 import ThreeDimensionalProperties from "./ThreeDimensionalProperties";
 import VolumeProperties from "./VolumeProperties";
 
-interface StageMember extends ThreeDimensionalProperties, VolumeProperties {
-  _id: StageMemberId;
-  stageId: StageId;
-  groupId: GroupId;
-  userId: UserId;
+interface StageMember<IdType = string>
+  extends ThreeDimensionalProperties,
+    VolumeProperties {
+  _id: IdType;
+  stageId: IdType;
+  groupId: IdType;
+  userId: IdType;
 
-  isAdmin: boolean;
-  isSoundEditor: boolean;
+  online: boolean;
+
+  isDirector: boolean;
 }
 
 export default StageMember;

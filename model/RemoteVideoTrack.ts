@@ -1,8 +1,10 @@
-import { StageMemberId, RemoteVideoTrackId } from "../IdTypes";
-
-interface RemoteVideoTrack {
-  _id: RemoteVideoTrackId;
-  stageMemberId: StageMemberId;
+interface RemoteVideoTrack<IdType = string> {
+  _id: IdType;
+  userId: IdType;
+  stageId: IdType;
+  stageMemberId: IdType;
+  localVideoTrackId: IdType;
+  online: boolean;
 
   /**
    * The type of the producing device
@@ -11,9 +13,7 @@ interface RemoteVideoTrack {
   /**
    * Type specific payload
    */
-  data: {
-    [id: string]: any;
-  };
+  [id: string]: any;
 }
 
 export default RemoteVideoTrack;

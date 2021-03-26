@@ -1,16 +1,10 @@
-import {
-  CustomizedStageMemberVolumeId,
-  DeviceId,
-  StageMemberId,
-  UserId,
-} from "../IdTypes";
 import VolumeProperties from "./VolumeProperties";
 
-interface CustomStageMemberVolume extends VolumeProperties {
-  _id: CustomizedStageMemberVolumeId;
-  userId: UserId;
-  deviceId: DeviceId;
-  stageMemberId: StageMemberId;
+interface CustomStageMemberVolume<IdType = string> extends VolumeProperties {
+  _id: IdType;
+  userId: IdType;
+  deviceId: IdType;
+  stageMemberId: IdType;
 }
 
 export default CustomStageMemberVolume;

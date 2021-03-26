@@ -1,8 +1,6 @@
-import { DeviceId, UserId } from "../IdTypes";
-
-interface Device {
-  _id: DeviceId;
-  userId: UserId;
+interface Device<IdType = string> {
+  _id: IdType;
+  userId: IdType;
 
   /**
    * This _identifies the type of the device. Regarding to the type additional items may be available.
@@ -21,7 +19,13 @@ interface Device {
    */
   uuid: string;
 
+  availableSoundCardIds: IdType[];
+  soundCardId: IdType;
+
   [additional: string]: any;
+
+  // Additional information about connected api server
+  apiServer: string;
 }
 
 export default Device;

@@ -1,11 +1,10 @@
-import { CustomizedGroupVolumeId, DeviceId, GroupId, UserId } from "../IdTypes";
 import VolumeProperties from "./VolumeProperties";
 
-interface CustomGroupVolume extends VolumeProperties {
-  _id: CustomizedGroupVolumeId;
-  userId: UserId;
-  deviceId: DeviceId;
-  groupId: GroupId;
+interface CustomGroupVolume<IdType = string> extends VolumeProperties {
+  _id: IdType;
+  userId: IdType;
+  deviceId: IdType;
+  groupId: IdType;
 }
 
 export default CustomGroupVolume;

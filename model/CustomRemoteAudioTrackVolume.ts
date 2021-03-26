@@ -1,16 +1,11 @@
-import {
-  RemoteAudioTrackId,
-  CustomizedRemoteAudioTrackPositionId,
-  DeviceId,
-  UserId,
-} from "../IdTypes";
 import VolumeProperties from "./VolumeProperties";
 
-interface CustomRemoteAudioTrackVolume extends VolumeProperties {
-  _id: CustomizedRemoteAudioTrackPositionId;
-  userId: UserId;
-  deviceId: DeviceId;
-  remoteAudioTrackId: RemoteAudioTrackId;
+interface CustomRemoteAudioTrackVolume<IdType = string>
+  extends VolumeProperties {
+  _id: IdType;
+  userId: IdType;
+  deviceId: IdType;
+  remoteAudioTrackId: IdType;
 }
 
 export default CustomRemoteAudioTrackVolume;

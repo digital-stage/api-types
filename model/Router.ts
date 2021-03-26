@@ -1,9 +1,16 @@
-import { RouterId } from "../IdTypes";
+interface Router<IdType = string> {
+  _id: IdType;
 
-interface Router {
-  _id: RouterId;
+  types: {
+    [type: string]: number;
+  };
 
-  type: string;
+  countryCode: string;
+  city: string;
+  positon: {
+    lat: number;
+    lng: number;
+  };
 
   [additional: string]: any;
 }

@@ -1,15 +1,19 @@
-import { StageId, UserId } from "../IdTypes";
-
-interface Stage {
-  _id: StageId;
+interface Stage<IdType = string> {
+  _id: IdType;
 
   name: string;
   description: string;
+  password: string | null;
 
-  admins: UserId[];
-  soundEditors: UserId[];
+  admins: IdType[];
+  soundEditors: IdType[];
 
   iconUrl: string | null;
+
+  videoType: string;
+  videoTypeManaged: boolean;
+  audioType: string;
+  audioTypeManaged: boolean;
 
   [additional: string]: any;
 }
