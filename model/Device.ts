@@ -20,6 +20,9 @@ interface Device<IdType = string> {
   uuid: string | null;
   requestSession?: boolean;
 
+  createdAt: Date;
+  lastLoginAt: Date;
+
   availableSoundCardIds: IdType[];
   soundCardId: IdType;
 
