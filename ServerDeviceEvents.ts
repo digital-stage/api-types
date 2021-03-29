@@ -1,4 +1,6 @@
 const ServerDeviceEvents = {
+  UUIDSuggested: "uuid",
+
   LocalDeviceReady: "ldr",
   UserReady: "u-r",
   Ready: "ok",

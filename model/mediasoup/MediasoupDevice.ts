@@ -1,7 +1,7 @@
 import Device from "../Device";
 
-export interface WebMediaDevice<IdType = string> {
-  _id: IdType;
+export interface WebMediaDevice {
+  id: string;
   label: string;
 }
 
@@ -11,14 +11,14 @@ interface MediasoupDevice<IdType = string> extends Device<IdType> {
   canMediasoup: true;
 
   // WebRTC video device
-  inputVideoDevices: IdType[];
-  inputVideoDeviceId?: IdType;
+  inputVideoDevices: WebMediaDevice[];
+  inputVideoDeviceId?: string;
 
   // WebRTC audio device
-  inputAudioDevices: IdType[];
-  inputAudioDeviceId?: IdType;
-  outputAudioDevices: IdType[];
-  outputAudioDeviceId?: IdType;
+  inputAudioDevices: WebMediaDevice[];
+  inputAudioDeviceId?: string;
+  outputAudioDevices: WebMediaDevice[];
+  outputAudioDeviceId?: string;
 
   egoVolume: number;
 }

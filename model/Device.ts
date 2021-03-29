@@ -18,6 +18,7 @@ interface Device<IdType = string> {
    * Use this to _identify existing devices on connect, on native clients you might use the mac address, on browser a cookie _id
    */
   uuid: string | null;
+  requestSession?: boolean;
 
   availableSoundCardIds: IdType[];
   soundCardId: IdType;
