@@ -7,7 +7,6 @@ import VolumeProperties from "./model/VolumeProperties";
 import CustomStageMemberVolume from "./model/CustomStageMemberVolume";
 import LocalAudioTrack from "./model/LocalAudioTrack";
 import LocalVideoTrack from "./model/LocalVideoTrack";
-import { LocalVideoTrackId } from "../../../api-client-js/types/IdTypes";
 import Device from "./model/Device";
 import Router from "./model/Router";
 
@@ -21,6 +20,7 @@ namespace ClientDevicePayloads {
   export type CustomizedStageMemberVolumeId = PayloadIdType;
   export type DeviceId = PayloadIdType;
   export type GroupId = PayloadIdType;
+  export type LocalVideoTrackId = PayloadIdType;
   export type LocalAudioTrackId = PayloadIdType;
   export type RemoteAudioTrackId = PayloadIdType;
   export type StageId = PayloadIdType;

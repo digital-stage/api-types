@@ -14,7 +14,6 @@ import CustomRemoteAudioTrackVolume from "./model/CustomRemoteAudioTrackVolume";
 import CustomRemoteAudioTrackPosition from "./model/CustomRemoteAudioTrackPosition";
 import StagePackage from "./model/StagePackage";
 import LocalVideoTrack from "./model/LocalVideoTrack";
-import { LocalVideoTrackId } from "../../../api-client-js/types/IdTypes";
 import Router from "./model/Router";
 import Device from "./model/Device";
 
@@ -31,6 +30,7 @@ namespace ServerDevicePayloads {
   export type StageMemberId = PayloadIdType;
   export type UserId = PayloadIdType;
   export type RouterId = PayloadIdType;
+  export type LocalVideoTrackId = PayloadIdType;
 
   export type RouterAdded = Router;
   export type RouterChanged = { _id: RouterId } & Partial<Router>;
