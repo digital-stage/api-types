@@ -1,0 +1,22 @@
+import Router from "./model/Router";
+import Device from "./model/Device";
+
+namespace Payloads {
+  export type PayloadIdType = string;
+  export type RemoteAudioTrackId = PayloadIdType;
+  export type UserId = PayloadIdType;
+
+  // General or common payloads
+  export interface ConnectAsRouter {
+    apiKey: string;
+    router?: Omit<Router, "_id">;
+  }
+
+  export interface ConnectWithToken {
+    token: string;
+    s;
+    device?: Partial<Omit<Device, "_id">> & { uuid: string };
+  }
+}
+
+export default Payloads;

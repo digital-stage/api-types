@@ -1,11 +1,6 @@
-const ServerRouterEvents = {
-  RequestAudioTrack: "request-audio-track",
-  RequestVideoTrack: "request-video-track",
-
+const ClientRouterEvents = {
   ChangeRouter: "change-router",
-
-  StageManaged: "stage-managed",
-  ChangeStage: "change-stage",
-  StageUnManaged: "stage-unmanaged",
-}
-export default ServerRouterEvents;
+  StageServed: "stage-served",
+  StageUnServed: "stage-unserved",
+};
+export default ClientRouterEvents;

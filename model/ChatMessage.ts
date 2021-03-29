@@ -1,4 +1,4 @@
-export interface ChatMessage<IdType = string> {
+interface ChatMessage<IdType = string> {
   userId: IdType;
   stageMemberId: IdType;
   message: string;

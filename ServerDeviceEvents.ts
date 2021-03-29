@@ -1,4 +1,6 @@
 const ServerDeviceEvents = {
+  LocalDeviceReady: "ldr",
+  UserReady: "u-r",
   Ready: "ok",
 
   UserAdded: "u-a", // Never via socket

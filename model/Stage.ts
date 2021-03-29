@@ -10,10 +10,16 @@ interface Stage<IdType = string> {
 
   iconUrl: string | null;
 
-  videoType: string;
-  videoTypeManaged: boolean;
-  audioType: string;
-  audioTypeManaged: boolean;
+  videoType: string | null;
+  videoRouter: IdType;
+
+  audioType: string | null;
+  audioRouter: IdType;
+
+  preferredPosition: {
+    lat: number;
+    lng: number;
+  };
 
   [additional: string]: any;
 }

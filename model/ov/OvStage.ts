@@ -7,3 +7,4 @@ interface OvStage extends Stage {
     port: number;
   };
 }
+export default OvStage;

@@ -5,5 +5,8 @@ interface JammerStage extends Stage {
     ipv4: string;
     ipv6: string;
     port: number;
+    key: string;
   };
 }
+
+export default JammerStage;

@@ -1,9 +1,11 @@
 const ServerRouterEvents = {
+  Ready: "ok",
+
   RouterAdded: "router-added",
   RouterChanged: "router-changed",
   RouterRemoved: "router-removed",
 
-  ManageStage: "manage-stage",
-  UnManageStage: "un-manage-stage",
-}
+  ServeStage: "serve-stage",
+  UnServeStage: "un-serve-stage",
+};
 export default ServerRouterEvents;
