@@ -14,7 +14,6 @@ namespace Payloads {
 
   export interface ConnectWithToken {
     token: string;
-    s;
     device?: Partial<Omit<Device, "_id">> & { uuid: string };
   }
 }

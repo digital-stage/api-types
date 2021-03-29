@@ -16,6 +16,9 @@ import StagePackage from "./model/StagePackage";
 import LocalVideoTrack from "./model/LocalVideoTrack";
 import Router from "./model/Router";
 import Device from "./model/Device";
+import SoundCard from "./model/SoundCard";
+import ChatMessage from "./model/ChatMessage";
+import RemoteVideoTrack from "./model/RemoteVideoTrack";
 
 namespace ServerDevicePayloads {
   export type PayloadIdType = string;
@@ -31,20 +34,29 @@ namespace ServerDevicePayloads {
   export type UserId = PayloadIdType;
   export type RouterId = PayloadIdType;
   export type LocalVideoTrackId = PayloadIdType;
+  export type SoundCardId = PayloadIdType;
+  export type RemoteVideoTrackId = PayloadIdType;
 
   export type RouterAdded = Router;
   export type RouterChanged = { _id: RouterId } & Partial<Router>;
   export type RouterRemoved = UserId;
 
   export type UserChanged = { _id: UserId } & Partial<User>;
+  export type UserReady = User;
   export type RemoteUserAdded = User;
   export type RemoteUserChanged = { _id: UserId } & Partial<User>;
   export type RemoteUserRemoved = UserId;
 
+  export type ChatMessageSend = ChatMessage;
+
   /* DEVICE */
+  export type LocalDeviceReady = Device;
   export type DeviceAdded = Device;
   export type DeviceChanged = { _id: DeviceId } & Partial<Device>;
   export type DeviceRemoved = DeviceId;
+  export type SoundCardAdded = SoundCard;
+  export type SoundCardChanged = { _id: DeviceId } & Partial<SoundCard>;
+  export type SoundCardRemoved = SoundCardId;
 
   /* STAGE */
   export type StageAdded = Stage;
@@ -73,9 +85,11 @@ namespace ServerDevicePayloads {
   export type CustomGroupPositionRemoved = CustomizedGroupPositionId;
 
   /* STAGE MEMBER */
+  export type StageMemberAdded = StageMember;
   export type StageMemberChanged = {
     _id: StageMemberId;
   } & Partial<StageMember>;
+  export type StageMemberRemoved = StageMemberId;
   export type CustomStageMemberVolumeAdded = CustomStageMemberVolume;
   export type CustomStageMemberVolumeChanged = {
     _id: CustomizedStageMemberPositionId;
@@ -93,6 +107,12 @@ namespace ServerDevicePayloads {
     _id: LocalVideoTrackId;
   } & Partial<LocalVideoTrack>;
   export type LocalVideoTrackRemoved = LocalVideoTrackId;
+
+  export type RemoteVideoTrackAdded = RemoteVideoTrack;
+  export type RemoteVideoTrackChanged = {
+    _id: RemoteVideoTrackId;
+  } & Partial<RemoteVideoTrack>;
+  export type RemoteVideoTrackRemoved = RemoteVideoTrackId;
 
   /* AUDIO TRACKS */
   export type LocalAudioTrackAdded = LocalAudioTrack;
