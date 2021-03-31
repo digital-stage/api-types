@@ -21,6 +21,12 @@ interface Stage<IdType = string> {
     lng: number;
   };
 
+  width: number;
+  length: number;
+  height: number;
+  reflection: number;
+  absorption: number;
+
   [additional: string]: any;
 }
 
