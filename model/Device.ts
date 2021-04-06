@@ -11,6 +11,8 @@ interface Device<IdType = string> {
 
   canAudio: boolean;
   canVideo: boolean;
+  sendAudio: boolean;
+  sendVideo: boolean;
   receiveAudio: boolean;
   receiveVideo: boolean;
 

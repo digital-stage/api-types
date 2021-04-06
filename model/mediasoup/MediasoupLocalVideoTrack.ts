@@ -1,8 +1,8 @@
-import RemoteVideoTrack from "../RemoteVideoTrack";
+import RemoteVideoTrack from '../RemoteVideoTrack';
 
 interface MediasoupLocalVideoTrack<IdType = string>
   extends RemoteVideoTrack<IdType> {
-  type: "mediasoup";
+  type: 'mediasoup';
 
   producerId: IdType;
 }
