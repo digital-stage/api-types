@@ -41,5 +41,5 @@ export type {
   StagePackage,
   ThreeDimensionalProperties,
   User,
-  VolumeProperties
-}
+  VolumeProperties,
+};

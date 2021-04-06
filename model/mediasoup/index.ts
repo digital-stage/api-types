@@ -9,5 +9,5 @@ export type {
   MediasoupLocalAudioTrack,
   MediasoupLocalVideoTrack,
   MediasoupRemoteAudioTrack,
-  MediasoupStage
-}
+  MediasoupStage,
+};

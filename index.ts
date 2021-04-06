@@ -8,7 +8,7 @@ import Payloads from "./ServerPayloads";
 import ServerRouterEvents from "./ServerRouterEvents";
 import ServerRouterPayloads from "./ServerRouterPayloads";
 
-export * from './model';
+export * from "./model";
 
 export type {
   ClientDevicePayloads,
@@ -16,11 +16,11 @@ export type {
   ServerDevicePayloads,
   ServerRouterPayloads,
   Payloads,
-}
+};
 
 export {
   ClientDeviceEvents,
   ClientRouterEvents,
   ServerDeviceEvents,
-  ServerRouterEvents
-}
+  ServerRouterEvents,
+};
