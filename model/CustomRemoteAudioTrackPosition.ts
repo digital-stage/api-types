@@ -1,4 +1,4 @@
-import ThreeDimensionalProperties from './ThreeDimensionalProperties';
+import ThreeDimensionalProperties from "./ThreeDimensionalProperties";
 
 interface CustomRemoteAudioTrackPosition<IdType = string>
   extends ThreeDimensionalProperties {

@@ -1,4 +1,4 @@
-import Device from '../Device';
+import Device from "../Device";
 
 export interface WebMediaDevice {
   id: string;
@@ -6,7 +6,7 @@ export interface WebMediaDevice {
 }
 
 interface MediasoupDevice<IdType = string> extends Device<IdType> {
-  type: 'mediasoup';
+  type: "mediasoup";
 
   canMediasoup: true;
 

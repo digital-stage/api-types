@@ -12,6 +12,8 @@ interface Router<IdType = string> {
     lng: number;
   };
 
+  apiServer: string;
+
   [additional: string]: any;
 }
 
