@@ -6,12 +6,13 @@ namespace ServerRouterPayloads {
 
   export type Ready = Router;
   export type ServeStage = {
-    // kind: "audio" | "video" | "both";
-    type: string;
+    kind: "audio" | "video" | "both";
+    type: string; // "ov" | "mediasoup" | "jammer"
     stage: Stage;
   };
   export type UnServeStage = {
-    type: string;
+    kind: "audio" | "video" | "both";
+    type: string; // "ov" | "mediasoup" | "jammer"
     stageId: string;
   };
   export type RouterAdded = Router;

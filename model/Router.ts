@@ -7,7 +7,7 @@ interface Router<IdType = string> {
 
   countryCode: string;
   city: string;
-  positon: {
+  position: {
     lat: number;
     lng: number;
   };
