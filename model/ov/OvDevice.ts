@@ -1,7 +1,7 @@
-import Device from '../Device';
+import Device from "../Device";
 
 interface OvDevice extends Device {
-  type: 'ov';
+  type: "ov";
 
   canOv: true;
 }

@@ -1,7 +1,7 @@
-import Stage from '../Stage';
+import Stage from "../Stage";
 
 interface MediasoupStage extends Stage {
-  type: 'mediasoup';
+  type: "mediasoup";
 
   mediasoup: {
     url: string;

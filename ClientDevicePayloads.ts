@@ -1,14 +1,14 @@
-import Stage from './model/Stage';
-import Group from './model/Group';
-import StageMember from './model/StageMember';
-import RemoteAudioTrack from './model/RemoteAudioTrack';
-import ThreeDimensionalProperties from './model/ThreeDimensionalProperties';
-import VolumeProperties from './model/VolumeProperties';
-import CustomStageMemberVolume from './model/CustomStageMemberVolume';
-import LocalAudioTrack from './model/LocalAudioTrack';
-import LocalVideoTrack from './model/LocalVideoTrack';
-import Device from './model/Device';
-import Router from './model/Router';
+import Stage from "./model/Stage";
+import Group from "./model/Group";
+import StageMember from "./model/StageMember";
+import RemoteAudioTrack from "./model/RemoteAudioTrack";
+import ThreeDimensionalProperties from "./model/ThreeDimensionalProperties";
+import VolumeProperties from "./model/VolumeProperties";
+import CustomStageMemberVolume from "./model/CustomStageMemberVolume";
+import LocalAudioTrack from "./model/LocalAudioTrack";
+import LocalVideoTrack from "./model/LocalVideoTrack";
+import Device from "./model/Device";
+import Router from "./model/Router";
 
 namespace ClientDevicePayloads {
   export type PayloadIdType = string;
@@ -43,12 +43,12 @@ namespace ClientDevicePayloads {
   export type ChangeDevice = { _id: DeviceId } & Partial<Device>;
 
   /* STAGE */
-  export type CreateStage = Omit<Stage, '_id'>;
+  export type CreateStage = Omit<Stage, "_id">;
   export type ChangeStage = { _id: StageId } & Partial<Stage>;
   export type RemoveStage = StageId;
 
   /* GROUP */
-  export type CreateGroup = Partial<Omit<Group, '_id'>> & {
+  export type CreateGroup = Partial<Omit<Group, "_id">> & {
     stageId: StageId;
   };
   export type ChangeGroup = { _id: GroupId } & Partial<Group>;
@@ -67,7 +67,7 @@ namespace ClientDevicePayloads {
 
   /* STAGE MEMBER */
   export type ChangeStageMember = { _id: StageMemberId } & Partial<
-    Omit<StageMember, 'stageId' | 'groupId' | 'userId'>
+    Omit<StageMember, "stageId" | "groupId" | "userId">
   >;
   export type RemoveStageMember = StageMemberId;
   export type StageMemberChanged = {
@@ -86,17 +86,17 @@ namespace ClientDevicePayloads {
   export type CustomStageMemberVolumeAdded = CustomStageMemberVolume;
 
   /* VIDEO TRACKS */
-  export type CreateLocalVideoTrack = Partial<Omit<LocalVideoTrack, 'id'>>;
+  export type CreateLocalVideoTrack = Partial<Omit<LocalVideoTrack, "id">>;
   export type ChangeLocalVideoTrack = {
     _id: LocalVideoTrackId;
-  } & Partial<Omit<LocalVideoTrack, 'userId' | 'deviceId'>>;
+  } & Partial<Omit<LocalVideoTrack, "userId" | "deviceId">>;
   export type RemoveLocalVideoTrack = LocalVideoTrackId;
 
   /* AUDIO TRACKS */
-  export type CreateLocalAudioTrack = Partial<Omit<LocalAudioTrack, 'id'>>;
+  export type CreateLocalAudioTrack = Partial<Omit<LocalAudioTrack, "id">>;
   export type ChangeLocalAudioTrack = {
     _id: LocalAudioTrackId;
-  } & Partial<Omit<LocalAudioTrack, 'userId' | 'deviceId'>>;
+  } & Partial<Omit<LocalAudioTrack, "userId" | "deviceId">>;
   export type RemoveLocalAudioTrack = LocalAudioTrackId;
 
   export type ChangeRemoteAudioTrack = {
