@@ -9,6 +9,7 @@ namespace ClientRouterPayloads {
     type: string; // "ov" | "mediasoup" | "jammer"
     update: Partial<Stage> & { _id: string };
   };
+  export type ChangeStage = Partial<Stage> & { _id: string };
   export type StageUnServed = {
     kind: "audio" | "video" | "both";
     type: string; // "ov" | "mediasoup" | "jammer"
