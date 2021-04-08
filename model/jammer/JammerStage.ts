@@ -1,12 +1,12 @@
-import Stage from '../Stage';
+import Stage from '../Stage'
 
 interface JammerStage extends Stage {
-  jammer: {
-    ipv4: string;
-    ipv6: string;
-    port: number;
-    key: string;
-  };
+    jammer: {
+        ipv4: string
+        ipv6: string
+        port: number
+        key: string
+    }
 }
 
-export default JammerStage;
+export default JammerStage
