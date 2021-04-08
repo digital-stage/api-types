@@ -1,7 +1,7 @@
-import Device from "../Device";
+import Device from '../Device';
 
 export interface JammerDevice extends Device {
-  type: "jammer";
+  type: 'jammer';
 
   canJammer: true;
 }

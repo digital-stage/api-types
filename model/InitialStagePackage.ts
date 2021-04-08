@@ -1,4 +1,4 @@
-import StagePackage from "./StagePackage";
+import StagePackage from './StagePackage';
 
 interface InitialStagePackage<IdType = string> extends StagePackage<IdType> {
   stageId: IdType;
