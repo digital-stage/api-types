@@ -1,17 +1,17 @@
-import Router from "./model/Router";
-import Stage from "./model/Stage";
+import Router from './model/Router';
+import Stage from './model/Stage';
 
 namespace ServerRouterPayloads {
   // Server --> Client
 
   export type Ready = Router;
   export type ServeStage = {
-    kind: "audio" | "video" | "both";
+    kind: 'audio' | 'video' | 'both';
     type: string; // "ov" | "mediasoup" | "jammer"
     stage: Stage;
   };
   export type UnServeStage = {
-    kind: "audio" | "video" | "both";
+    kind: 'audio' | 'video' | 'both';
     type: string; // "ov" | "mediasoup" | "jammer"
     stageId: string;
   };

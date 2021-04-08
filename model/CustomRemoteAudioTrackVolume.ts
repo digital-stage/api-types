@@ -1,4 +1,4 @@
-import VolumeProperties from "./VolumeProperties";
+import VolumeProperties from './VolumeProperties';
 
 interface CustomRemoteAudioTrackVolume<IdType = string>
   extends VolumeProperties {

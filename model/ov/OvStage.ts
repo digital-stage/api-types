@@ -1,4 +1,4 @@
-import Stage from "../Stage";
+import Stage from '../Stage';
 
 interface OvStage extends Stage {
   // 3D Room specific

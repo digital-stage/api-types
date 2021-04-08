@@ -1,5 +1,5 @@
-import ThreeDimensionalProperties from "./ThreeDimensionalProperties";
-import VolumeProperties from "./VolumeProperties";
+import ThreeDimensionalProperties from './ThreeDimensionalProperties';
+import VolumeProperties from './VolumeProperties';
 
 interface RemoteAudioTrack<IdType = string>
   extends ThreeDimensionalProperties,
