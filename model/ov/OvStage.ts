@@ -1,25 +1,19 @@
 import Stage from '../Stage'
 
-interface OvStage extends Stage {
-    // 3D Room specific
-
+interface OvStage<IdType = string> extends Stage<IdType> {
     ambientSoundUrl?: string
     ambientLevel: number
 
-    ovServer?: {
-        router: string
-        ipv4: string
-        ipv6?: string
-        port: number
-        pin: number
-        serverJitter?: number
-
-        latency?: {
-            [srcOvStageDeviceId: number]: {
-                [desOvStageDeviceId: number]: {
-                    latency: number
-                    jitter: number
-                }
+    ovIpv4: string
+    ovIpv6?: string
+    ovPort: number
+    ovPin: number
+    ovJitter?: number
+    latency?: {
+        [srcOvStageDeviceId: number]: {
+            [desOvStageDeviceId: number]: {
+                latency: number
+                jitter: number
             }
         }
     }

@@ -1,7 +1,9 @@
 import Device from '../Device'
 
-export interface JammerDevice extends Device {
+export interface JammerDevice<IdType = string> extends Device<IdType> {
     type: 'jammer'
 
     canJammer: true
+    availableSoundCardIds: IdType[]
+    soundCardId: IdType
 }
