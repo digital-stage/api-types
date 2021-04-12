@@ -20,7 +20,12 @@ interface MediasoupDevice<IdType = string> extends Device<IdType> {
     outputAudioDevices: WebMediaDevice[]
     outputAudioDeviceId?: string
 
-    egoVolume: number
+  sampleRate?: number;
+  autoGainControl?: boolean;
+  echoCancellation?: boolean;
+  noiseSuppression?: boolean;
+
+  egoVolume: number;
 }
 
 export default MediasoupDevice
