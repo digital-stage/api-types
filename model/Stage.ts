@@ -1,33 +1,33 @@
 interface Stage<IdType = string> {
-  _id: IdType;
+    _id: IdType
 
-  name: string;
-  description: string;
-  password: string | null;
+    name: string
+    description: string
+    password: string | null
 
-  admins: IdType[];
-  soundEditors: IdType[];
+    admins: IdType[]
+    soundEditors: IdType[]
 
-  iconUrl: string | null;
+    iconUrl: string | null
 
-  videoType: string | null;
-  videoRouter: IdType;
+    videoType: string | null
+    videoRouter: IdType
 
-  audioType: string | null;
-  audioRouter: IdType;
+    audioType: string | null
+    audioRouter: IdType
 
-  preferredPosition: {
-    lat: number;
-    lng: number;
-  };
+    preferredPosition: {
+        lat: number
+        lng: number
+    }
 
-  width: number;
-  length: number;
-  height: number;
-  reflection: number;
-  absorption: number;
+    width: number
+    length: number
+    height: number
+    reflection: number
+    absorption: number
 
-  [additional: string]: any;
+    [additional: string]: any
 }
 
-export default Stage;
+export default Stage
