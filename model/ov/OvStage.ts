@@ -1,15 +1,15 @@
 import Stage from '../Stage'
 
 interface OvStage<IdType = string> extends Stage<IdType> {
-    ambientSoundUrl?: string
-    ambientLevel: number
+    ovAmbientSoundUrl?: string
+    ovAmbientLevel: number
 
     ovIpv4: string
     ovIpv6?: string
     ovPort: number
     ovPin: number
     ovJitter?: number
-    latency?: {
+    ovLatency?: {
         [srcOvStageDeviceId: number]: {
             [desOvStageDeviceId: number]: {
                 latency: number

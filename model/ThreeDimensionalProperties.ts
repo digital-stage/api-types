@@ -5,9 +5,11 @@ interface ThreeDimensionalProperties {
     rX: number
     rY: number
     rZ: number
+    directivity: 'omni' | 'cardoid'
 }
 
 const DefaultThreeDimensionalProperties: ThreeDimensionalProperties = {
+    directivity: 'omni',
     x: 0,
     y: -1,
     z: 0,

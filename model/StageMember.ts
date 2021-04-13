@@ -10,6 +10,10 @@ interface StageMember<IdType = string> extends ThreeDimensionalProperties, Volum
     online: boolean
 
     isDirector: boolean
+
+    order: number
+
+    sendLocal: boolean
 }
 
 export default StageMember
