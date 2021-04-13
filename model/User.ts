@@ -1,15 +1,15 @@
 interface User<IdType = string> {
-    _id: IdType
-    uid: string
-    name: string
+  _id: IdType;
+  uid: string;
+  name: string;
 
-    avatarUrl: string | null
+  avatarUrl: string | null;
 
-    canCreateStage: boolean
+  canCreateStage: boolean;
 
-    stageId: IdType | null
-    groupId: IdType | null // Redundancy, but needed for performance issues
-    stageMemberId: IdType | null // Redundancy, but needed for performance issues
+  stageId: IdType | null;
+  groupId: IdType | null; // Redundancy, but needed for performance issues
+  stageMemberId: IdType | null; // Redundancy, but needed for performance issues
 }
 
-export default User
+export default User;

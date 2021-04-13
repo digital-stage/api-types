@@ -1,10 +1,11 @@
-import ThreeDimensionalProperties from './ThreeDimensionalProperties'
+import ThreeDimensionalProperties from './ThreeDimensionalProperties';
 
-interface CustomGroupPosition<IdType = string> extends ThreeDimensionalProperties {
-    _id: IdType
-    userId: IdType
-    deviceId: IdType
-    groupId: IdType
+interface CustomGroupPosition<IdType = string>
+  extends ThreeDimensionalProperties {
+  _id: IdType;
+  userId: IdType;
+  deviceId: IdType;
+  groupId: IdType;
 }
 
-export default CustomGroupPosition
+export default CustomGroupPosition;

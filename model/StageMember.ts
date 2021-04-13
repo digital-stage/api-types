@@ -1,15 +1,17 @@
-import ThreeDimensionalProperties from './ThreeDimensionalProperties'
-import VolumeProperties from './VolumeProperties'
+import ThreeDimensionalProperties from './ThreeDimensionalProperties';
+import VolumeProperties from './VolumeProperties';
 
-interface StageMember<IdType = string> extends ThreeDimensionalProperties, VolumeProperties {
-    _id: IdType
-    stageId: IdType
-    groupId: IdType
-    userId: IdType
+interface StageMember<IdType = string>
+  extends ThreeDimensionalProperties,
+    VolumeProperties {
+  _id: IdType;
+  stageId: IdType;
+  groupId: IdType;
+  userId: IdType;
 
-    online: boolean
+  online: boolean;
 
-    isDirector: boolean
+  isDirector: boolean;
 }
 
-export default StageMember
+export default StageMember;

@@ -1,9 +1,9 @@
 interface LocalAudioTrack<IdType = string> {
-    _id: IdType
-    deviceId: IdType
-    userId: IdType
+  _id: IdType;
+  deviceId: IdType;
+  userId: IdType;
 
-    type: string
+  type: string;
 }
 
-export default LocalAudioTrack
+export default LocalAudioTrack;
