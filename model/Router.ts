@@ -1,20 +1,20 @@
 interface Router<IdType = string> {
-  _id: IdType;
+    _id: IdType
 
-  types: {
-    [type: string]: number;
-  };
+    types: {
+        [type: string]: number
+    }
 
-  countryCode: string;
-  city: string;
-  position: {
-    lat: number;
-    lng: number;
-  };
+    countryCode: string
+    city: string
+    position: {
+        lat: number
+        lng: number
+    }
 
-  apiServer: string;
+    apiServer: string
 
-  [additional: string]: any;
+    [additional: string]: any
 }
 
-export default Router;
+export default Router

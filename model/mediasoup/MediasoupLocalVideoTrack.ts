@@ -1,10 +1,9 @@
-import LocalVideoTrack from '../LocalVideoTrack';
+import LocalVideoTrack from '../LocalVideoTrack'
 
-interface MediasoupLocalVideoTrack<IdType = string>
-  extends LocalVideoTrack<IdType> {
-  type: 'mediasoup';
+interface MediasoupLocalVideoTrack<IdType = string> extends LocalVideoTrack<IdType> {
+    type: 'mediasoup'
 
-  producerId: IdType;
+    producerId: IdType
 }
 
-export default MediasoupLocalVideoTrack;
+export default MediasoupLocalVideoTrack

@@ -1,9 +1,9 @@
-import Device from '../Device';
+import Device from '../Device'
 
 interface OvDevice<IdType = string> extends Device<IdType> {
-  type: 'ov';
+    type: 'ov'
 
-  canOv: true;
+    canOv: true
 }
 
-export default OvDevice;
+export default OvDevice

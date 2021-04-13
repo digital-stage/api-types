@@ -1,11 +1,11 @@
-import Stage from '../Stage';
+import Stage from '../Stage'
 
 interface MediasoupStage extends Stage {
-  type: 'mediasoup';
+    type: 'mediasoup'
 
-  mediasoup: {
-    url: string;
-    port: number;
-  };
+    mediasoup: {
+        url: string
+        port: number
+    }
 }
-export default MediasoupStage;
+export default MediasoupStage

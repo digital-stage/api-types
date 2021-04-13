@@ -1,4 +1,4 @@
-import OvDevice from './OvDevice';
-import OvStage from './OvStage';
+import OvDevice from './OvDevice'
+import OvStage from './OvStage'
 
-export type { OvDevice, OvStage };
+export type { OvDevice, OvStage }
