@@ -22,11 +22,8 @@ interface SoundCard<IdType = string> {
 
     softwareLatency: number | null
 
-    numInputChannels: number
-    numOutputChannels: number
-
-    inputChannels: number[] // TODO: Replace this later by track presets
-    outputChannels: number[] // Will be 0 and 1 per default TODO: Later let user decide
+    inputChannels: string[] // TODO: Replace this later by track presets
+    outputChannels: string[] // Will be 0 and 1 per default TODO: Later let user decide
 }
 
 export default SoundCard
