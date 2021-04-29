@@ -9,6 +9,7 @@ import LocalAudioTrack from './model/LocalAudioTrack'
 import LocalVideoTrack from './model/LocalVideoTrack'
 import Device from './model/Device'
 import Router from './model/Router'
+import SoundCard from './model/SoundCard'
 
 namespace ClientDevicePayloads {
     export type PayloadIdType = string
@@ -41,6 +42,9 @@ namespace ClientDevicePayloads {
 
     /* DEVICE */
     export type ChangeDevice = { _id: DeviceId } & Partial<Device>
+
+    /* SDUND CARD */
+    export type SetSoundCard = { uuid: string } & Partial<SoundCard>
 
     /* STAGE */
     export type CreateStage = Omit<Stage, '_id'>

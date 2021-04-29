@@ -5,6 +5,8 @@ const ClientDeviceEvents = {
     ChangeUser: 'change-user',
     RemoveUser: 'remove-user',
     ChangeDevice: 'change-device',
+    SetSoundCard: 'set-sound-card',
+    RemoveSoundCard: 'remove-sound-card',
     CreateStage: 'create-stage',
     ChangeStage: 'change-stage',
     RemoveStage: 'remove-stage',
