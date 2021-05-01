@@ -20,6 +20,7 @@ namespace ClientDevicePayloads {
     export type CustomizedStageMemberPositionId = PayloadIdType
     export type CustomizedStageMemberVolumeId = PayloadIdType
     export type DeviceId = PayloadIdType
+    export type SoundCardId = PayloadIdType
     export type GroupId = PayloadIdType
     export type LocalVideoTrackId = PayloadIdType
     export type LocalAudioTrackId = PayloadIdType
@@ -45,6 +46,7 @@ namespace ClientDevicePayloads {
 
     /* SDUND CARD */
     export type SetSoundCard = { uuid: string } & Partial<SoundCard>
+    export type UpdateSoundCard = { _id: SoundCardId } & Partial<SoundCard>
 
     /* STAGE */
     export type CreateStage = Omit<Stage, '_id'>
