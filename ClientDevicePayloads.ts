@@ -46,7 +46,7 @@ namespace ClientDevicePayloads {
 
     /* SDUND CARD */
     export type SetSoundCard = { uuid: string } & Partial<SoundCard>
-    export type UpdateSoundCard = { _id: SoundCardId } & Partial<SoundCard>
+    export type ChangeSoundCard = { _id: SoundCardId } & Partial<SoundCard>
 
     /* STAGE */
     export type CreateStage = Omit<Stage, '_id'>
