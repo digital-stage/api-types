@@ -4,4 +4,5 @@ import MediasoupLocalVideoTrack from './MediasoupLocalVideoTrack';
 import MediasoupRemoteAudioTrack from './MediasoupRemoteAudioTrack';
 import MediasoupRemoteVideoTrack from './MediasoupRemoteVideoTrack';
 import MediasoupStage from './MediasoupStage';
-export type { MediasoupDevice, MediasoupLocalAudioTrack, MediasoupLocalVideoTrack, MediasoupRemoteAudioTrack, MediasoupRemoteVideoTrack, MediasoupStage, };
+import WebMediaDevice from './WebMediaDevice';
+export type { MediasoupDevice, MediasoupLocalAudioTrack, MediasoupLocalVideoTrack, MediasoupRemoteAudioTrack, MediasoupRemoteVideoTrack, MediasoupStage, WebMediaDevice, };

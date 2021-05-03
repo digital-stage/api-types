@@ -4,6 +4,7 @@ import MediasoupLocalVideoTrack from './MediasoupLocalVideoTrack'
 import MediasoupRemoteAudioTrack from './MediasoupRemoteAudioTrack'
 import MediasoupRemoteVideoTrack from './MediasoupRemoteVideoTrack'
 import MediasoupStage from './MediasoupStage'
+import WebMediaDevice from './WebMediaDevice'
 
 export type {
     MediasoupDevice,
@@ -12,4 +13,5 @@ export type {
     MediasoupRemoteAudioTrack,
     MediasoupRemoteVideoTrack,
     MediasoupStage,
+    WebMediaDevice,
 }
