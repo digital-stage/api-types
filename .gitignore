@@ -3,7 +3,6 @@ node_modules
 .idea
 .cache
 yarn.lock
-package-lock.json
 .env
 yarn-error.log
 dist
