@@ -19,9 +19,12 @@ import SoundCard from './SoundCard'
 import Stage from './Stage'
 import StageMember from './StageMember'
 import StagePackage from './StagePackage'
-import ThreeDimensionalProperties from './ThreeDimensionalProperties'
+import ThreeDimensionalProperties, {
+    DefaultThreeDimensionalProperties,
+} from './ThreeDimensionalProperties'
 import User from './User'
-import VolumeProperties from './VolumeProperties'
+import VolumeProperties, { DefaultVolumeProperties } from './VolumeProperties'
+import InitialStagePackage from './InitialStagePackage'
 
 export * from './mediasoup'
 export * from './jammer'
@@ -52,4 +55,7 @@ export type {
     ThreeDimensionalProperties,
     User,
     VolumeProperties,
+    InitialStagePackage,
 }
+
+export { DefaultThreeDimensionalProperties, DefaultVolumeProperties }
