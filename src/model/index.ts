@@ -6,6 +6,8 @@ import CustomRemoteAudioTrackPosition from './CustomRemoteAudioTrackPosition'
 import CustomRemoteAudioTrackVolume from './CustomRemoteAudioTrackVolume'
 import CustomStageMemberPosition from './CustomStageMemberPosition'
 import CustomStageMemberVolume from './CustomStageMemberVolume'
+import CustomStageDevicePosition from './CustomStageDevicePosition'
+import CustomStageDeviceVolume from './CustomStageDeviceVolume'
 import Device from './Device'
 import Group from './Group'
 import LocalAudioTrack from './LocalAudioTrack'
@@ -33,6 +35,8 @@ export type {
     CustomRemoteAudioTrackVolume,
     CustomStageMemberPosition,
     CustomStageMemberVolume,
+    CustomStageDevicePosition,
+    CustomStageDeviceVolume,
     Device,
     Group,
     LocalAudioTrack,
