@@ -2,9 +2,12 @@ import VolumeProperties from './VolumeProperties'
 
 interface CustomGroupVolume<IdType = string> extends VolumeProperties {
     _id: IdType
-    userId: IdType
+    // UNIQUE PAIR:
     deviceId: IdType
     groupId: IdType
+    // Helper
+    userId: IdType
+    stageId: IdType
 }
 
 export default CustomGroupVolume

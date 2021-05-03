@@ -3,6 +3,7 @@ interface RemoteVideoTrack<IdType = string> {
     userId: IdType
     stageId: IdType
     stageMemberId: IdType
+    stageDeviceId: IdType
     localVideoTrackId: IdType
     online: boolean
 

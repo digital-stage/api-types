@@ -4,9 +4,11 @@ import VolumeProperties from './VolumeProperties'
 interface RemoteAudioTrack<IdType = string> extends ThreeDimensionalProperties, VolumeProperties {
     _id: IdType
     localAudioTrackId: IdType
-    stageMemberId: IdType
-    stageId: IdType
     userId: IdType
+    deviceId: IdType
+    stageId: IdType
+    stageMemberId: IdType
+    stageDeviceId: IdType
 
     online: boolean
 

@@ -19,18 +19,27 @@ import Device from './model/Device'
 import SoundCard from './model/SoundCard'
 import ChatMessage from './model/ChatMessage'
 import RemoteVideoTrack from './model/RemoteVideoTrack'
+import StageDevice from './model/StageDevice'
+import CustomStageDeviceVolume from './model/CustomStageDeviceVolume'
+import CustomStageDevicePosition from './model/CustomStageDevicePosition'
 
 namespace ServerDevicePayloads {
     export type PayloadIdType = string
-    export type CustomizedRemoteAudioTrackPositionId = PayloadIdType
-    export type CustomizedGroupPositionId = PayloadIdType
-    export type CustomizedStageMemberPositionId = PayloadIdType
+    export type CustomGroupPositionId = PayloadIdType
+    export type CustomGroupVolumeId = PayloadIdType
+    export type CustomStageMemberPositionId = PayloadIdType
+    export type CustomStageMemberVolumeId = PayloadIdType
+    export type CustomStageDevicePositionId = PayloadIdType
+    export type CustomStageDeviceVolumeId = PayloadIdType
+    export type CustomRemoteAudioTrackPositionId = PayloadIdType
+    export type CustomRemoteAudioTrackVolumeId = PayloadIdType
     export type DeviceId = PayloadIdType
     export type GroupId = PayloadIdType
     export type LocalAudioTrackId = PayloadIdType
     export type RemoteAudioTrackId = PayloadIdType
     export type StageId = PayloadIdType
     export type StageMemberId = PayloadIdType
+    export type StageDeviceId = PayloadIdType
     export type UserId = PayloadIdType
     export type RouterId = PayloadIdType
     export type LocalVideoTrackId = PayloadIdType
@@ -75,14 +84,14 @@ namespace ServerDevicePayloads {
 
     export type CustomGroupVolumeAdded = CustomGroupVolume
     export type CustomGroupVolumeChanged = {
-        _id: CustomizedGroupPositionId
+        _id: CustomGroupVolumeId
     } & Partial<VolumeProperties>
-    export type CustomGroupVolumeRemoved = CustomizedGroupPositionId
+    export type CustomGroupVolumeRemoved = CustomGroupVolumeId
     export type CustomGroupPositionAdded = CustomGroupPosition
     export type CustomGroupPositionChanged = {
-        _id: CustomizedGroupPositionId
+        _id: CustomGroupPositionId
     } & Partial<ThreeDimensionalProperties>
-    export type CustomGroupPositionRemoved = CustomizedGroupPositionId
+    export type CustomGroupPositionRemoved = CustomGroupPositionId
 
     /* STAGE MEMBER */
     export type StageMemberAdded = StageMember
@@ -92,14 +101,31 @@ namespace ServerDevicePayloads {
     export type StageMemberRemoved = StageMemberId
     export type CustomStageMemberVolumeAdded = CustomStageMemberVolume
     export type CustomStageMemberVolumeChanged = {
-        _id: CustomizedStageMemberPositionId
+        _id: CustomStageMemberVolumeId
     } & Partial<VolumeProperties>
-    export type CustomStageMemberVolumeRemoved = CustomizedStageMemberPositionId
+    export type CustomStageMemberVolumeRemoved = CustomStageMemberVolumeId
     export type CustomStageMemberPositionAdded = CustomStageMemberPosition
     export type CustomStageMemberPositionChanged = {
-        _id: CustomizedStageMemberPositionId
+        _id: CustomStageMemberPositionId
     } & Partial<ThreeDimensionalProperties>
-    export type CustomStageMemberPositionRemoved = CustomizedStageMemberPositionId
+    export type CustomStageMemberPositionRemoved = CustomStageMemberPositionId
+
+    /* STAGE DEVICE */
+    export type StageDeviceAdded = StageDevice
+    export type StageDeviceChanged = {
+        _id: StageDeviceId
+    } & Partial<StageDevice>
+    export type StageDeviceRemoved = StageDeviceId
+    export type CustomStageDeviceVolumeAdded = CustomStageDeviceVolume
+    export type CustomStageDeviceVolumeChanged = {
+        _id: CustomStageDeviceVolumeId
+    } & Partial<VolumeProperties>
+    export type CustomStageDeviceVolumeRemoved = CustomStageDeviceVolumeId
+    export type CustomStageDevicePositionAdded = CustomStageDevicePosition
+    export type CustomStageDevicePositionChanged = {
+        _id: CustomStageDevicePositionId
+    } & Partial<ThreeDimensionalProperties>
+    export type CustomStageDevicePositionRemoved = CustomStageDevicePositionId
 
     /* VIDEO TRACKS */
     export type LocalVideoTrackAdded = LocalVideoTrack
@@ -129,14 +155,14 @@ namespace ServerDevicePayloads {
 
     export type CustomRemoteAudioTrackVolumeAdded = CustomRemoteAudioTrackVolume
     export type CustomRemoteAudioTrackVolumeChanged = {
-        _id: CustomizedRemoteAudioTrackPositionId
+        _id: CustomRemoteAudioTrackVolumeId
     } & Partial<VolumeProperties>
-    export type CustomRemoteAudioTrackVolumeRemoved = CustomizedRemoteAudioTrackPositionId
+    export type CustomRemoteAudioTrackVolumeRemoved = CustomRemoteAudioTrackVolumeId
     export type CustomRemoteAudioTrackPositionAdded = CustomRemoteAudioTrackPosition
     export type CustomRemoteAudioTrackPositionChanged = {
-        _id: CustomizedRemoteAudioTrackPositionId
+        _id: CustomRemoteAudioTrackPositionId
     } & Partial<ThreeDimensionalProperties>
-    export type CustomRemoteAudioTrackPositionRemoved = CustomizedRemoteAudioTrackPositionId
+    export type CustomRemoteAudioTrackPositionRemoved = CustomRemoteAudioTrackPositionId
 }
 
 export default ServerDevicePayloads

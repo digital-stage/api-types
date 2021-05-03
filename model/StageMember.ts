@@ -7,13 +7,8 @@ interface StageMember<IdType = string> extends ThreeDimensionalProperties, Volum
     groupId: IdType
     userId: IdType
 
-    online: boolean
-
+    active: boolean
     isDirector: boolean
-
-    order: number
-
-    sendLocal: boolean
 }
 
 export default StageMember

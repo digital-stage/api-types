@@ -22,10 +22,18 @@ const ClientDeviceEvents = {
     ChangeStageMember: 'change-stage-member',
     RemoveStageMember: 'remove-stage-member',
 
+    ChangeStageDevice: 'change-stage-device',
+    RemoveStageDevice: 'remove-stage-device',
+
     SetCustomStageMemberPosition: 'set-custom-stage-member-position',
     SetCustomStageMemberVolume: 'set-custom-stage-member-volume',
     RemoveCustomStageMemberPosition: 'remove-custom-stage-member-position',
     RemoveCustomStageMemberVolume: 'remove-custom-stage-member-volume',
+
+    SetCustomStageDevicePosition: 'set-custom-stage-device-position',
+    SetCustomStageDeviceVolume: 'set-custom-stage-device-volume',
+    RemoveCustomStageDevicePosition: 'remove-custom-stage-device-position',
+    RemoveCustomStageDeviceVolume: 'remove-custom-stage-device-volume',
 
     CreateLocalVideoTrack: 'create-local-video-track',
     ChangeLocalVideoTrack: 'change-local-video-track',

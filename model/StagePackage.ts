@@ -10,6 +10,9 @@ import RemoteAudioTrack from './RemoteAudioTrack'
 import RemoteVideoTrack from './RemoteVideoTrack'
 import CustomRemoteAudioTrackPosition from './CustomRemoteAudioTrackPosition'
 import CustomRemoteAudioTrackVolume from './CustomRemoteAudioTrackVolume'
+import StageDevice from './StageDevice'
+import CustomStageDeviceVolume from './CustomStageDeviceVolume'
+import CustomStageDevicePosition from './CustomStageDevicePosition'
 
 interface StagePackage<IdType = string> {
     remoteUsers: User<IdType>[]
@@ -21,6 +24,9 @@ interface StagePackage<IdType = string> {
     stageMembers: StageMember<IdType>[]
     customStageMemberVolumes: CustomStageMemberVolume<IdType>[]
     customStageMemberPositions: CustomStageMemberPosition<IdType>[]
+    stageDevices: StageDevice<IdType>[]
+    customStageDeviceVolumes: CustomStageDeviceVolume<IdType>[]
+    customStageDevicePositions: CustomStageDevicePosition<IdType>[]
     remoteAudioTracks: RemoteAudioTrack<IdType>[]
     remoteVideoTracks: RemoteVideoTrack<IdType>[]
     customRemoteAudioTrackPositions: CustomRemoteAudioTrackPosition<IdType>[]

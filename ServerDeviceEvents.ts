@@ -58,6 +58,18 @@ const ServerDeviceEvents = {
     CustomStageMemberVolumeChanged: 'c-sm-v-c',
     CustomStageMemberVolumeRemoved: 'c-sm-v-r',
 
+    StageDeviceAdded: 'sd-a',
+    StageDeviceChanged: 'sd-c',
+    StageDeviceRemoved: 'sd-r',
+
+    CustomStageDevicePositionAdded: 'c-sd-p-a',
+    CustomStageDevicePositionChanged: 'c-sd-p-c',
+    CustomStageDevicePositionRemoved: 'c-sd-p-r',
+
+    CustomStageDeviceVolumeAdded: 'c-sd-v-a',
+    CustomStageDeviceVolumeChanged: 'c-sd-v-c',
+    CustomStageDeviceVolumeRemoved: 'c-sd-v-r',
+
     LocalAudioTrackAdded: 'la-a',
     LocalAudioTrackChanged: 'la-c',
     LocalAudioTrackRemoved: 'la-r',
