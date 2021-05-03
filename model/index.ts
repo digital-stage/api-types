@@ -1,3 +1,4 @@
+import StageDevice from '../../../dist/types/model/StageDevice'
 import ChatMessage from './ChatMessage'
 import CustomGroupPosition from './CustomGroupPosition'
 import CustomGroupVolume from './CustomGroupVolume'
@@ -42,6 +43,7 @@ export type {
     SoundCard,
     Stage,
     StageMember,
+    StageDevice,
     StagePackage,
     ThreeDimensionalProperties,
     User,
