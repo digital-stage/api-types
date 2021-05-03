@@ -1,4 +1,4 @@
-import StageDevice from '../../../dist/types/model/StageDevice'
+import StageDevice from './StageDevice'
 import ChatMessage from './ChatMessage'
 import CustomGroupPosition from './CustomGroupPosition'
 import CustomGroupVolume from './CustomGroupVolume'
