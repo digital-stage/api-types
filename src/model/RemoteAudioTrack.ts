@@ -10,8 +10,6 @@ interface RemoteAudioTrack<IdType = string> extends ThreeDimensionalProperties, 
     stageMemberId: IdType
     stageDeviceId: IdType
 
-    online: boolean
-
     /**
      * The type of the producing device
      */

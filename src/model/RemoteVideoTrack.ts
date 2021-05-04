@@ -5,7 +5,6 @@ interface RemoteVideoTrack<IdType = string> {
     stageMemberId: IdType
     stageDeviceId: IdType
     localVideoTrackId: IdType
-    online: boolean
 
     /**
      * The type of the producing device

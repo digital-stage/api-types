@@ -1,5 +1,5 @@
 {
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -60,5 +60,18 @@
     "tsdx": "^0.14.1",
     "tslib": "^2.2.0",
     "typescript": "^4.2.4"
-  }
+  },
+  "description": "Type definitions for the whole api intercommunication",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digital-stage/api-types.git"
+  },
+  "keywords": [
+    "typescript",
+    "model"
+  ],
+  "bugs": {
+    "url": "https://github.com/digital-stage/api-types/issues"
+  },
+  "homepage": "https://github.com/digital-stage/api-types#readme"
 }
