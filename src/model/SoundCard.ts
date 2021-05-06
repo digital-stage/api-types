@@ -28,6 +28,8 @@ interface SoundCard<IdType = string> {
     outputChannels: {
         [id: string]: boolean
     }
+
+    online: boolean
 }
 
 export default SoundCard

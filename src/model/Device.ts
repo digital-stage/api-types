@@ -25,7 +25,6 @@ interface Device<IdType = string> {
     createdAt: Date
     lastLoginAt: Date
 
-    availableSoundCardIds: IdType[]
     soundCardId: IdType
 
     volume: number
