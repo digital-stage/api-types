@@ -1,6 +1,7 @@
 interface VideoTrack<IdType = string> {
     _id: IdType
     userId: IdType
+    deviceId: IdType
     stageId: IdType
     stageMemberId: IdType
     stageDeviceId: IdType
