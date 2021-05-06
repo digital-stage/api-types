@@ -28,6 +28,8 @@ interface Device<IdType = string> {
     availableSoundCardIds: IdType[]
     soundCardId: IdType
 
+    volume: number
+
     // OV SPECIFIC
     egoGain: number
     ovReverbGain: number
@@ -35,7 +37,7 @@ interface Device<IdType = string> {
     ovRenderISM: boolean
     ovRawMode: boolean
     ovReceiverType: 'ortf' | 'hrtf'
-    canOv: true
+    canOv: boolean
     ovP2p: boolean
 
     [additional: string]: any
