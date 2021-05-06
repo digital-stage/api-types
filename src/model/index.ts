@@ -2,18 +2,16 @@ import StageDevice from './StageDevice'
 import ChatMessage from './ChatMessage'
 import CustomGroupPosition from './CustomGroupPosition'
 import CustomGroupVolume from './CustomGroupVolume'
-import CustomRemoteAudioTrackPosition from './CustomRemoteAudioTrackPosition'
-import CustomRemoteAudioTrackVolume from './CustomRemoteAudioTrackVolume'
+import CustomAudioTrackPosition from './CustomAudioTrackPosition'
+import CustomAudioTrackVolume from './CustomAudioTrackVolume'
 import CustomStageMemberPosition from './CustomStageMemberPosition'
 import CustomStageMemberVolume from './CustomStageMemberVolume'
 import CustomStageDevicePosition from './CustomStageDevicePosition'
 import CustomStageDeviceVolume from './CustomStageDeviceVolume'
 import Device from './Device'
 import Group from './Group'
-import LocalAudioTrack from './LocalAudioTrack'
-import LocalVideoTrack from './LocalVideoTrack'
-import RemoteAudioTrack from './RemoteAudioTrack'
-import RemoteVideoTrack from './RemoteVideoTrack'
+import AudioTrack from './AudioTrack'
+import VideoTrack from './VideoTrack'
 import Router from './Router'
 import SoundCard from './SoundCard'
 import Stage from './Stage'
@@ -34,18 +32,16 @@ export type {
     ChatMessage,
     CustomGroupPosition,
     CustomGroupVolume,
-    CustomRemoteAudioTrackPosition,
-    CustomRemoteAudioTrackVolume,
+    CustomAudioTrackPosition,
+    CustomAudioTrackVolume,
     CustomStageMemberPosition,
     CustomStageMemberVolume,
     CustomStageDevicePosition,
     CustomStageDeviceVolume,
     Device,
     Group,
-    LocalAudioTrack,
-    LocalVideoTrack,
-    RemoteAudioTrack,
-    RemoteVideoTrack,
+    AudioTrack,
+    VideoTrack,
     Router,
     SoundCard,
     Stage,

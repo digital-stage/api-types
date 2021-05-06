@@ -1,17 +1,16 @@
 import Stage from './model/Stage'
 import Group from './model/Group'
 import StageMember from './model/StageMember'
-import RemoteAudioTrack from './model/RemoteAudioTrack'
+import AudioTrack from './model/AudioTrack'
 import ThreeDimensionalProperties from './model/ThreeDimensionalProperties'
 import VolumeProperties from './model/VolumeProperties'
 import CustomStageMemberVolume from './model/CustomStageMemberVolume'
-import LocalAudioTrack from './model/LocalAudioTrack'
-import LocalVideoTrack from './model/LocalVideoTrack'
 import Device from './model/Device'
 import Router from './model/Router'
 import SoundCard from './model/SoundCard'
 import StageDevice from './model/StageDevice'
 import CustomStageDeviceVolume from './model/CustomStageDeviceVolume'
+import { VideoTrack } from './model'
 
 namespace ClientDevicePayloads {
     export type PayloadIdType = string
@@ -21,20 +20,18 @@ namespace ClientDevicePayloads {
     export type CustomStageMemberVolumeId = PayloadIdType
     export type CustomStageDevicePositionId = PayloadIdType
     export type CustomStageDeviceVolumeId = PayloadIdType
-    export type CustomRemoteAudioTrackPositionId = PayloadIdType
-    export type CustomRemoteAudioTrackVolumeId = PayloadIdType
+    export type CustomAudioTrackPositionId = PayloadIdType
+    export type CustomAudioTrackVolumeId = PayloadIdType
     export type DeviceId = PayloadIdType
     export type GroupId = PayloadIdType
-    export type LocalAudioTrackId = PayloadIdType
-    export type RemoteAudioTrackId = PayloadIdType
+    export type AudioTrackId = PayloadIdType
     export type StageId = PayloadIdType
     export type StageMemberId = PayloadIdType
     export type StageDeviceId = PayloadIdType
     export type UserId = PayloadIdType
     export type RouterId = PayloadIdType
-    export type LocalVideoTrackId = PayloadIdType
     export type SoundCardId = PayloadIdType
-    export type RemoteVideoTrackId = PayloadIdType
+    export type VideoTrackId = PayloadIdType
 
     export type RouterAdded = Router
     export type RouterChanged = { _id: RouterId } & Partial<Router>
@@ -114,33 +111,29 @@ namespace ClientDevicePayloads {
     export type CustomStageDeviceVolumeAdded = CustomStageDeviceVolume
 
     /* VIDEO TRACKS */
-    export type CreateLocalVideoTrack = Partial<Omit<LocalVideoTrack, '_id'>>
+    export type CreateLocalVideoTrack = Partial<Omit<VideoTrack, '_id'>>
     export type ChangeLocalVideoTrack = {
-        _id: LocalVideoTrackId
-    } & Partial<LocalVideoTrack>
-    export type RemoveLocalVideoTrack = LocalVideoTrackId
+        _id: VideoTrackId
+    } & Partial<VideoTrack>
+    export type RemoveLocalVideoTrack = VideoTrackId
 
     /* AUDIO TRACKS */
-    export type CreateLocalAudioTrack = Partial<Omit<LocalAudioTrack, '_id'>>
+    export type CreateLocalAudioTrack = Partial<Omit<AudioTrack, '_id'>>
     export type ChangeLocalAudioTrack = {
-        _id: LocalAudioTrackId
-    } & Partial<LocalAudioTrack>
-    export type RemoveLocalAudioTrack = LocalAudioTrackId
+        _id: AudioTrackId
+    } & Partial<AudioTrack>
+    export type RemoveLocalAudioTrack = AudioTrackId
 
-    export type ChangeRemoteAudioTrack = {
-        _id: RemoteAudioTrackId
-    } & Partial<RemoteAudioTrack>
-
-    export type SetCustomRemoteAudioTrackVolume = {
-        remoteAudioTrackId: RemoteAudioTrackId
+    export type SetCustomAudioTrackVolume = {
+        audioTrackId: AudioTrackId
         deviceId: DeviceId
     } & Partial<VolumeProperties>
-    export type SetCustomRemoteAudioTrackPosition = {
-        remoteAudioTrackId: RemoteAudioTrackId
+    export type SetCustomAudioTrackPosition = {
+        audioTrackId: AudioTrackId
         deviceId: DeviceId
     } & Partial<ThreeDimensionalProperties>
-    export type RemoveCustomRemoteAudioTrackVolume = CustomRemoteAudioTrackVolumeId
-    export type RemoveCustomRemoteAudioTrackPosition = CustomRemoteAudioTrackPositionId
+    export type RemoveCustomAudioTrackVolume = CustomAudioTrackVolumeId
+    export type RemoveCustomAudioTrackPosition = CustomAudioTrackPositionId
 
     export interface JoinStage {
         stageId: string

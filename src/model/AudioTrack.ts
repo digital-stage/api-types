@@ -1,7 +1,7 @@
 import ThreeDimensionalProperties from './ThreeDimensionalProperties'
 import VolumeProperties from './VolumeProperties'
 
-interface RemoteAudioTrack<IdType = string> extends ThreeDimensionalProperties, VolumeProperties {
+interface AudioTrack<IdType = string> extends ThreeDimensionalProperties, VolumeProperties {
     _id: IdType
     localAudioTrackId: IdType
     userId: IdType
@@ -21,4 +21,4 @@ interface RemoteAudioTrack<IdType = string> extends ThreeDimensionalProperties, 
     [id: string]: any
 }
 
-export default RemoteAudioTrack
+export default AudioTrack

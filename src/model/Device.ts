@@ -45,11 +45,12 @@ interface Device<IdType = string> {
     apiServer: string
 }
 
-const InitialDevice: Omit<Device, '_id' | 'userId' | 'soundCardId'> = {
+export const getDefaultDeviceValues = <IdType = string>(): Omit<
+    Device<IdType>,
+    '_id' | 'userId' | 'soundCardId'
+> => ({
     uuid: null,
     type: 'unknown',
-    availableSoundCardIds: [],
-    soundCardId: null,
     requestSession: false,
     canAudio: false,
     canVideo: false,
@@ -66,8 +67,6 @@ const InitialDevice: Omit<Device, '_id' | 'userId' | 'soundCardId'> = {
     canOv: false,
     volume: 1,
     egoGain: 1,
-}
-
-export { InitialDevice }
+})
 
 export default Device

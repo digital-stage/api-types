@@ -1,13 +1,13 @@
 import ThreeDimensionalProperties from './ThreeDimensionalProperties'
 
-interface CustomRemoteAudioTrackPosition<IdType = string> extends ThreeDimensionalProperties {
+interface CustomAudioTrackPosition<IdType = string> extends ThreeDimensionalProperties {
     _id: IdType
     // UNIQUE PAIR
     deviceId: IdType
-    remoteAudioTrackId: IdType
+    audioTrackId: IdType
     // HELPER
     stageId: IdType
     userId: IdType
 }
 
-export default CustomRemoteAudioTrackPosition
+export default CustomAudioTrackPosition

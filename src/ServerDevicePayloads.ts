@@ -1,7 +1,7 @@
 import Stage from './model/Stage'
 import Group from './model/Group'
 import StageMember from './model/StageMember'
-import RemoteAudioTrack from './model/RemoteAudioTrack'
+import AudioTrack from './model/AudioTrack'
 import ThreeDimensionalProperties from './model/ThreeDimensionalProperties'
 import User from './model/User'
 import CustomGroupVolume from './model/CustomGroupVolume'
@@ -9,16 +9,14 @@ import CustomGroupPosition from './model/CustomGroupPosition'
 import VolumeProperties from './model/VolumeProperties'
 import CustomStageMemberVolume from './model/CustomStageMemberVolume'
 import CustomStageMemberPosition from './model/CustomStageMemberPosition'
-import LocalAudioTrack from './model/LocalAudioTrack'
-import CustomRemoteAudioTrackVolume from './model/CustomRemoteAudioTrackVolume'
-import CustomRemoteAudioTrackPosition from './model/CustomRemoteAudioTrackPosition'
+import CustomAudioTrackVolume from './model/CustomAudioTrackVolume'
+import CustomAudioTrackPosition from './model/CustomAudioTrackPosition'
 import StagePackage from './model/StagePackage'
-import LocalVideoTrack from './model/LocalVideoTrack'
 import Router from './model/Router'
 import Device from './model/Device'
 import SoundCard from './model/SoundCard'
 import ChatMessage from './model/ChatMessage'
-import RemoteVideoTrack from './model/RemoteVideoTrack'
+import VideoTrack from './model/VideoTrack'
 import StageDevice from './model/StageDevice'
 import CustomStageDeviceVolume from './model/CustomStageDeviceVolume'
 import CustomStageDevicePosition from './model/CustomStageDevicePosition'
@@ -31,20 +29,18 @@ namespace ServerDevicePayloads {
     export type CustomStageMemberVolumeId = PayloadIdType
     export type CustomStageDevicePositionId = PayloadIdType
     export type CustomStageDeviceVolumeId = PayloadIdType
-    export type CustomRemoteAudioTrackPositionId = PayloadIdType
-    export type CustomRemoteAudioTrackVolumeId = PayloadIdType
+    export type CustomAudioTrackPositionId = PayloadIdType
+    export type CustomAudioTrackVolumeId = PayloadIdType
     export type DeviceId = PayloadIdType
     export type GroupId = PayloadIdType
-    export type LocalAudioTrackId = PayloadIdType
-    export type RemoteAudioTrackId = PayloadIdType
+    export type AudioTrackId = PayloadIdType
     export type StageId = PayloadIdType
     export type StageMemberId = PayloadIdType
     export type StageDeviceId = PayloadIdType
     export type UserId = PayloadIdType
     export type RouterId = PayloadIdType
-    export type LocalVideoTrackId = PayloadIdType
     export type SoundCardId = PayloadIdType
-    export type RemoteVideoTrackId = PayloadIdType
+    export type VideoTrackId = PayloadIdType
 
     export type RouterAdded = Router
     export type RouterChanged = { _id: RouterId } & Partial<Router>
@@ -128,41 +124,29 @@ namespace ServerDevicePayloads {
     export type CustomStageDevicePositionRemoved = CustomStageDevicePositionId
 
     /* VIDEO TRACKS */
-    export type LocalVideoTrackAdded = LocalVideoTrack
-    export type LocalVideoTrackChanged = {
-        _id: LocalVideoTrackId
-    } & Partial<LocalVideoTrack>
-    export type LocalVideoTrackRemoved = LocalVideoTrackId
-
-    export type RemoteVideoTrackAdded = RemoteVideoTrack
-    export type RemoteVideoTrackChanged = {
-        _id: RemoteVideoTrackId
-    } & Partial<RemoteVideoTrack>
-    export type RemoteVideoTrackRemoved = RemoteVideoTrackId
+    export type VideoTrackAdded = VideoTrack
+    export type VideoTrackChanged = {
+        _id: VideoTrackId
+    } & Partial<VideoTrack>
+    export type VideoTrackRemoved = VideoTrackId
 
     /* AUDIO TRACKS */
-    export type LocalAudioTrackAdded = LocalAudioTrack
-    export type LocalAudioTrackChanged = {
-        _id: LocalAudioTrackId
-    } & Partial<LocalAudioTrack>
-    export type LocalAudioTrackRemoved = LocalAudioTrackId
+    export type AudioTrackAdded = AudioTrack
+    export type AudioTrackChanged = {
+        _id: AudioTrackId
+    } & Partial<AudioTrack>
+    export type AudioTrackRemoved = AudioTrackId
 
-    export type RemoteAudioTrackAdded = RemoteAudioTrack
-    export type RemoteAudioTrackChanged = {
-        _id: RemoteAudioTrackId
-    } & Partial<RemoteAudioTrack>
-    export type RemoteAudioTrackRemoved = RemoteAudioTrackId
-
-    export type CustomRemoteAudioTrackVolumeAdded = CustomRemoteAudioTrackVolume
-    export type CustomRemoteAudioTrackVolumeChanged = {
-        _id: CustomRemoteAudioTrackVolumeId
+    export type CustomAudioTrackVolumeAdded = CustomAudioTrackVolume
+    export type CustomAudioTrackVolumeChanged = {
+        _id: CustomAudioTrackVolumeId
     } & Partial<VolumeProperties>
-    export type CustomRemoteAudioTrackVolumeRemoved = CustomRemoteAudioTrackVolumeId
-    export type CustomRemoteAudioTrackPositionAdded = CustomRemoteAudioTrackPosition
-    export type CustomRemoteAudioTrackPositionChanged = {
-        _id: CustomRemoteAudioTrackPositionId
+    export type CustomAudioTrackVolumeRemoved = CustomAudioTrackVolumeId
+    export type CustomAudioTrackPositionAdded = CustomAudioTrackPosition
+    export type CustomAudioTrackPositionChanged = {
+        _id: CustomAudioTrackPositionId
     } & Partial<ThreeDimensionalProperties>
-    export type CustomRemoteAudioTrackPositionRemoved = CustomRemoteAudioTrackPositionId
+    export type CustomAudioTrackPositionRemoved = CustomAudioTrackPositionId
 }
 
 export default ServerDevicePayloads

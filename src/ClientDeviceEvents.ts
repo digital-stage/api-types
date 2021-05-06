@@ -22,32 +22,30 @@ const ClientDeviceEvents = {
     ChangeStageMember: 'change-stage-member',
     RemoveStageMember: 'remove-stage-member',
 
-    ChangeStageDevice: 'change-stage-device',
-    RemoveStageDevice: 'remove-stage-device',
-
     SetCustomStageMemberPosition: 'set-custom-stage-member-position',
     SetCustomStageMemberVolume: 'set-custom-stage-member-volume',
     RemoveCustomStageMemberPosition: 'remove-custom-stage-member-position',
     RemoveCustomStageMemberVolume: 'remove-custom-stage-member-volume',
+
+    ChangeStageDevice: 'change-stage-device',
+    RemoveStageDevice: 'remove-stage-device',
 
     SetCustomStageDevicePosition: 'set-custom-stage-device-position',
     SetCustomStageDeviceVolume: 'set-custom-stage-device-volume',
     RemoveCustomStageDevicePosition: 'remove-custom-stage-device-position',
     RemoveCustomStageDeviceVolume: 'remove-custom-stage-device-volume',
 
-    CreateLocalVideoTrack: 'create-local-video-track',
-    ChangeLocalVideoTrack: 'change-local-video-track',
-    RemoveLocalVideoTrack: 'remove-local-video-track',
-    CreateLocalAudioTrack: 'create-local-audio-track',
-    ChangeLocalAudioTrack: 'change-local-audio-track',
-    RemoveLocalAudioTrack: 'remove-local-audio-track',
+    CreateVideoTrack: 'create-video-track',
+    ChangeVideoTrack: 'change-video-track',
+    RemoveVideoTrack: 'remove-video-track',
+    CreateAudioTrack: 'create-audio-track',
+    ChangeAudioTrack: 'change-audio-track',
+    RemoveAudioTrack: 'remove-audio-track',
 
-    ChangeRemoteAudioTrack: 'change-remote-audio-track',
-
-    SetCustomRemoteAudioTrackPosition: 'set-remote-audio-track-position',
-    SetCustomRemoteAudioTrackVolume: 'set-remote-audio-track-volume',
-    RemoveCustomRemoteAudioTrackPosition: 'remove-remote-audio-track-position',
-    RemoveCustomRemoteAudioTrackVolume: 'remove-remote-audio-track-volume',
+    SetCustomAudioTrackPosition: 'set-audio-track-position',
+    SetCustomAudioTrackVolume: 'set-audio-track-volume',
+    RemoveCustomAudioTrackPosition: 'remove-audio-track-position',
+    RemoveCustomAudioTrackVolume: 'remove-audio-track-volume',
 
     JoinStage: 'join-stage',
     LeaveStage: 'leave-stage',

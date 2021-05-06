@@ -6,10 +6,10 @@ import CustomStageMemberPosition from './CustomStageMemberPosition'
 import StageMember from './StageMember'
 import CustomGroupVolume from './CustomGroupVolume'
 import CustomStageMemberVolume from './CustomStageMemberVolume'
-import RemoteAudioTrack from './RemoteAudioTrack'
-import RemoteVideoTrack from './RemoteVideoTrack'
-import CustomRemoteAudioTrackPosition from './CustomRemoteAudioTrackPosition'
-import CustomRemoteAudioTrackVolume from './CustomRemoteAudioTrackVolume'
+import AudioTrack from './AudioTrack'
+import VideoTrack from './VideoTrack'
+import CustomAudioTrackPosition from './CustomAudioTrackPosition'
+import CustomAudioTrackVolume from './CustomAudioTrackVolume'
 import StageDevice from './StageDevice'
 import CustomStageDeviceVolume from './CustomStageDeviceVolume'
 import CustomStageDevicePosition from './CustomStageDevicePosition'
@@ -27,10 +27,10 @@ interface StagePackage<IdType = string> {
     stageDevices: StageDevice<IdType>[]
     customStageDeviceVolumes: CustomStageDeviceVolume<IdType>[]
     customStageDevicePositions: CustomStageDevicePosition<IdType>[]
-    remoteAudioTracks: RemoteAudioTrack<IdType>[]
-    remoteVideoTracks: RemoteVideoTrack<IdType>[]
-    customRemoteAudioTrackPositions: CustomRemoteAudioTrackPosition<IdType>[]
-    customRemoteAudioTrackVolumes: CustomRemoteAudioTrackVolume<IdType>[]
+    remoteAudioTracks: AudioTrack<IdType>[]
+    remoteVideoTracks: VideoTrack<IdType>[]
+    customRemoteAudioTrackPositions: CustomAudioTrackPosition<IdType>[]
+    customRemoteAudioTrackVolumes: CustomAudioTrackVolume<IdType>[]
 }
 
 export default StagePackage

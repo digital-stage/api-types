@@ -70,28 +70,20 @@ const ServerDeviceEvents = {
     CustomStageDeviceVolumeChanged: 'c-sd-v-c',
     CustomStageDeviceVolumeRemoved: 'c-sd-v-r',
 
-    LocalAudioTrackAdded: 'la-a',
-    LocalAudioTrackChanged: 'la-c',
-    LocalAudioTrackRemoved: 'la-r',
+    VideoTrackAdded: 'v-a',
+    VideoTrackChanged: 'v-c',
+    VideoTrackRemoved: 'v-r',
 
-    LocalVideoTrackAdded: 'lv-a',
-    LocalVideoTrackChanged: 'lv-c',
-    LocalVideoTrackRemoved: 'lv-r',
+    AudioTrackAdded: 'a-a',
+    AudioTrackChanged: 'a-c',
+    AudioTrackRemoved: 'a-r',
 
-    RemoteVideoTrackAdded: 'v-a',
-    RemoteVideoTrackChanged: 'v-c',
-    RemoteVideoTrackRemoved: 'v-r',
+    CustomAudioTrackPositionAdded: 'c-a-p-a',
+    CustomAudioTrackPositionChanged: 'c-a-p-c',
+    CustomAudioTrackPositionRemoved: 'c-a-p-r',
 
-    RemoteAudioTrackAdded: 'a-a',
-    RemoteAudioTrackChanged: 'a-c',
-    RemoteAudioTrackRemoved: 'a-r',
-
-    CustomRemoteAudioTrackPositionAdded: 'c-a-p-a',
-    CustomRemoteAudioTrackPositionChanged: 'c-a-p-c',
-    CustomRemoteAudioTrackPositionRemoved: 'c-a-p-r',
-
-    CustomRemoteAudioTrackVolumeAdded: 'c-a-v-a',
-    CustomRemoteAudioTrackVolumeChanged: 'c-a-v-c',
-    CustomRemoteAudioTrackVolumeRemoved: 'c-a-v-r',
+    CustomAudioTrackVolumeAdded: 'c-a-v-a',
+    CustomAudioTrackVolumeChanged: 'c-a-v-c',
+    CustomAudioTrackVolumeRemoved: 'c-a-v-r',
 }
 export default ServerDeviceEvents

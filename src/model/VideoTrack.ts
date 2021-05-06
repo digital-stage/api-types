@@ -1,10 +1,9 @@
-interface RemoteVideoTrack<IdType = string> {
+interface VideoTrack<IdType = string> {
     _id: IdType
     userId: IdType
     stageId: IdType
     stageMemberId: IdType
     stageDeviceId: IdType
-    localVideoTrackId: IdType
 
     /**
      * The type of the producing device
@@ -16,4 +15,4 @@ interface RemoteVideoTrack<IdType = string> {
     [id: string]: any
 }
 
-export default RemoteVideoTrack
+export default VideoTrack

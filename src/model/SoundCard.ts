@@ -1,10 +1,10 @@
 interface SoundCard<IdType = string> {
     _id: IdType
-    userId: IdType
+    deviceId: IdType
 
     /**
      * Soundcard identifier on system,
-     * will make sound card unique together with user id
+     * will make sound card unique together with device id
      */
     uuid: string
 
@@ -30,6 +30,9 @@ interface SoundCard<IdType = string> {
     }
 
     online: boolean
+
+    // helper entry
+    userId: IdType
 }
 
 export default SoundCard
