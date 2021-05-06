@@ -25,7 +25,7 @@ interface Device<IdType = string> {
     createdAt: Date
     lastLoginAt: Date
 
-    soundCardId: IdType
+    soundCardId: IdType | null
 
     volume: number
 
@@ -44,5 +44,30 @@ interface Device<IdType = string> {
     // Additional information about connected api server
     apiServer: string
 }
+
+const InitialDevice: Omit<Device, '_id' | 'userId' | 'soundCardId'> = {
+    uuid: null,
+    type: 'unknown',
+    availableSoundCardIds: [],
+    soundCardId: null,
+    requestSession: false,
+    canAudio: false,
+    canVideo: false,
+    receiveAudio: false,
+    receiveVideo: false,
+    sendAudio: false,
+    sendVideo: false,
+    ovRawMode: false,
+    ovRenderISM: false,
+    ovP2p: true,
+    ovReceiverType: 'ortf',
+    ovRenderReverb: true,
+    ovReverbGain: 0.4,
+    canOv: false,
+    volume: 1,
+    egoGain: 1,
+}
+
+export { InitialDevice }
 
 export default Device

@@ -2,6 +2,7 @@ import ClientDeviceEvents from './ClientDeviceEvents'
 import ClientDevicePayloads from './ClientDevicePayloads'
 import ClientRouterEvents from './ClientRouterEvents'
 import ClientRouterPayloads from './ClientRouterPayloads'
+import { InitialDevice } from './model/Device'
 import ServerDeviceEvents from './ServerDeviceEvents'
 import ServerDevicePayloads from './ServerDevicePayloads'
 import Payloads from './ServerPayloads'
@@ -18,4 +19,10 @@ export type {
     Payloads,
 }
 
-export { ClientDeviceEvents, ClientRouterEvents, ServerDeviceEvents, ServerRouterEvents }
+export {
+    ClientDeviceEvents,
+    ClientRouterEvents,
+    ServerDeviceEvents,
+    ServerRouterEvents,
+    InitialDevice,
+}
