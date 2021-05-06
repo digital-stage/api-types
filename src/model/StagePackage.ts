@@ -27,10 +27,10 @@ interface StagePackage<IdType = string> {
     stageDevices: StageDevice<IdType>[]
     customStageDeviceVolumes: CustomStageDeviceVolume<IdType>[]
     customStageDevicePositions: CustomStageDevicePosition<IdType>[]
-    remoteAudioTracks: AudioTrack<IdType>[]
-    remoteVideoTracks: VideoTrack<IdType>[]
-    customRemoteAudioTrackPositions: CustomAudioTrackPosition<IdType>[]
-    customRemoteAudioTrackVolumes: CustomAudioTrackVolume<IdType>[]
+    audioTracks: AudioTrack<IdType>[]
+    videoTracks: VideoTrack<IdType>[]
+    customAudioTrackPositions: CustomAudioTrackPosition<IdType>[]
+    customAudioTrackVolumes: CustomAudioTrackVolume<IdType>[]
 }
 
 export default StagePackage

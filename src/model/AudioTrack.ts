@@ -3,7 +3,6 @@ import VolumeProperties from './VolumeProperties'
 
 interface AudioTrack<IdType = string> extends ThreeDimensionalProperties, VolumeProperties {
     _id: IdType
-    localAudioTrackId: IdType
     userId: IdType
     deviceId: IdType
     stageId: IdType

@@ -111,18 +111,18 @@ namespace ClientDevicePayloads {
     export type CustomStageDeviceVolumeAdded = CustomStageDeviceVolume
 
     /* VIDEO TRACKS */
-    export type CreateLocalVideoTrack = Partial<Omit<VideoTrack, '_id'>>
-    export type ChangeLocalVideoTrack = {
+    export type CreateVideoTrack = Partial<Omit<VideoTrack, '_id'>>
+    export type ChangeVideoTrack = {
         _id: VideoTrackId
     } & Partial<VideoTrack>
-    export type RemoveLocalVideoTrack = VideoTrackId
+    export type RemoveVideoTrack = VideoTrackId
 
     /* AUDIO TRACKS */
-    export type CreateLocalAudioTrack = Partial<Omit<AudioTrack, '_id'>>
-    export type ChangeLocalAudioTrack = {
+    export type CreateAudioTrack = Partial<Omit<AudioTrack, '_id'>>
+    export type ChangeAudioTrack = {
         _id: AudioTrackId
     } & Partial<AudioTrack>
-    export type RemoveLocalAudioTrack = AudioTrackId
+    export type RemoveAudioTrack = AudioTrackId
 
     export type SetCustomAudioTrackVolume = {
         audioTrackId: AudioTrackId
