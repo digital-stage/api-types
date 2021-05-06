@@ -28,6 +28,16 @@ interface Device<IdType = string> {
     availableSoundCardIds: IdType[]
     soundCardId: IdType
 
+    // OV SPECIFIC
+    egoGain: number
+    ovReverbGain: number
+    ovRenderReverb: boolean
+    ovRenderISM: boolean
+    ovRawMode: boolean
+    ovReceiverType: 'ortf' | 'hrtf'
+    canOv: true
+    ovP2p: boolean
+
     [additional: string]: any
 
     // Additional information about connected api server
