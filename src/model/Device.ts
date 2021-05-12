@@ -7,6 +7,8 @@ interface Device<IdType = string> {
      */
     type: 'mediasoup' | 'ov' | 'jammer'
 
+    name: string
+
     online: boolean
 
     canAudio: boolean
