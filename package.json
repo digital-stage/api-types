@@ -14,7 +14,7 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test",
-    "lint": "eslint --fix src/**",
+    "lint": "eslint src/**",
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why"
@@ -22,7 +22,7 @@
   "peerDependencies": {},
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
+      "pre-commit": "eslint lint --fix"
     }
   },
   "prettier": {
@@ -47,15 +47,15 @@
   ],
   "devDependencies": {
     "@size-limit/preset-small-lib": "^4.10.2",
-    "@typescript-eslint/eslint-plugin": "^4.22.1",
-    "eslint": "^7.25.0",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "eslint": "^7.26.0",
     "eslint-config-airbnb-typescript": "^12.3.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-promise": "^5.1.0",
     "husky": "^6.0.0",
-    "prettier": "^2.2.1",
+    "prettier": "^2.3.0",
     "size-limit": "^4.10.2",
     "tsdx": "^0.14.1",
     "tslib": "^2.2.0",
@@ -73,5 +73,8 @@
   "bugs": {
     "url": "https://github.com/digital-stage/api-types/issues"
   },
-  "homepage": "https://github.com/digital-stage/api-types#readme"
+  "homepage": "https://github.com/digital-stage/api-types#readme",
+  "dependencies": {
+    "husky": "^6.0.0"
+  }
 }
