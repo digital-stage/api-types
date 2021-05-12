@@ -9,6 +9,10 @@ interface StageDevice<IdType = string> extends ThreeDimensionalProperties, Volum
     groupId: IdType
     stageMemberId: IdType
 
+    name: string
+
+    type: 'mediasoup' | 'ov' | 'jammer'
+
     active: boolean
 
     order: number

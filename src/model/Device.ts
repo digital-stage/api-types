@@ -5,7 +5,7 @@ interface Device<IdType = string> {
     /**
      * This _identifies the type of the device. Regarding to the type additional items may be available.
      */
-    type: string
+    type: 'mediasoup' | 'ov' | 'jammer'
 
     online: boolean
 
