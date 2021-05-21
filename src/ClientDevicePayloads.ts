@@ -147,7 +147,7 @@ namespace ClientDevicePayloads {
         stageId: string
         groupId: string
     }
-    export type RevokeInviteCode = string
+    export type RevokeInviteCode = EncodeInviteCode
     export type DecodeInviteCode = string
 }
 
