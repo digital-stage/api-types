@@ -52,6 +52,7 @@ const ClientDeviceEvents = {
     LeaveStageForGood: 'leave-stage-for-good',
 
     EncodeInviteCode: 'encode-invite',
+    RevokeInviteCode: 'revoke-invite',
     DecodeInviteCode: 'decode-invite',
 }
 export default ClientDeviceEvents
