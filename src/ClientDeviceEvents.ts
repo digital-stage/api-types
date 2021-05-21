@@ -50,5 +50,8 @@ const ClientDeviceEvents = {
     JoinStage: 'join-stage',
     LeaveStage: 'leave-stage',
     LeaveStageForGood: 'leave-stage-for-good',
+
+    EncodeInviteCode: 'encode-invite',
+    DecodeInviteCode: 'decode-invite',
 }
 export default ClientDeviceEvents

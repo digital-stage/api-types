@@ -1,6 +1,6 @@
 module.exports = {
     "extends": [
-        'airbnb-typescript',
+        'airbnb-typescript/base',
         "plugin:promise/recommended",
         "plugin:prettier/recommended"
     ],

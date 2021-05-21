@@ -142,6 +142,12 @@ namespace ClientDevicePayloads {
     }
 
     export type LeaveStageForGood = string
+
+    export type EncodeInviteCode = {
+        stageId: string
+        groupId: string
+    }
+    export type DecodeInviteCode = string
 }
 
 export default ClientDevicePayloads
