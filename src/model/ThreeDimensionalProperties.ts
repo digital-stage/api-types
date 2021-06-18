@@ -9,7 +9,7 @@ interface ThreeDimensionalProperties {
 }
 
 const DefaultThreeDimensionalProperties: ThreeDimensionalProperties = {
-    directivity: 'omni',
+    directivity: 'cardoid',
     x: 0,
     y: -1,
     z: 0,
