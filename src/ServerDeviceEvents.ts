@@ -5,13 +5,9 @@ const ServerDeviceEvents = {
     UserReady: 'u-r',
     Ready: 'ok',
 
-    UserAdded: 'u-a', // Never via socket
+    UserAdded: 'u-a',
     UserChanged: 'u-c',
-    UserRemoved: 'u-r', // Never via socket
-
-    RemoteUserAdded: 'r-u-a',
-    RemoteUserChanged: 'r-u-c',
-    RemoteUserRemoved: 'r-u-r',
+    UserRemoved: 'u-r',
 
     ChatMessageSend: 'c',
 

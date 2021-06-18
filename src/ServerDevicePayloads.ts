@@ -46,11 +46,10 @@ namespace ServerDevicePayloads {
     export type RouterChanged = { _id: RouterId } & Partial<Router>
     export type RouterRemoved = UserId
 
-    export type UserChanged = { _id: UserId } & Partial<User>
+    export type UserAdded = User
     export type UserReady = User
-    export type RemoteUserAdded = User
-    export type RemoteUserChanged = { _id: UserId } & Partial<User>
-    export type RemoteUserRemoved = UserId
+    export type UserChanged = { _id: UserId } & Partial<User>
+    export type UserRemoved = UserId
 
     export type ChatMessageSend = ChatMessage
 

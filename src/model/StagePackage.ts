@@ -15,7 +15,7 @@ import CustomStageDeviceVolume from './CustomStageDeviceVolume'
 import CustomStageDevicePosition from './CustomStageDevicePosition'
 
 interface StagePackage<IdType = string> {
-    remoteUsers: User<IdType>[]
+    users: User<IdType>[]
 
     stage?: Stage<IdType>
     groups?: Group<IdType>[]
