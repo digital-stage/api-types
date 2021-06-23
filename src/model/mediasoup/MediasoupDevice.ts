@@ -21,6 +21,9 @@ interface MediasoupDevice<IdType = string> extends Device<IdType> {
     echoCancellation?: boolean
     noiseSuppression?: boolean
 
+    os?: string
+    browser?: string
+
     egoVolume: number
 }
 
