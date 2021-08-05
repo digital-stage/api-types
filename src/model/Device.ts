@@ -44,7 +44,6 @@ interface Device<IdType = string> {
     [additional: string]: any
 
     // Additional information about connected api server
-    socketId?: string
     apiServer: string
 }
 
