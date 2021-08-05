@@ -5,6 +5,7 @@ interface BrowserDevice<IdType = string> extends Device<IdType> {
     type: 'browser'
 
     canWebRTC: true
+    canMediasoup: true
 
     // WebRTC video device
     inputVideoDevices: WebMediaDevice[]

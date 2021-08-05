@@ -1,9 +1,9 @@
 import AudioTrack from '../AudioTrack'
 
-interface BrowserAudioTrack<IdType = string> extends AudioTrack<IdType> {
+interface WebRTCAudioTrack<IdType = string> extends AudioTrack<IdType> {
     type: 'browser'
 
     trackId: string
 }
 
-export default BrowserAudioTrack
+export default WebRTCAudioTrack
