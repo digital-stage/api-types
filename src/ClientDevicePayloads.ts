@@ -151,6 +151,11 @@ namespace ClientDevicePayloads {
     export type RevokeInviteCode = EncodeInviteCode
     export type DecodeInviteCode = string
 
+    export type SendP2POffer = {
+        from: StageDeviceId
+        to: StageDeviceId
+        offer: RTCSessionDescriptionInit
+    }
     export type SendP2PAnswer = {
         from: StageDeviceId
         to: StageDeviceId
