@@ -11,13 +11,16 @@ interface StageDevice<IdType = string> extends ThreeDimensionalProperties, Volum
 
     name: string
 
-    type: 'mediasoup' | 'ov' | 'jammer'
+    type: 'browser' | 'mediasoup' | 'ov' | 'jammer'
 
     active: boolean
 
     order: number
 
     sendLocal: boolean
+
+    /* WebRTC specific */
+    offer?: RTCSessionDescriptionInit
 }
 
 export default StageDevice

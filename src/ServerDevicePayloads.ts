@@ -146,6 +146,9 @@ namespace ServerDevicePayloads {
         _id: CustomAudioTrackPositionId
     } & Partial<ThreeDimensionalProperties>
     export type CustomAudioTrackPositionRemoved = CustomAudioTrackPositionId
+
+    export type P2PAnswerSent = RTCSessionDescriptionInit
+    export type IceCandidateSent = RTCIceCandidate
 }
 
 export default ServerDevicePayloads
