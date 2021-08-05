@@ -46,6 +46,7 @@ namespace ClientDevicePayloads {
 
     /* DEVICE */
     export type ChangeDevice = { _id: DeviceId } & Partial<Device>
+    export type RemoveDevice = DeviceId
 
     /* SDUND CARD */
     export type SetSoundCard = { uuid: string } & Partial<SoundCard>
