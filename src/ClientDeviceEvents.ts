@@ -54,5 +54,8 @@ const ClientDeviceEvents = {
     EncodeInviteCode: 'encode-invite',
     RevokeInviteCode: 'revoke-invite',
     DecodeInviteCode: 'decode-invite',
+
+    SendP2PAnswer: 'send-p2p-answer',
+    SendIceCandidate: 'send-ice-candidate',
 }
 export default ClientDeviceEvents
