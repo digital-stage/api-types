@@ -152,11 +152,13 @@ namespace ClientDevicePayloads {
     export type DecodeInviteCode = string
 
     export type SendP2PAnswer = {
-        stageDeviceId: StageDeviceId
+        from: StageDeviceId
+        to: StageDeviceId
         answer: RTCSessionDescriptionInit
     }
     export type SendIceCandidate = {
-        stageDeviceId: StageDeviceId
+        from: StageDeviceId
+        to: StageDeviceId
         iceCandidate: RTCIceCandidate
     }
 }

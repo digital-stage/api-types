@@ -18,9 +18,6 @@ interface StageDevice<IdType = string> extends ThreeDimensionalProperties, Volum
     order: number
 
     sendLocal: boolean
-
-    /* WebRTC specific */
-    offer?: RTCSessionDescriptionInit
 }
 
 export default StageDevice
