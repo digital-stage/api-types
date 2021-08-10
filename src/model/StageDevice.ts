@@ -18,6 +18,8 @@ interface StageDevice<IdType = string> extends ThreeDimensionalProperties, Volum
     order: number
 
     sendLocal: boolean
+
+    [additional: string]: any
 }
 
 export default StageDevice
