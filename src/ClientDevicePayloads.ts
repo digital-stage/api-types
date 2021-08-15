@@ -138,7 +138,7 @@ namespace ClientDevicePayloads {
 
     export interface JoinStage {
         stageId: string
-        groupId: string
+        groupId?: string
         password?: string
     }
 
