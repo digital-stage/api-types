@@ -81,5 +81,9 @@ const ServerDeviceEvents = {
     CustomAudioTrackVolumeAdded: 'c-a-v-a',
     CustomAudioTrackVolumeChanged: 'c-a-v-c',
     CustomAudioTrackVolumeRemoved: 'c-a-v-r',
+
+    P2POfferSent: 'p2p-o',
+    P2PAnswerSent: 'p2p-a',
+    IceCandidateSent: 'ice',
 }
 export default ServerDeviceEvents

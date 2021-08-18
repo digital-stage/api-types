@@ -5,6 +5,7 @@ const ClientDeviceEvents = {
     ChangeUser: 'change-user',
     RemoveUser: 'remove-user',
     ChangeDevice: 'change-device',
+    RemoveDevice: 'remove-device',
     SetSoundCard: 'set-sound-card',
     ChangeSoundCard: 'change-sound-card',
     RemoveSoundCard: 'remove-sound-card',
@@ -54,5 +55,9 @@ const ClientDeviceEvents = {
     EncodeInviteCode: 'encode-invite',
     RevokeInviteCode: 'revoke-invite',
     DecodeInviteCode: 'decode-invite',
+
+    SendP2POffer: 'send-p2p-offer',
+    SendP2PAnswer: 'send-p2p-answer',
+    SendIceCandidate: 'send-ice-candidate',
 }
 export default ClientDeviceEvents

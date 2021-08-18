@@ -24,7 +24,7 @@ import User from './User'
 import VolumeProperties, { DefaultVolumeProperties } from './VolumeProperties'
 import InitialStagePackage from './InitialStagePackage'
 
-export * from './mediasoup'
+export * from './browser'
 export * from './jammer'
 export * from './ov'
 

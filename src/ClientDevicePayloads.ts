@@ -46,6 +46,7 @@ namespace ClientDevicePayloads {
 
     /* DEVICE */
     export type ChangeDevice = { _id: DeviceId } & Partial<Device>
+    export type RemoveDevice = DeviceId
 
     /* SDUND CARD */
     export type SetSoundCard = { uuid: string } & Partial<SoundCard>
@@ -137,7 +138,7 @@ namespace ClientDevicePayloads {
 
     export interface JoinStage {
         stageId: string
-        groupId: string
+        groupId?: string
         password?: string
     }
 
@@ -149,6 +150,22 @@ namespace ClientDevicePayloads {
     }
     export type RevokeInviteCode = EncodeInviteCode
     export type DecodeInviteCode = string
+
+    export type SendP2POffer = {
+        from: StageDeviceId
+        to: StageDeviceId
+        offer: RTCSessionDescriptionInit
+    }
+    export type SendP2PAnswer = {
+        from: StageDeviceId
+        to: StageDeviceId
+        answer: RTCSessionDescriptionInit
+    }
+    export type SendIceCandidate = {
+        from: StageDeviceId
+        to: StageDeviceId
+        iceCandidate: RTCIceCandidate
+    }
 }
 
 export default ClientDevicePayloads

@@ -1,9 +1,10 @@
 import Device from '../Device'
 import WebMediaDevice from './WebMediaDevice'
 
-interface MediasoupDevice<IdType = string> extends Device<IdType> {
-    type: 'mediasoup'
+interface BrowserDevice<IdType = string> extends Device<IdType> {
+    type: 'browser'
 
+    canWebRTC: true
     canMediasoup: true
 
     // WebRTC video device
@@ -27,4 +28,4 @@ interface MediasoupDevice<IdType = string> extends Device<IdType> {
     egoVolume: number
 }
 
-export default MediasoupDevice
+export default BrowserDevice
