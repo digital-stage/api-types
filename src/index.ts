@@ -2,6 +2,7 @@ import ClientDeviceEvents from './ClientDeviceEvents'
 import ClientDevicePayloads from './ClientDevicePayloads'
 import ClientRouterEvents from './ClientRouterEvents'
 import ClientRouterPayloads from './ClientRouterPayloads'
+import ErrorCodes from './ErrorCodes'
 import { getDefaultDeviceValues } from './model/Device'
 import ServerDeviceEvents from './ServerDeviceEvents'
 import ServerDevicePayloads from './ServerDevicePayloads'
@@ -17,6 +18,7 @@ export type {
     ServerDevicePayloads,
     ServerRouterPayloads,
     Payloads,
+    ErrorCodes,
 }
 
 export {
