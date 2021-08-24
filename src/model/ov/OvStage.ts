@@ -1,4 +1,4 @@
-import Stage from '../Stage'
+import { Stage } from '../Stage'
 
 interface OvStage<IdType = string> extends Stage<IdType> {
     ovAmbientSoundUrl?: string

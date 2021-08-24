@@ -1,4 +1,4 @@
-import AudioTrack from '../AudioTrack'
+import { AudioTrack } from '../AudioTrack'
 
 interface WebRTCAudioTrack<IdType = string> extends AudioTrack<IdType> {
     type: 'browser'

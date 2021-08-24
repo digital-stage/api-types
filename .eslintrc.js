@@ -1,4 +1,3 @@
-
 module.exports = {
     plugins: ["import"],
     extends: [
@@ -19,13 +18,13 @@ module.exports = {
         // Use function hoisting to improve code readability
         "no-use-before-define": [
             "error",
-            { functions: false, classes: true, variables: true },
+            {functions: false, classes: true, variables: true},
         ],
         // Allow most functions to rely on type inference. If the function is exported, then `@typescript-eslint/explicit-module-boundary-types` will ensure it's typed.
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/no-use-before-define": [
             "error",
-            { functions: false, classes: true, variables: true, typedefs: true },
+            {functions: false, classes: true, variables: true, typedefs: true},
         ],
         // It's not accurate in the monorepo style
         "import/no-extraneous-dependencies": "off",
@@ -44,6 +43,8 @@ module.exports = {
                 "endOfLine": "auto"
             },
         ],
+        // Just for this library:
+        "@typescript-eslint/no-namespace": "off"
     },
     parserOptions: {
         project: './tsconfig.json'

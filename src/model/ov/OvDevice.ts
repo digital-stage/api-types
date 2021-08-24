@@ -1,4 +1,4 @@
-import Device from '../Device'
+import { Device } from '../Device'
 
 interface OvDevice<IdType = string> extends Device<IdType> {
     type: 'ov'

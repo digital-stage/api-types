@@ -1,4 +1,4 @@
-import StageDevice from '../StageDevice'
+import { StageDevice } from '../StageDevice'
 
 interface WebRTCStageDevice<IdType = string> extends StageDevice<IdType> {
     offer: RTCSessionDescriptionInit

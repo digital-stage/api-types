@@ -1,4 +1,4 @@
-import ThreeDimensionalProperties from './ThreeDimensionalProperties'
+import { ThreeDimensionalProperties } from './ThreeDimensionalProperties'
 
 interface CustomStageDevicePosition<IdType = string> extends ThreeDimensionalProperties {
     _id: IdType

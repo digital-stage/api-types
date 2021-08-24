@@ -52,7 +52,7 @@ export const getDefaultDeviceValues = <IdType = string>(): Omit<
     '_id' | 'userId' | 'soundCardId'
 > => ({
     uuid: null,
-    type: 'unknown',
+    type: 'browser',
     requestSession: false,
     canAudio: false,
     canVideo: false,

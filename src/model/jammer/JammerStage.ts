@@ -1,4 +1,4 @@
-import Stage from '../Stage'
+import { Stage } from '../Stage'
 
 interface JammerStage extends Stage {
     jammerIpv4: string

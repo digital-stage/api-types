@@ -1,4 +1,4 @@
-import VolumeProperties from './VolumeProperties'
+import { VolumeProperties } from './VolumeProperties'
 
 interface CustomAudioTrackVolume<IdType = string> extends VolumeProperties {
     _id: IdType

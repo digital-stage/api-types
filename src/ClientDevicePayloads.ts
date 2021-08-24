@@ -1,16 +1,16 @@
 import { Stage } from './model/Stage'
-import Group from './model/Group'
-import StageMember from './model/StageMember'
+import { Group } from './model/Group'
+import { StageMember } from './model/StageMember'
 import { AudioTrack } from './model/AudioTrack'
-import ThreeDimensionalProperties from './model/ThreeDimensionalProperties'
-import VolumeProperties from './model/VolumeProperties'
-import CustomStageMemberVolume from './model/CustomStageMemberVolume'
+import { ThreeDimensionalProperties } from './model/ThreeDimensionalProperties'
+import { VolumeProperties } from './model/VolumeProperties'
+import { CustomStageMemberVolume } from './model/CustomStageMemberVolume'
 import { Device } from './model/Device'
 import { Router } from './model/Router'
-import SoundCard from './model/SoundCard'
+import { SoundCard } from './model/SoundCard'
 import { StageDevice } from './model/StageDevice'
-import CustomStageDeviceVolume from './model/CustomStageDeviceVolume'
-import { VideoTrack } from './model'
+import { CustomStageDeviceVolume } from './model/CustomStageDeviceVolume'
+import { VideoTrack } from './model/VideoTrack'
 
 declare namespace ClientDevicePayloads {
     export type PayloadIdType = string
@@ -53,7 +53,7 @@ declare namespace ClientDevicePayloads {
     export type ChangeSoundCard = { _id: SoundCardId } & Partial<SoundCard>
 
     /* STAGE */
-    export type CreateStage = Omit<Stage, '_id'>
+    export type CreateStage = Partial<Omit<Stage, '_id'>>
     export type ChangeStage = { _id: StageId } & Partial<Stage>
     export type RemoveStage = StageId
 
@@ -112,14 +112,14 @@ declare namespace ClientDevicePayloads {
     export type CustomStageDeviceVolumeAdded = CustomStageDeviceVolume
 
     /* VIDEO TRACKS */
-    export type CreateVideoTrack = Partial<Omit<VideoTrack, '_id'>>
+    export type CreateVideoTrack = Partial<Omit<VideoTrack, '_id'>> & { stageId: StageId }
     export type ChangeVideoTrack = {
         _id: VideoTrackId
     } & Partial<VideoTrack>
     export type RemoveVideoTrack = VideoTrackId
 
     /* AUDIO TRACKS */
-    export type CreateAudioTrack = Partial<Omit<AudioTrack, '_id'>>
+    export type CreateAudioTrack = Partial<Omit<AudioTrack, '_id'>> & { stageId: StageId }
     export type ChangeAudioTrack = {
         _id: AudioTrackId
     } & Partial<AudioTrack>

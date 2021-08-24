@@ -1,5 +1,5 @@
-import ThreeDimensionalProperties from './ThreeDimensionalProperties'
-import VolumeProperties from './VolumeProperties'
+import { ThreeDimensionalProperties } from './ThreeDimensionalProperties'
+import { VolumeProperties } from './VolumeProperties'
 
 export interface AudioTrack<IdType = string> extends ThreeDimensionalProperties, VolumeProperties {
     _id: IdType

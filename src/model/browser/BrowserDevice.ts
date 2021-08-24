@@ -1,5 +1,5 @@
-import Device from '../Device'
-import WebMediaDevice from './WebMediaDevice'
+import { Device } from '../Device'
+import { WebMediaDevice } from './WebMediaDevice'
 
 interface BrowserDevice<IdType = string> extends Device<IdType> {
     type: 'browser'

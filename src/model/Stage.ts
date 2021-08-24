@@ -27,7 +27,7 @@ interface Stage<IdType = string> {
     reflection: number
     absorption: number
 
-    [additional: string]: unknown
+    [additional: string]: any
 }
 
 export { Stage }

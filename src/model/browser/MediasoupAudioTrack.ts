@@ -1,4 +1,4 @@
-import AudioTrack from '../AudioTrack'
+import { AudioTrack } from '../AudioTrack'
 
 interface MediasoupAudioTrack<IdType = string> extends AudioTrack<IdType> {
     type: 'mediasoup'

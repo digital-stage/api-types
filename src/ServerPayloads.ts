@@ -9,7 +9,7 @@ declare namespace Payloads {
     // General or common payloads
     export interface ConnectAsRouter {
         apiKey: string
-        router?: Omit<Router, '_id'>
+        router?: Partial<Omit<Router, '_id'>>
     }
 
     export interface ConnectWithToken {
