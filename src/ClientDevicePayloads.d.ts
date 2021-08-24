@@ -1,14 +1,14 @@
-import Stage from './model/Stage'
+import { Stage } from './model/Stage'
 import Group from './model/Group'
 import StageMember from './model/StageMember'
-import AudioTrack from './model/AudioTrack'
+import { AudioTrack } from './model/AudioTrack'
 import ThreeDimensionalProperties from './model/ThreeDimensionalProperties'
 import VolumeProperties from './model/VolumeProperties'
 import CustomStageMemberVolume from './model/CustomStageMemberVolume'
-import Device from './model/Device'
-import Router from './model/Router'
+import { Device } from './model/Device'
+import { Router } from './model/Router'
 import SoundCard from './model/SoundCard'
-import StageDevice from './model/StageDevice'
+import { StageDevice } from './model/StageDevice'
 import CustomStageDeviceVolume from './model/CustomStageDeviceVolume'
 import { VideoTrack } from './model'
 
@@ -168,4 +168,4 @@ namespace ClientDevicePayloads {
     }
 }
 
-export default ClientDevicePayloads
+export { ClientDevicePayloads }

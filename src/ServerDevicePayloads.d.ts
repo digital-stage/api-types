@@ -1,27 +1,27 @@
-import Stage from './model/Stage'
-import Group from './model/Group'
-import StageMember from './model/StageMember'
-import AudioTrack from './model/AudioTrack'
-import ThreeDimensionalProperties from './model/ThreeDimensionalProperties'
-import User from './model/User'
-import CustomGroupVolume from './model/CustomGroupVolume'
-import CustomGroupPosition from './model/CustomGroupPosition'
-import VolumeProperties from './model/VolumeProperties'
-import CustomStageMemberVolume from './model/CustomStageMemberVolume'
-import CustomStageMemberPosition from './model/CustomStageMemberPosition'
-import CustomAudioTrackVolume from './model/CustomAudioTrackVolume'
-import CustomAudioTrackPosition from './model/CustomAudioTrackPosition'
-import StagePackage from './model/StagePackage'
-import Router from './model/Router'
-import Device from './model/Device'
-import SoundCard from './model/SoundCard'
-import ChatMessage from './model/ChatMessage'
-import VideoTrack from './model/VideoTrack'
-import StageDevice from './model/StageDevice'
-import CustomStageDeviceVolume from './model/CustomStageDeviceVolume'
-import CustomStageDevicePosition from './model/CustomStageDevicePosition'
+import { Stage } from './model/Stage'
+import {Group} from './model/Group'
+import {StageMember} from './model/StageMember'
+import { AudioTrack } from './model/AudioTrack'
+import {ThreeDimensionalProperties} from './model/ThreeDimensionalProperties'
+import { User } from './model/User'
+import {CustomGroupVolume} from './model/CustomGroupVolume'
+import {CustomGroupPosition} from './model/CustomGroupPosition'
+import {VolumeProperties} from './model/VolumeProperties'
+import {CustomStageMemberVolume} from './model/CustomStageMemberVolume'
+import {CustomStageMemberPosition} from './model/CustomStageMemberPosition'
+import {CustomAudioTrackVolume} from './model/CustomAudioTrackVolume'
+import {CustomAudioTrackPosition} from './model/CustomAudioTrackPosition'
+import {StagePackage} from './model/StagePackage'
+import { Router } from './model/Router'
+import { Device } from './model/Device'
+import {SoundCard} from './model/SoundCard'
+import {ChatMessage} from './model/ChatMessage'
+import { VideoTrack } from './model/VideoTrack'
+import { StageDevice } from './model/StageDevice'
+import {CustomStageDeviceVolume} from './model/CustomStageDeviceVolume'
+import {CustomStageDevicePosition} from './model/CustomStageDevicePosition'
 
-namespace ServerDevicePayloads {
+declare module ServerDevicePayloads {
     export type PayloadIdType = string
     export type CustomGroupPositionId = PayloadIdType
     export type CustomGroupVolumeId = PayloadIdType
@@ -164,4 +164,4 @@ namespace ServerDevicePayloads {
     }
 }
 
-export default ServerDevicePayloads
+export { ServerDevicePayloads }

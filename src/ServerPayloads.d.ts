@@ -1,7 +1,7 @@
-import Router from './model/Router'
-import Device from './model/Device'
+import { Router } from './model/Router'
+import { Device } from './model/Device'
 
-namespace Payloads {
+declare module Payloads {
     export type PayloadIdType = string
     export type RemoteAudioTrackId = PayloadIdType
     export type UserId = PayloadIdType
@@ -18,4 +18,4 @@ namespace Payloads {
     }
 }
 
-export default Payloads
+export { Payloads }
