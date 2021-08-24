@@ -8,4 +8,4 @@ const ServerRouterEvents = {
     ServeStage: 'serve-stage',
     UnServeStage: 'un-serve-stage',
 }
-export default ServerRouterEvents
+export { ServerRouterEvents }

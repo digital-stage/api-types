@@ -33,4 +33,4 @@ interface StagePackage<IdType = string> {
     customAudioTrackVolumes: CustomAudioTrackVolume<IdType>[]
 }
 
-export default StagePackage
+export { StagePackage }

@@ -12,4 +12,4 @@ interface User<IdType = string> {
     stageMemberId: IdType | null // Redundancy, but needed for performance issues
 }
 
-export default User
+export { User }

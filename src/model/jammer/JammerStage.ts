@@ -7,4 +7,4 @@ interface JammerStage extends Stage {
     jammerKey: string
 }
 
-export default JammerStage
+export { JammerStage }

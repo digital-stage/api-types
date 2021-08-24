@@ -5,4 +5,4 @@ interface InitialStagePackage<IdType = string> extends StagePackage<IdType> {
     groupId: IdType
 }
 
-export default InitialStagePackage
+export { InitialStagePackage }

@@ -10,4 +10,4 @@ interface CustomAudioTrackPosition<IdType = string> extends ThreeDimensionalProp
     userId: IdType
 }
 
-export default CustomAudioTrackPosition
+export { CustomAudioTrackPosition }

@@ -8,4 +8,4 @@ interface MediasoupStage extends Stage {
         port: number
     }
 }
-export default MediasoupStage
+export { MediasoupStage }

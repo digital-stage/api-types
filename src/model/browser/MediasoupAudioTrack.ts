@@ -6,4 +6,4 @@ interface MediasoupAudioTrack<IdType = string> extends AudioTrack<IdType> {
     producerId: string
 }
 
-export default MediasoupAudioTrack
+export { MediasoupAudioTrack }

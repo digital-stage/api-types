@@ -10,4 +10,4 @@ interface CustomGroupPosition<IdType = string> extends ThreeDimensionalPropertie
     stageId: IdType
 }
 
-export default CustomGroupPosition
+export { CustomGroupPosition }

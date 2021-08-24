@@ -11,4 +11,4 @@ interface StageMember<IdType = string> extends ThreeDimensionalProperties, Volum
     isDirector: boolean
 }
 
-export default StageMember
+export { StageMember }

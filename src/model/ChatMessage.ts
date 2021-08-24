@@ -5,4 +5,4 @@ interface ChatMessage<IdType = string> {
     time: number
 }
 
-export default ChatMessage
+export { ChatMessage }

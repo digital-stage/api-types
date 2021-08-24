@@ -35,4 +35,4 @@ interface SoundCard<IdType = string> {
     userId: IdType
 }
 
-export default SoundCard
+export { SoundCard }

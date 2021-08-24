@@ -6,4 +6,4 @@ interface WebRTCAudioTrack<IdType = string> extends AudioTrack<IdType> {
     trackId: string
 }
 
-export default WebRTCAudioTrack
+export { WebRTCAudioTrack }

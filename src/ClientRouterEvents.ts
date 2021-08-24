@@ -5,4 +5,4 @@ const ClientRouterEvents = {
     ChangeStage: 'change-stage',
     StageUnServed: 'stage-unserved',
 }
-export default ClientRouterEvents
+export { ClientRouterEvents }

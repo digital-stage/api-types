@@ -6,4 +6,4 @@ interface OvDevice<IdType = string> extends Device<IdType> {
     canOv: true
 }
 
-export default OvDevice
+export { OvDevice }

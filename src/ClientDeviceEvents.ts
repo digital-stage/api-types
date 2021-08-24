@@ -60,4 +60,4 @@ const ClientDeviceEvents = {
     SendP2PAnswer: 'send-p2p-answer',
     SendIceCandidate: 'send-ice-candidate',
 }
-export default ClientDeviceEvents
+export { ClientDeviceEvents }

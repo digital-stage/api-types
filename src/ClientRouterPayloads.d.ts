@@ -1,7 +1,7 @@
 import { Router } from './model/Router'
-import Stage from './model/Stage'
+import { Stage } from './model/Stage'
 
-declare module ClientRouterPayloads {
+declare namespace ClientRouterPayloads {
     // Client --> Server
     export type ChangeRouter = { _id: string } & Partial<Router>
     export type StageServed<StageType = Stage> = {

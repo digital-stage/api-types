@@ -1,4 +1,4 @@
 import { JammerDevice } from './JammerDevice'
-import JammerStage from './JammerStage'
+import { JammerStage } from './JammerStage'
 
 export type { JammerDevice, JammerStage }

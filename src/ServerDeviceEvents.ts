@@ -86,4 +86,4 @@ const ServerDeviceEvents = {
     P2PAnswerSent: 'p2p-a',
     IceCandidateSent: 'ice',
 }
-export default ServerDeviceEvents
+export { ServerDeviceEvents }

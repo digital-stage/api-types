@@ -3,4 +3,4 @@ interface WebMediaDevice {
     label: string
 }
 
-export default WebMediaDevice
+export { WebMediaDevice }

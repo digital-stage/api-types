@@ -18,4 +18,4 @@ const DefaultThreeDimensionalProperties: ThreeDimensionalProperties = {
     rZ: -180,
 }
 export { DefaultThreeDimensionalProperties }
-export default ThreeDimensionalProperties
+export { ThreeDimensionalProperties }

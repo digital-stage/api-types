@@ -6,4 +6,4 @@ interface MediasoupVideoTrack<IdType = string> extends VideoTrack<IdType> {
     producerId: string
 }
 
-export default MediasoupVideoTrack
+export { MediasoupVideoTrack }

@@ -18,4 +18,4 @@ interface OvStage<IdType = string> extends Stage<IdType> {
         }
     }
 }
-export default OvStage
+export { OvStage }

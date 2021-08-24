@@ -28,4 +28,4 @@ interface BrowserDevice<IdType = string> extends Device<IdType> {
     egoVolume: number
 }
 
-export default BrowserDevice
+export { BrowserDevice }

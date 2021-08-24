@@ -8,4 +8,4 @@ interface CustomStageMemberPosition<IdType = string> extends ThreeDimensionalPro
     stageMemberId: IdType
 }
 
-export default CustomStageMemberPosition
+export { CustomStageMemberPosition }

@@ -8,4 +8,4 @@ const DefaultVolumeProperties: VolumeProperties = {
     muted: false,
 }
 export { DefaultVolumeProperties }
-export default VolumeProperties
+export { VolumeProperties }

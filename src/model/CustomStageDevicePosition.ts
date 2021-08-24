@@ -8,4 +8,4 @@ interface CustomStageDevicePosition<IdType = string> extends ThreeDimensionalPro
     stageDeviceId: IdType
 }
 
-export default CustomStageDevicePosition
+export { CustomStageDevicePosition }

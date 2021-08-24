@@ -12,7 +12,7 @@ import { StageDevice } from './model/StageDevice'
 import CustomStageDeviceVolume from './model/CustomStageDeviceVolume'
 import { VideoTrack } from './model'
 
-namespace ClientDevicePayloads {
+declare namespace ClientDevicePayloads {
     export type PayloadIdType = string
     export type CustomGroupPositionId = PayloadIdType
     export type CustomGroupVolumeId = PayloadIdType
@@ -167,5 +167,4 @@ namespace ClientDevicePayloads {
         iceCandidate: RTCIceCandidate
     }
 }
-
 export { ClientDevicePayloads }

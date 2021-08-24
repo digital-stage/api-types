@@ -6,4 +6,4 @@ interface WebRTCVideoTrack<IdType = string> extends VideoTrack<IdType> {
     trackId: string
 }
 
-export default WebRTCVideoTrack
+export { WebRTCVideoTrack }

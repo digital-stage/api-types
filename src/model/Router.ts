@@ -14,7 +14,7 @@ interface Router<IdType = string> {
 
     apiServer: string
 
-    [additional: string]: any
+    [additional: string]: unknown
 }
 
-export default Router
+export { Router }

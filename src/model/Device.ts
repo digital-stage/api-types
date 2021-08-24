@@ -24,8 +24,8 @@ interface Device<IdType = string> {
     uuid: string | null
     requestSession?: boolean
 
-    createdAt: Date
-    lastLoginAt: Date
+    createdAt: number
+    lastLoginAt: number
 
     soundCardId: IdType | null
 
@@ -41,7 +41,7 @@ interface Device<IdType = string> {
     canOv: boolean
     ovP2p: boolean
 
-    [additional: string]: any
+    [additional: string]: unknown
 
     // Additional information about connected api server
     apiServer: string
@@ -71,4 +71,4 @@ export const getDefaultDeviceValues = <IdType = string>(): Omit<
     egoGain: 1,
 })
 
-export default Device
+export { Device }

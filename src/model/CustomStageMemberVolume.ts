@@ -8,4 +8,4 @@ interface CustomStageMemberVolume<IdType = string> extends VolumeProperties {
     stageMemberId: IdType
 }
 
-export default CustomStageMemberVolume
+export { CustomStageMemberVolume }

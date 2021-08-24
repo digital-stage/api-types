@@ -1,7 +1,7 @@
 import { Router } from './model/Router'
 import { Device } from './model/Device'
 
-declare module Payloads {
+declare namespace Payloads {
     export type PayloadIdType = string
     export type RemoteAudioTrackId = PayloadIdType
     export type UserId = PayloadIdType

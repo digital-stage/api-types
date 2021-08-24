@@ -10,4 +10,4 @@ interface CustomGroupVolume<IdType = string> extends VolumeProperties {
     stageId: IdType
 }
 
-export default CustomGroupVolume
+export { CustomGroupVolume }

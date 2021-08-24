@@ -1,4 +1,5 @@
-interface VideoTrack<IdType = string> {
+/*eslint @typescript-eslint/no-explicit-any: ["error", { "ignoreRestArgs": true }]*/
+export interface VideoTrack<IdType = string> {
     _id: IdType
     userId: IdType
     deviceId: IdType
@@ -10,10 +11,9 @@ interface VideoTrack<IdType = string> {
      * The type of the producing device
      */
     type: string
+
     /**
      * Type specific payload
      */
-    [id: string]: any
+    [id: string]: unknown
 }
-
-export default VideoTrack

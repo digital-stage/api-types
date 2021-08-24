@@ -12,4 +12,4 @@ interface Group<IdType = string> extends ThreeDimensionalProperties, VolumePrope
     iconUrl: string | null
 }
 
-export default Group
+export { Group }

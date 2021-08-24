@@ -10,4 +10,4 @@ interface CustomAudioTrackVolume<IdType = string> extends VolumeProperties {
     userId: IdType
 }
 
-export default CustomAudioTrackVolume
+export { CustomAudioTrackVolume }

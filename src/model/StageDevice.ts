@@ -19,7 +19,7 @@ interface StageDevice<IdType = string> extends ThreeDimensionalProperties, Volum
 
     sendLocal: boolean
 
-    [additional: string]: any
+    [additional: string]: unknown
 }
 
-export default StageDevice
+export { StageDevice }
