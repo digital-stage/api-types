@@ -17,5 +17,6 @@ export interface AudioTrack<IdType = string> extends ThreeDimensionalProperties,
     /**
      * Additional type specific payload
      */
-    [id: string]: unknown
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    [id: string]: any
 }

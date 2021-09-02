@@ -15,5 +15,6 @@ export interface VideoTrack<IdType = string> {
     /**
      * Type specific payload
      */
-    [id: string]: unknown
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    [id: string]: any
 }

@@ -19,7 +19,8 @@ interface StageDevice<IdType = string> extends ThreeDimensionalProperties, Volum
 
     sendLocal: boolean
 
-    [additional: string]: unknown
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    [additional: string]: any
 }
 
 export { StageDevice }

@@ -41,7 +41,8 @@ interface Device<IdType = string> {
     canOv: boolean
     ovP2p: boolean
 
-    [additional: string]: unknown
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    [additional: string]: any
 
     // Additional information about connected api server
     apiServer: string

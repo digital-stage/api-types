@@ -27,6 +27,10 @@ interface Stage<IdType = string> {
     reflection: number
     absorption: number
 
+    render3DAudio: boolean
+    renderReverb: boolean
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [additional: string]: any
 }
 
