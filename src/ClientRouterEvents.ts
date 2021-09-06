@@ -4,5 +4,6 @@ const ClientRouterEvents = {
     StageServed: 'stage-served',
     ChangeStage: 'change-stage',
     StageUnServed: 'stage-unserved',
+    TurnReady: 'turn-ready',
 }
 export { ClientRouterEvents }
