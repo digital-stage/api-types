@@ -46,7 +46,7 @@ declare namespace ServerDevicePayloads {
         turn?: {
             urls: string[]
             username: string
-            credentials: string
+            credential: string
         }
     }
 
