@@ -17,5 +17,6 @@ declare namespace ClientRouterPayloads {
         type: string // "ov" | "mediasoup" | "jammer"
         update: Partial<StageType> & { _id: string }
     }
+    export type TurnReady = string // static-auth-secret
 }
 export { ClientRouterPayloads }

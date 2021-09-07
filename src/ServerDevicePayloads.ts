@@ -42,6 +42,14 @@ declare namespace ServerDevicePayloads {
     export type SoundCardId = PayloadIdType
     export type VideoTrackId = PayloadIdType
 
+    export type Ready = {
+        turn?: {
+            urls: string[]
+            username: string
+            credentials: string
+        }
+    }
+
     export type RouterAdded = Router
     export type RouterChanged = { _id: RouterId } & Partial<Router>
     export type RouterRemoved = UserId
@@ -147,6 +155,8 @@ declare namespace ServerDevicePayloads {
     } & Partial<ThreeDimensionalProperties>
     export type CustomAudioTrackPositionRemoved = CustomAudioTrackPositionId
 
+    /* WebRTC related */
+    export type TurnServersChanged = string[]
     export type P2POfferSent = {
         from: StageDeviceId
         to: StageDeviceId
