@@ -83,6 +83,7 @@ const ServerDeviceEvents = {
     CustomAudioTrackVolumeRemoved: 'c-a-v-r',
 
     TurnServersChanged: 't',
+    P2PRestart: 'p2p-r',
     P2POfferSent: 'p2p-o',
     P2PAnswerSent: 'p2p-a',
     IceCandidateSent: 'ice',

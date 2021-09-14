@@ -20,6 +20,7 @@ import { VideoTrack } from './model/VideoTrack'
 import { StageDevice } from './model/StageDevice'
 import { CustomStageDeviceVolume } from './model/CustomStageDeviceVolume'
 import { CustomStageDevicePosition } from './model/CustomStageDevicePosition'
+import { StageDeviceId } from './ClientDevicePayloads'
 
 declare namespace ServerDevicePayloads {
     export type PayloadIdType = string
@@ -157,6 +158,10 @@ declare namespace ServerDevicePayloads {
 
     /* WebRTC related */
     export type TurnServersChanged = string[]
+    export type P2PRestart = {
+        from: StageDeviceId
+        to: StageDeviceId
+    }
     export type P2POfferSent = {
         from: StageDeviceId
         to: StageDeviceId
