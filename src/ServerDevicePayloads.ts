@@ -20,7 +20,6 @@ import { VideoTrack } from './model/VideoTrack'
 import { StageDevice } from './model/StageDevice'
 import { CustomStageDeviceVolume } from './model/CustomStageDeviceVolume'
 import { CustomStageDevicePosition } from './model/CustomStageDevicePosition'
-import { StageDeviceId } from './ClientDevicePayloads'
 
 declare namespace ServerDevicePayloads {
     export type PayloadIdType = string
