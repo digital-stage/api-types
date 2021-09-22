@@ -27,20 +27,64 @@
  * https://myloggingserivce/p-connecting
  */
 const ClientLogEvents = {
-    /** Called each time the application starts (also after an refresh of the browser tab) **/
+    /** Called each time the application starts (also after an refresh of the browser tab) * */
     Ready: 'ready',
     // WebRTC specific logs
-    /** Called when a participant is connecting to another **/
+    /**
+     * WEBRTC CONNECTION ITERATION
+     * - Connect to other peer
+     * - Negotiate ICE
+     * - Add track (will generate RTC statistics)
+     */
+    /** Called when a participant is connecting to another * */
     PeerConnecting: 'p-connecting',
-    /** Called when a participant is connected to another **/
+    /** Called when a participant is connected to another * */
     PeerConnected: 'p-connected',
-    /** Called when the ice process failed with another peer **/
+    /** Called when the ice process failed with another peer * */
     PeerIceFailed: 'p-ice-failed',
-    /** Called when the connection ended to another peer **/
+    /** Called when the connection ended to another peer * */
     PeerDisconnected: 'p-disconnected',
     /** General RTC statistics, refer to
      * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_Statistics_API}
-     * @see {@link https://www.w3.org/TR/webrtc-stats/} **/
+     * @see {@link https://www.w3.org/TR/webrtc-stats/} * */
     PeerStats: 'p-s',
+
+    /**
+     * MEDIASOUP CONNECTION ITERATION:
+     * - Connect to router (m-connecting, m-connected)
+     * - Fetch RTP Capabilities
+     * - Create Send Transport
+     * - Create Receive Transport
+     * - Create producer for all local media (webcam, microphone)
+     * - Create consumer for all available producers of other clients
+     */
+    /** Called when a connection to a mediasoup router is initiated * */
+    MediasoupConnecting: 'm-connecting',
+    /** Called when a connection to a mediasoup router has been established * */
+    MediasoupConnected: 'm-connecting',
+    /** Called when a connection to a mediasoup router has been unintentionally disconnected * */
+    MediasoupDisconnected: 'm-disconnected',
+    /** Called when the RTP Capabilities has been fetched from the router * */
+    MediasoupGotRtpCapabilities: 'm-rtp-capabilities',
+    /** Called when a send transport has been connected * */
+    MediasoupSendTransportConnected: 'm-connect-send-transport',
+    /** Called when a receive transport has been connected * */
+    MediasoupReceiveTransportConnected: 'm-connect-receive-transport',
+    /** Called when a send transport has been unexpected disconnected * */
+    MediasoupSendTransportDisconnected: 'm-send-transport-disconnected',
+    /** Called when a receive transport has been unexpected disconnected * */
+    MediasoupReceiveTransportDisconnected: 'm-receive-transport-disconnected',
+    /** Called when a new producer has been created * */
+    MediasoupProducerCreated: 'm-producer-added',
+    /** Called when the mute state of an producer changed * */
+    MediasoupProducerMuteChanged: 'm-producer-mute-changed',
+    /** Called when a producer has been removed * */
+    MediasoupProducerRemoved: 'm-producer-removed',
+    /** Called when a new producer has been created * */
+    MediasoupConsumerCreated: 'm-consumer-added',
+    /** Called when the mute state of an consumer changed * */
+    MediasoupConsumerMuteChanged: 'm-consumer-mute-changed',
+    /** Called when a consumer has been removed * */
+    MediasoupConsumerRemoved: 'm-consumer-removed',
 }
 export { ClientLogEvents }

@@ -20,7 +20,7 @@
  * SOFTWARE.
  */
 
-/*eslint @typescript-eslint/no-explicit-any: ["error", { "ignoreRestArgs": true }]*/
+/* eslint @typescript-eslint/no-explicit-any: ["error", { "ignoreRestArgs": true }] */
 export interface VideoTrack<IdType = string> {
     _id: IdType
     userId: IdType

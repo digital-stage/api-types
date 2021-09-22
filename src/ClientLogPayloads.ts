@@ -24,25 +24,44 @@ type BaseReport = {
     /**
      * Unique device ID, is unique for each browser window
      * @see Device
-     **/
+     * */
     deviceId: string
     /**
      * Unique user ID
      * @see User
-     **/
+     * */
     userId: string
-    /** Unique email for this user **/
+    /** Unique email for this user * */
     email: string
     /**
      * Unique ID of stage, where the user is currently logged in
      * @see Stage
-     **/
+     * */
     stageId: string
 }
 
 type BasePeerReport = BaseReport & {
-    /** Device ID of the other peer **/
+    /** Device ID of the other peer * */
     targetDeviceId: string
+}
+
+type BaseMediasoupReport = BaseReport & {
+    routerUrl: string
+}
+
+type BaseMediasoupProducerReport = BaseMediasoupReport & {
+    producerId: string
+    /** The track ID is the globally unique ID of this video or audio track * */
+    trackId: string
+}
+
+type BaseMediasoupConsumerReport = BaseMediasoupReport & {
+    /** The unique ID of the consumer (usualley only used by the client itself) * */
+    consumerId: string
+    /** The ID of the producer that is consumed * */
+    producerId: string
+    /** The track ID is the globally unique ID of this video or audio track * */
+    trackId: string
 }
 
 /**
@@ -59,7 +78,7 @@ declare namespace ClientLogPayloads {
     export type PeerConnected = BasePeerReport
 
     export type PeerIceFailed = BasePeerReport & {
-        /** Short reason describing why the ICE process failed **/
+        /** Short reason describing why the ICE process failed * */
         reason?: string
     }
 
@@ -68,5 +87,24 @@ declare namespace ClientLogPayloads {
     export type PeerStats = BasePeerReport & {
         stats: RTCStatsReport
     }
+
+    export type MediasoupConnecting = BaseMediasoupReport
+    export type MediasoupConnected = BaseMediasoupReport
+    export type MediasoupDisconnected = BaseMediasoupReport
+    export type MediasoupGotRtpCapabilities = BaseMediasoupReport
+    export type MediasoupSendTransportConnected = BaseMediasoupReport
+    export type MediasoupReceiveTransportConnected = BaseMediasoupReport
+    export type MediasoupSendTransportDisconnected = BaseMediasoupReport
+    export type MediasoupReceiveTransportDisconnected = BaseMediasoupReport
+    export type MediasoupProducerCreated = BaseMediasoupProducerReport
+    export type MediasoupProducerChanged = BaseMediasoupProducerReport & {
+        muted: boolean
+    }
+    export type MediasoupProducerRemoved = BaseMediasoupProducerReport
+    export type MediasoupConsumerCreated = BaseMediasoupConsumerReport
+    export type MediasoupConsumerChanged = BaseMediasoupConsumerReport & {
+        muted: boolean
+    }
+    export type MediasoupConsumerRemoved = BaseMediasoupConsumerReport
 }
 export { ClientLogPayloads }
