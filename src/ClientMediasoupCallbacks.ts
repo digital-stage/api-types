@@ -31,7 +31,7 @@ declare namespace ClientMediasoupCallbacks {
 
     export type CreateProducer = (
         error: string | null,
-        data: {
+        data?: {
             id: string
         }
     ) => void
