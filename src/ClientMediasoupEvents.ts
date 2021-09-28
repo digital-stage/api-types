@@ -21,18 +21,18 @@
  */
 
 const ClientMediasoupEvents = {
-  ConnectWithToken: 'token',
-  GetRTPCapabilities: 'rtp-capabilities',
-  CreateTransport: 'create-transport',
-  ConnectTransport: 'connect-transport',
-  CloseTransport: 'close-transport',
-  CreateProducer: 'create-producer',
-  PauseProducer: 'pause-producer',
-  ResumeProducer: 'resume-producer',
-  CloseProducer: 'close-producer',
-  CreateConsumer: 'create-consumer',
-  PauseConsumer: 'pause-consumer',
-  ResumeConsumer: 'resume-consumer',
-  CloseConsumer: 'close-consumer',
+    ConnectWithToken: 'token',
+    GetRTPCapabilities: 'rtp-capabilities',
+    CreateTransport: 'create-transport',
+    ConnectTransport: 'connect-transport',
+    CloseTransport: 'close-transport',
+    CreateProducer: 'create-producer',
+    PauseProducer: 'pause-producer',
+    ResumeProducer: 'resume-producer',
+    CloseProducer: 'close-producer',
+    CreateConsumer: 'create-consumer',
+    PauseConsumer: 'pause-consumer',
+    ResumeConsumer: 'resume-consumer',
+    CloseConsumer: 'close-consumer',
 }
-export {ClientMediasoupEvents}
+export { ClientMediasoupEvents }

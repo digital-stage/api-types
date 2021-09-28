@@ -24,15 +24,19 @@ import { ClientDeviceEvents } from './ClientDeviceEvents'
 import { ClientDevicePayloads } from './ClientDevicePayloads'
 import { ClientLogEvents } from './ClientLogEvents'
 import { ClientLogPayloads } from './ClientLogPayloads'
+import { ClientMediasoupPayloads } from './ClientMediasoupPayloads'
 import { ClientRouterEvents } from './ClientRouterEvents'
 import { ClientRouterPayloads } from './ClientRouterPayloads'
 import { ErrorCode, ErrorCodes } from './ErrorCodes'
 import { getDefaultDeviceValues } from './model/Device'
 import { ServerDeviceEvents } from './ServerDeviceEvents'
+import { ServerMediasoupPayloads } from './ServerMediasoupPayloads'
 import { ServerDevicePayloads } from './ServerDevicePayloads'
 import { Payloads } from './ServerPayloads'
 import { ServerRouterEvents } from './ServerRouterEvents'
 import { ServerRouterPayloads } from './ServerRouterPayloads'
+import { ServerMediasoupEvents } from './ServerMediasoupEvents'
+import { ClientMediasoupEvents } from './ClientMediasoupEvents'
 
 export * from './model'
 
@@ -40,8 +44,10 @@ export type {
     ClientDevicePayloads,
     ClientLogPayloads,
     ClientRouterPayloads,
+    ClientMediasoupPayloads,
     ServerDevicePayloads,
     ServerRouterPayloads,
+    ServerMediasoupPayloads,
     Payloads,
     ErrorCode,
 }
@@ -50,8 +56,10 @@ export {
     ClientDeviceEvents,
     ClientRouterEvents,
     ClientLogEvents,
+    ClientMediasoupEvents,
     ServerDeviceEvents,
     ServerRouterEvents,
+    ServerMediasoupEvents,
     getDefaultDeviceValues,
     ErrorCodes,
 }

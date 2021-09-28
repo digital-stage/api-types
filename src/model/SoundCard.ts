@@ -22,20 +22,15 @@
 
 interface SoundCard<IdType = string> {
     _id: IdType
-    deviceId: IdType
 
     /**
-     * Soundcard identifier on system,
-     * will make sound card unique together with device id
+     * The audio driver of this sound card, e.g. ASIO, JACK, CoreAudio etc.
      */
-    uuid: string
-
+    audioDriver: string
+    type: 'input' | 'output'
     label: string
 
     isDefault?: boolean
-
-    drivers: string[]
-    driver: string | null
 
     sampleRate: number
     sampleRates: number[]
@@ -44,17 +39,21 @@ interface SoundCard<IdType = string> {
 
     softwareLatency: number | null
 
-    inputChannels: {
-        [id: string]: boolean
-    }
-    outputChannels: {
+    /**
+     * List of channels, if a channel is active the value will be true, otherwise false
+     */
+    channels: {
         [id: string]: boolean
     }
 
+    /**
+     * Indicate if the given sound card is connected and online
+     */
     online: boolean
 
     // helper entry
     userId: IdType
+    deviceId: IdType
 }
 
 export { SoundCard }

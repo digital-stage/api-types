@@ -21,33 +21,38 @@
  */
 
 declare namespace ClientMediasoupCallbacks {
-  export type ConnectWithToken = (error: string | null) => void
-  export type GetRTPCapabilities = (error: string | null,
-                                    rtpCapabilities: any) => void
-  export type CreateTransport = (error: string | null,
-                                 transportOptions: any) => void
-  export type ConnectTransport = (error: string | null) => void
-  export type CloseTransport = (error: string | null) => void
+    export type ConnectWithToken = (error: string | null) => void
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    export type GetRTPCapabilities = (error: string | null, rtpCapabilities: any) => void
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    export type CreateTransport = (error: string | null, transportOptions: any) => void
+    export type ConnectTransport = (error: string | null) => void
+    export type CloseTransport = (error: string | null) => void
 
-  export type CreateProducer = (error: string | null, data: {
-    id: string
-  }) => void
-  export type PauseProducer = (error: string | null) => void
-  export type ResumeProducer = (error: string | null) => void
-  export type CloseProducer = (error: string | null) => void
+    export type CreateProducer = (
+        error: string | null,
+        data: {
+            id: string
+        }
+    ) => void
+    export type PauseProducer = (error: string | null) => void
+    export type ResumeProducer = (error: string | null) => void
+    export type CloseProducer = (error: string | null) => void
 
-  export type CreateConsumer = (
-    error: string | null,
-    data: {
-      id: string
-      producerId: string
-      kind: 'audio' | 'video'
-      rtpParameters: any
-      paused: boolean
-      type: 'simple' | 'simulcast' | 'svc' | 'pipe'
-    }) => void
-  export type PauseConsumer = (error: string | null) => void
-  export type ResumeConsumer = (error: string | null) => void
-  export type CloseConsumer = (error: string | null) => void
+    export type CreateConsumer = (
+        error: string | null,
+        data: {
+            id: string
+            producerId: string
+            kind: 'audio' | 'video'
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            rtpParameters: any
+            paused: boolean
+            type: 'simple' | 'simulcast' | 'svc' | 'pipe'
+        }
+    ) => void
+    export type PauseConsumer = (error: string | null) => void
+    export type ResumeConsumer = (error: string | null) => void
+    export type CloseConsumer = (error: string | null) => void
 }
-export {ClientMediasoupCallbacks}
+export { ClientMediasoupCallbacks }

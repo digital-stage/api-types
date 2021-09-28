@@ -21,33 +21,37 @@
  */
 
 declare namespace ClientMediasoupPayloads {
-  type ConnectWithToken = {
-    token: string,
-    stageId: string
-  }
-  type GetRTPCapabilities = undefined
-  type CreateTransport = undefined
-  type ConnectTransport = {
-    transportId: string,
-    dtlsParameters: any
-  }
-  type CloseTransport = string
-  type CreateProducer = {
-    transportId: string,
-    kind: 'audio' | 'video',
-    rtpParameters: any,
-    appData: any,
-  }
-  type PauseProducer = string
-  type ResumeProducer = string
-  type CloseProducer = string
-  type CreateConsumer = {
-    producerId: string
-    transportId: string,
-    rtpCapabilities: any,
-  }
-  type PauseConsumer = string
-  type ResumeConsumer = string
-  type CloseConsumer = string
+    type ConnectWithToken = {
+        token: string
+        stageId: string
+    }
+    type GetRTPCapabilities = undefined
+    type CreateTransport = undefined
+    type ConnectTransport = {
+        transportId: string
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        dtlsParameters: any
+    }
+    type CloseTransport = string
+    type CreateProducer = {
+        transportId: string
+        kind: 'audio' | 'video'
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        rtpParameters: any
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        appData: any
+    }
+    type PauseProducer = string
+    type ResumeProducer = string
+    type CloseProducer = string
+    type CreateConsumer = {
+        producerId: string
+        transportId: string
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        rtpCapabilities: any
+    }
+    type PauseConsumer = string
+    type ResumeConsumer = string
+    type CloseConsumer = string
 }
-export {ClientMediasoupPayloads}
+export { ClientMediasoupPayloads }

@@ -21,9 +21,12 @@
  */
 
 declare namespace ServerMediasoupPayloads {
-  export type TransportPaused = {
-    transportId: string
-    direction: 'send' | 'receive'
-  }
+    export type TransportPaused = string // = transportId
+    export type TransportResumed = string // = transportId
+    export type TransportClosed = string // = transportId
+    export type ProducerClosed = string // = producerId
+    export type ConsumerClosed = string // = consumerId
+    export type DataProducerClosed = string // = producerId
+    export type DataConsumerClosed = string // = consumerId
 }
-export {ServerMediasoupPayloads}
+export { ServerMediasoupPayloads }

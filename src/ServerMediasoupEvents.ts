@@ -21,12 +21,12 @@
  */
 
 const ServerMediasoupEvents = {
-  TransportPaused: 'transport-paused',
-  TransportResumed: 'transport-resumed',
-  TransportClosed: 'transport-closed',
-  ProducerClosed: 'producer-closed',
-  ConsumerClosed: 'consumer-closed',
-  DataProducerClosed: 'data-producer-closed',
-  DataConsumerClosed: 'data-consumer-closed'
+    TransportPaused: 'transport-paused',
+    TransportResumed: 'transport-resumed',
+    TransportClosed: 'transport-closed',
+    ProducerClosed: 'producer-closed',
+    ConsumerClosed: 'consumer-closed',
+    DataProducerClosed: 'data-producer-closed',
+    DataConsumerClosed: 'data-consumer-closed',
 }
-export {ServerMediasoupEvents}
+export { ServerMediasoupEvents }

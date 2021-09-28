@@ -49,9 +49,24 @@ interface Device<IdType = string> {
     createdAt: number
     lastLoginAt: number
 
-    soundCardId: IdType | null
+    /**
+     * The currently selected input sound card or null if none selected
+     */
+    inputSoundCardId: IdType | null
+    /**
+     * The currently selected output sound card or null if none selected
+     */
+    outputSoundCardId: IdType | null
 
+    /**
+     * The output volume
+     */
     volume: number
+
+    /**
+     * The balance between the monitor and the session mixer aka Ego balance
+     */
+    balance: number
 
     // OV SPECIFIC
     egoGain: number
@@ -92,6 +107,7 @@ export const getDefaultDeviceValues = <IdType = string>(): Omit<
     canOv: false,
     volume: 1,
     egoGain: 1,
+    balance: 0.5,
 })
 
 export { Device }
