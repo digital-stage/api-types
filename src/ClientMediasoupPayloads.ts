@@ -27,28 +27,25 @@ declare namespace ClientMediasoupPayloads {
     }
     type GetRTPCapabilities = undefined
     type CreateTransport = undefined
-    type ConnectTransport = {
+    type ConnectTransport<DtlsParameters> = {
         transportId: string
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        dtlsParameters: any
+        dtlsParameters: DtlsParameters
     }
     type CloseTransport = string
-    type CreateProducer = {
+    type CreateProducer<RtpParameters> = {
         transportId: string
         kind: 'audio' | 'video'
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        rtpParameters: any
+        rtpParameters: RtpParameters
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         appData: any
     }
     type PauseProducer = string
     type ResumeProducer = string
     type CloseProducer = string
-    type CreateConsumer = {
+    type CreateConsumer<RtpCapabilities> = {
         producerId: string
         transportId: string
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        rtpCapabilities: any
+        rtpCapabilities: RtpCapabilities
     }
     type PauseConsumer = string
     type ResumeConsumer = string

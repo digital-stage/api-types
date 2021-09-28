@@ -20,12 +20,36 @@
  * SOFTWARE.
  */
 
+export type TransportOptionsPlaceholder = {
+    id: string
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    iceParameters: any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    iceCandidates: any[]
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    dtlsParameters: any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    sctpParameters?: any
+    iceServers?: RTCIceServer[]
+    iceTransportPolicy?: RTCIceTransportPolicy
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    additionalSettings?: any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    proprietaryConstraints?: any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    appData?: any
+}
+
 declare namespace ClientMediasoupCallbacks {
     export type ConnectWithToken = (error: string | null) => void
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    export type GetRTPCapabilities = (error: string | null, rtpCapabilities?: any) => void
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    export type CreateTransport = (error: string | null, transportOptions?: any) => void
+    export type GetRTPCapabilities<RtpCapabilities> = (
+        error: string | null,
+        rtpCapabilities?: RtpCapabilities
+    ) => void
+    export type CreateTransport<TransportOptions = TransportOptionsPlaceholder> = (
+        error: string | null,
+        transportOptions?: TransportOptions
+    ) => void
     export type ConnectTransport = (error: string | null) => void
     export type CloseTransport = (error: string | null) => void
 
@@ -39,14 +63,13 @@ declare namespace ClientMediasoupCallbacks {
     export type ResumeProducer = (error: string | null) => void
     export type CloseProducer = (error: string | null) => void
 
-    export type CreateConsumer = (
+    export type CreateConsumer<RtpCapabilities> = (
         error: string | null,
         data?: {
             id: string
             producerId: string
             kind: 'audio' | 'video'
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            rtpParameters: any
+            rtpParameters: RtpCapabilities
             paused: boolean
             type: 'simple' | 'simulcast' | 'svc' | 'pipe'
         }
