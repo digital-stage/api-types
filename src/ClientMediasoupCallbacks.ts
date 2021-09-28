@@ -23,9 +23,9 @@
 declare namespace ClientMediasoupCallbacks {
     export type ConnectWithToken = (error: string | null) => void
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    export type GetRTPCapabilities = (error: string | null, rtpCapabilities: any) => void
+    export type GetRTPCapabilities = (error: string | null, rtpCapabilities?: any) => void
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    export type CreateTransport = (error: string | null, transportOptions: any) => void
+    export type CreateTransport = (error: string | null, transportOptions?: any) => void
     export type ConnectTransport = (error: string | null) => void
     export type CloseTransport = (error: string | null) => void
 
@@ -41,7 +41,7 @@ declare namespace ClientMediasoupCallbacks {
 
     export type CreateConsumer = (
         error: string | null,
-        data: {
+        data?: {
             id: string
             producerId: string
             kind: 'audio' | 'video'
