@@ -53,11 +53,19 @@ interface SoundCard<IdType = string> {
     softwareLatency: number | null
 
     /**
-     * List of channels, if a channel is active the value will be true, otherwise false
+     * Indexed list of channels
      */
     channels: {
-        [id: string]: boolean
-    }
+        /**
+         * Optional label of this channel.
+         * If no label is given, the web client will display the channel index instead
+         */
+        label?: string
+        /**
+         * Indicates, if this channel is or shall be currently active
+         */
+        active: boolean
+    }[]
 
     /**
      * Indicate if the given sound card is connected and online
