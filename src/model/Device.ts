@@ -41,7 +41,7 @@ interface Device<IdType = string> {
     receiveVideo: boolean
 
     /**
-     * Use this to _identify existing devices on connect, on native clients you might use the mac address, on browser a cookie _id
+     * Use this to identify existing devices on connect, on native clients you might use the mac address, on browser a cookie _id
      */
     uuid: string | null
     requestSession?: boolean

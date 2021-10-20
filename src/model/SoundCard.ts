@@ -23,11 +23,25 @@
 interface SoundCard<IdType = string> {
     _id: IdType
 
+    deviceId: IdType
     /**
      * The audio driver of this sound card, e.g. ASIO, JACK, CoreAudio etc.
      */
     audioDriver: string
+    /**
+     * The type or direction of this sound card
+     */
     type: 'input' | 'output'
+    /**
+     * The uuid of this sound card.
+     * Can describe a sound card unique together with deviceId, audioDriver and type.
+     * Hint: in JUCE we are using the name of the sound card as uuid AND label
+     */
+    uuid: string
+
+    /**
+     * The label, some systems e.g. JUCE just use the uuid as label
+     */
     label: string
 
     isDefault?: boolean
@@ -36,7 +50,6 @@ interface SoundCard<IdType = string> {
     sampleRates: number[]
     periodSize: number
     numPeriods: number // default to 2
-
     softwareLatency: number | null
 
     /**
@@ -53,7 +66,6 @@ interface SoundCard<IdType = string> {
 
     // helper entry
     userId: IdType
-    deviceId: IdType
 }
 
 export { SoundCard }
