@@ -74,7 +74,7 @@ declare namespace ClientDevicePayloads {
     export type SetSoundCard = {
         audioDriver: string
         type: 'input' | 'output'
-        label: string
+        uuid: string
     } & Partial<SoundCard>
     export type ChangeSoundCard = { _id: SoundCardId } & Partial<SoundCard>
 
