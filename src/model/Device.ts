@@ -68,6 +68,12 @@ interface Device<IdType = string> {
      */
     balance: number
 
+    /**
+     * The amount of buffer used on this client
+     * TODO: Discuss if we might choose ms as unit and estimate the number of frames on the client side
+     */
+    buffer?: number
+
     // WEB CLIENT SPECIFIC
     displayMode?: 'boxes' | 'lanes'
     numLanes?: number
