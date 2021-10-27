@@ -194,7 +194,7 @@ declare namespace ClientDevicePayloads {
     export type SendIceCandidate = {
         from: StageDeviceId
         to: StageDeviceId
-        iceCandidate: RTCIceCandidate
+        iceCandidate: RTCIceCandidate | null
     }
 }
 export { ClientDevicePayloads }
