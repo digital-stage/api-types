@@ -53,6 +53,17 @@ interface SoundCard<IdType = string> {
     softwareLatency: number | null
 
     /**
+     * Capture buffer in ms,
+     * affects the latency of own and others
+     */
+    inputBuffer: number
+    /**
+     * Playback buffer in ms,
+     * affects the own latency
+     */
+    outputBuffer: number
+
+    /**
      * Indexed list of channels
      */
     channels: {
