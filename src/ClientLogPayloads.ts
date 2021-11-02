@@ -73,16 +73,21 @@ type BaseMediasoupConsumerReport = BaseMediasoupReport & {
 declare namespace ClientLogPayloads {
     export type Ready = BaseReport
 
-    export type PeerConnecting = BasePeerReport
-
-    export type PeerConnected = BasePeerReport
-
-    export type PeerIceFailed = BasePeerReport & {
-        /** Short reason describing why the ICE process failed * */
-        reason?: string
+    export type RTCSignalingStateChanged = BasePeerReport & {
+        state: RTCSignalingState
     }
 
-    export type PeerDisconnected = BasePeerReport
+    export type RTCIceConnectionStateChanged = BasePeerReport & {
+        state: RTCIceConnectionState
+    }
+
+    export type RTCPeerConnectionStateChanged = BasePeerReport & {
+        state: RTCPeerConnectionState
+    }
+
+    export type IceCandidateError = BasePeerReport & {
+        error: RTCPeerConnectionIceErrorEvent
+    }
 
     export type PeerStats = BasePeerReport & {
         stats: RTCStatsReport

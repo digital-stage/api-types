@@ -36,14 +36,14 @@ const ClientLogEvents = {
      * - Negotiate ICE
      * - Add track (will generate RTC statistics)
      */
-    /** Called when a participant is connecting to another * */
-    PeerConnecting: 'p-connecting',
-    /** Called when a participant is connected to another * */
-    PeerConnected: 'p-connected',
-    /** Called when the ice process failed with another peer * */
-    PeerIceFailed: 'p-ice-failed',
-    /** Called when the connection ended to another peer * */
-    PeerDisconnected: 'p-disconnected',
+    /** Called when the signaling state of this peer changed **/
+    RTCSignalingStateChanged: 'p-signaling',
+    /** Called when the ice connection state of this peer changed **/
+    RTCIceConnectionStateChanged: 'p-ice-connection',
+    /** Called when the general connection state of this peer changed **/
+    RTCPeerConnectionStateChanged: 'p-connection',
+    /** Called when an ice candidate error is captured **/
+    IceCandidateError: 'p-ice-error',
     /** General RTC statistics, refer to
      * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_Statistics_API}
      * @see {@link https://www.w3.org/TR/webrtc-stats/} * */
