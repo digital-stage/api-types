@@ -50,6 +50,7 @@ interface SoundCard<IdType = string> {
     sampleRates: number[]
     periodSize: number
     numPeriods: number // default to 2
+    frameSize: number
     softwareLatency: number | null
 
     /**
