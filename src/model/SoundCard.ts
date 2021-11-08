@@ -25,6 +25,10 @@ interface SoundCard<IdType = string> {
 
     deviceId: IdType
     /**
+     * The audio engine of this sound card, e.g. JUCE, rtaudio, miniaudio, webaudio
+     */
+    audioEngine: string
+    /**
      * The audio driver of this sound card, e.g. ASIO, JACK, CoreAudio etc.
      */
     audioDriver: string
