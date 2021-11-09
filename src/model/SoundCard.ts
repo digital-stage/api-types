@@ -54,19 +54,12 @@ interface SoundCard<IdType = string> {
     sampleRates: number[]
     periodSize: number
     numPeriods: number // default to 2
-    frameSize: number
     softwareLatency: number | null
 
     /**
-     * Capture buffer in ms,
-     * affects the latency of own and others
+     * Buffer size
      */
-    inputBuffer: number
-    /**
-     * Playback buffer in ms,
-     * affects the own latency
-     */
-    outputBuffer: number
+    bufferSize: number
 
     /**
      * Indexed list of channels
