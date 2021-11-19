@@ -45,6 +45,10 @@ type BasePeerReport = BaseReport & {
     targetDeviceId: string
 }
 
+type BasePeerStateReport = BasePeerReport & {
+    timestamp: number
+}
+
 type BaseMediasoupReport = BaseReport & {
     routerUrl: string
 }
@@ -73,19 +77,19 @@ type BaseMediasoupConsumerReport = BaseMediasoupReport & {
 declare namespace ClientLogPayloads {
     export type Ready = BaseReport
 
-    export type RTCSignalingStateChanged = BasePeerReport & {
+    export type RTCSignalingStateChanged = BasePeerStateReport & {
         state: RTCSignalingState
     }
 
-    export type RTCIceConnectionStateChanged = BasePeerReport & {
+    export type RTCIceConnectionStateChanged = BasePeerStateReport & {
         state: RTCIceConnectionState
     }
 
-    export type RTCPeerConnectionStateChanged = BasePeerReport & {
+    export type RTCPeerConnectionStateChanged = BasePeerStateReport & {
         state: RTCPeerConnectionState
     }
 
-    export type IceCandidateError = BasePeerReport & {
+    export type IceCandidateError = BasePeerStateReport & {
         error: RTCPeerConnectionIceErrorEvent
     }
 
