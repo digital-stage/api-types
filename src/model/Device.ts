@@ -50,6 +50,14 @@ interface Device<IdType = string> {
     lastLoginAt: number
 
     /**
+     * The currently selected audio engine (e.g. JUCE, rtaudio, webaudio)
+     */
+    audioEngine: string
+    /**
+     * The currently selected audio driver (e.g. jack, CoreAudio)
+     */
+    audioDriver?: string
+    /**
      * The currently selected input sound card or null if none selected
      */
     inputSoundCardId: IdType | null
@@ -69,10 +77,9 @@ interface Device<IdType = string> {
     balance: number
 
     /**
-     * The amount of buffer used on this client
-     * TODO: Discuss if we might choose ms as unit and estimate the number of frames on the client side
+     * The amount of receiver buffer in samples used on this client
      */
-    buffer?: number
+    buffer: number
 
     // WEB CLIENT SPECIFIC
     displayMode?: 'boxes' | 'lanes'

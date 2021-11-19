@@ -25,6 +25,10 @@ interface SoundCard<IdType = string> {
 
     deviceId: IdType
     /**
+     * The audio engine of this sound card, e.g. JUCE, rtaudio, miniaudio, webaudio
+     */
+    audioEngine: string
+    /**
      * The audio driver of this sound card, e.g. ASIO, JACK, CoreAudio etc.
      */
     audioDriver: string
@@ -53,15 +57,9 @@ interface SoundCard<IdType = string> {
     softwareLatency: number | null
 
     /**
-     * Capture buffer in ms,
-     * affects the latency of own and others
+     * Buffer size
      */
-    inputBuffer: number
-    /**
-     * Playback buffer in ms,
-     * affects the own latency
-     */
-    outputBuffer: number
+    bufferSize: number
 
     /**
      * Indexed list of channels
