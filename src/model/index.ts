@@ -46,6 +46,7 @@ import {
 import { User } from './User'
 import { DefaultVolumeProperties, VolumeProperties } from './VolumeProperties'
 import { InitialStagePackage } from './InitialStagePackage'
+import { CustomGroup } from './CustomGroup'
 
 export * from './browser'
 export * from './jammer'
@@ -53,6 +54,7 @@ export * from './ov'
 
 export type {
     ChatMessage,
+    CustomGroup,
     CustomGroupPosition,
     CustomGroupVolume,
     CustomAudioTrackPosition,

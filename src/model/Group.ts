@@ -31,6 +31,8 @@ interface Group<IdType = string> extends ThreeDimensionalProperties, VolumePrope
 
     color: string
 
+    index: number
+
     iconUrl: string | null
 }
 

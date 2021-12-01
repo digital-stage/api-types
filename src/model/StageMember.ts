@@ -28,7 +28,9 @@ interface StageMember<IdType = string> extends ThreeDimensionalProperties, Volum
     stageId: IdType
     userId: IdType
 
-    groupId?: IdType
+    groupId: IdType | null
+
+    index: number
 
     active: boolean
     isDirector: boolean

@@ -36,6 +36,7 @@ import { VideoTrack } from './model/VideoTrack'
 
 declare namespace ClientDevicePayloads {
     export type PayloadIdType = string
+    export type CustomGroupId = PayloadIdType
     export type CustomGroupPositionId = PayloadIdType
     export type CustomGroupVolumeId = PayloadIdType
     export type CustomStageMemberPositionId = PayloadIdType
@@ -89,6 +90,12 @@ declare namespace ClientDevicePayloads {
     }
     export type ChangeGroup = { _id: GroupId } & Partial<Group>
     export type RemoveGroup = GroupId
+
+    export type SetCustomGroup = {
+        groupId: GroupId
+        targetGroupId: GroupId
+    } & Partial<VolumeProperties & ThreeDimensionalProperties>
+    export type RemoveCustomGroup = CustomGroupId
 
     export type SetCustomGroupVolume = {
         groupId: GroupId
@@ -172,7 +179,7 @@ declare namespace ClientDevicePayloads {
 
     export type EncodeInviteCode = {
         stageId: string
-        groupId: string
+        groupId?: string
     }
     export type RevokeInviteCode = EncodeInviteCode
     export type DecodeInviteCode = string

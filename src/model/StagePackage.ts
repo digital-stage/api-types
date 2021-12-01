@@ -35,12 +35,17 @@ import { CustomAudioTrackVolume } from './CustomAudioTrackVolume'
 import { StageDevice } from './StageDevice'
 import { CustomStageDeviceVolume } from './CustomStageDeviceVolume'
 import { CustomStageDevicePosition } from './CustomStageDevicePosition'
+import { CustomGroup } from './CustomGroup'
 
 interface StagePackage<IdType = string> {
     users: User<IdType>[]
 
     stage?: Stage<IdType>
     groups?: Group<IdType>[]
+    customGroups: CustomGroup<IdType>[]
+    /**
+     * @deprecated Prefer CustomGroup<IdType>
+     */
     customGroupVolumes: CustomGroupVolume<IdType>[]
     customGroupPositions: CustomGroupPosition<IdType>[]
     stageMembers: StageMember<IdType>[]

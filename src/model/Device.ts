@@ -20,6 +20,8 @@
  * SOFTWARE.
  */
 
+export type DeviceType = 'browser' | 'jammer' | 'native' | 'ov'
+
 interface Device<IdType = string> {
     _id: IdType
     userId: IdType
@@ -27,7 +29,7 @@ interface Device<IdType = string> {
     /**
      * This _identifies the type of the device. Regarding to the type additional items may be available.
      */
-    type: 'browser' | 'mediasoup' | 'ov' | 'jammer'
+    type: DeviceType
 
     name: string
 

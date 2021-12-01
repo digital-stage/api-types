@@ -23,17 +23,18 @@
 import { ThreeDimensionalProperties } from './ThreeDimensionalProperties'
 import { VolumeProperties } from './VolumeProperties'
 
-interface Group<IdType = string> extends ThreeDimensionalProperties, VolumeProperties {
+/**
+ * Customized group for a target group (e.g. settings of group sopranos for group tenors)
+ */
+interface CustomGroup<IdType = string> extends ThreeDimensionalProperties, VolumeProperties {
     _id: IdType
+
+    // UNIQUE PAIR:
+    groupId: IdType
+    targetGroupId: IdType
+
+    // Helper
     stageId: IdType
-    name: string
-    description: string
-
-    color: string
-
-    index: number
-
-    iconUrl: string | null
 }
 
-export { Group }
+export { CustomGroup }

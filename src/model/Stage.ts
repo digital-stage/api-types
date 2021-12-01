@@ -20,6 +20,8 @@
  * SOFTWARE.
  */
 
+import { DeviceType } from './Device'
+
 interface Stage<IdType = string> {
     _id: IdType
 
@@ -32,10 +34,10 @@ interface Stage<IdType = string> {
 
     iconUrl: string | null
 
-    videoType: string
+    videoType: DeviceType
     videoRouter: IdType | null
 
-    audioType: string
+    audioType: DeviceType
     audioRouter: IdType | null
 
     preferredPosition: {

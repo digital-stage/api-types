@@ -23,6 +23,7 @@
 import { Stage } from '../Stage'
 
 interface JammerStage extends Stage {
+    audioType: 'jammer'
     jammerIpv4: string
     jammerIpv6?: string
     jammerPort: number

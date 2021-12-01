@@ -20,6 +20,8 @@
  * SOFTWARE.
  */
 
+export type VideoTrackType = 'webrtc' | 'mediasoup'
+
 /* eslint @typescript-eslint/no-explicit-any: ["error", { "ignoreRestArgs": true }] */
 export interface VideoTrack<IdType = string> {
     _id: IdType
@@ -32,7 +34,7 @@ export interface VideoTrack<IdType = string> {
     /**
      * The type of the producing device
      */
-    type: string
+    type: VideoTrackType
 
     /**
      * Type specific payload

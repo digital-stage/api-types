@@ -20,6 +20,7 @@
  * SOFTWARE.
  */
 
+import { DeviceType } from './Device'
 import { ThreeDimensionalProperties } from './ThreeDimensionalProperties'
 import { VolumeProperties } from './VolumeProperties'
 
@@ -28,12 +29,12 @@ interface StageDevice<IdType = string> extends ThreeDimensionalProperties, Volum
     userId: IdType
     deviceId: IdType
     stageId: IdType
-    groupId: IdType
+    groupId: IdType | null
     stageMemberId: IdType
 
     name: string
 
-    type: 'browser' | 'mediasoup' | 'ov' | 'jammer'
+    type: DeviceType
 
     active: boolean
 

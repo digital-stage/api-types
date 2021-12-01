@@ -23,6 +23,8 @@
 import { Stage } from '../Stage'
 
 interface OvStage<IdType = string> extends Stage<IdType> {
+    audioType: 'ov'
+
     ovAmbientSoundUrl?: string
     ovAmbientLevel: number
 

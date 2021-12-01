@@ -42,8 +42,11 @@ import { VideoTrack } from './model/VideoTrack'
 import { StageDevice } from './model/StageDevice'
 import { CustomStageDeviceVolume } from './model/CustomStageDeviceVolume'
 import { CustomStageDevicePosition } from './model/CustomStageDevicePosition'
+import { CustomGroup } from './model/CustomGroup'
+import { ClientDevicePayloads } from './ClientDevicePayloads'
 
 declare namespace ServerDevicePayloads {
+    import CustomGroupId = ClientDevicePayloads.CustomGroupId
     export type PayloadIdType = string
     export type CustomGroupPositionId = PayloadIdType
     export type CustomGroupVolumeId = PayloadIdType
@@ -99,13 +102,17 @@ declare namespace ServerDevicePayloads {
     export type StageJoined = {
         stageId: StageId
         stageMemberId: StageMemberId
-        groupId: GroupId
+        groupId: GroupId | null
     } & StagePackage
 
     /* GROUP */
     export type GroupAdded = Group
     export type GroupChanged = { _id: GroupId } & Partial<Group>
     export type GroupRemoved = GroupId
+
+    export type CustomGroupAdded = CustomGroup
+    export type CustomGroupChanged = { _id: CustomGroupId } & Partial<CustomGroup>
+    export type CustomGroupRemoved = CustomGroupId
 
     export type CustomGroupVolumeAdded = CustomGroupVolume
     export type CustomGroupVolumeChanged = {

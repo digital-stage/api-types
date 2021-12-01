@@ -56,6 +56,10 @@ const ServerDeviceEvents = {
     GroupChanged: 'g-c',
     GroupRemoved: 'g-r',
 
+    CustomGroupAdded: 'c-g-a',
+    CustomGroupChanged: 'c-g-c',
+    CustomGroupRemoved: 'c-g-r',
+
     CustomGroupPositionAdded: 'c-g-p-a',
     CustomGroupPositionChanged: 'c-g-p-c',
     CustomGroupPositionRemoved: 'c-g-p-r',
