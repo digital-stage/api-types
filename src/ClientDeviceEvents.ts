@@ -37,6 +37,8 @@ const ClientDeviceEvents = {
     CreateGroup: 'create-group',
     ChangeGroup: 'change-group',
     RemoveGroup: 'remove-group',
+    SetCustomGroup: 'set-custom-group',
+    RemoveCustomGroup: 'remove-custom-group',
     SetCustomGroupVolume: 'set-custom-group-volume',
     SetCustomGroupPosition: 'set-custom-group-position',
     RemoveCustomGroupVolume: 'remove-custom-group-volume',
