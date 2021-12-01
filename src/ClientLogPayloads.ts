@@ -38,15 +38,15 @@ type BaseReport = {
      * @see Stage
      * */
     stageId: string
+    /**
+     * Timestamp
+     */
+    timestamp: number
 }
 
 type BasePeerReport = BaseReport & {
     /** Device ID of the other peer * */
     targetDeviceId: string
-}
-
-type BasePeerStateReport = BasePeerReport & {
-    timestamp: number
 }
 
 type BaseMediasoupReport = BaseReport & {
@@ -77,23 +77,35 @@ type BaseMediasoupConsumerReport = BaseMediasoupReport & {
 declare namespace ClientLogPayloads {
     export type Ready = BaseReport
 
-    export type RTCSignalingStateChanged = BasePeerStateReport & {
+    export type RTCSignalingStateChanged = BaseReport & {
         state: RTCSignalingState
     }
 
-    export type RTCIceConnectionStateChanged = BasePeerStateReport & {
+    export type RTCIceConnectionStateChanged = BaseReport & {
         state: RTCIceConnectionState
     }
 
-    export type RTCPeerConnectionStateChanged = BasePeerStateReport & {
+    export type RTCPeerConnectionStateChanged = BaseReport & {
         state: RTCPeerConnectionState
     }
 
-    export type IceCandidateError = BasePeerStateReport & {
+    export type IceCandidateError = BaseReport & {
         error: RTCPeerConnectionIceErrorEvent
     }
 
     export type PeerStats = BasePeerReport & {
+        stats: RTCStatsReport
+    }
+
+    export type RTCStartSendingTrack = BaseReport & {
+        trackId: string
+        kind: "video" | "audio"
+        stats: RTCStatsReport
+    }
+
+    export type RTCStopSendingTrack = BaseReport & {
+        trackId: string
+        kind: "video" | "audio"
         stats: RTCStatsReport
     }
 

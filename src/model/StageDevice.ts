@@ -34,7 +34,7 @@ interface StageDevice<IdType = string> extends ThreeDimensionalProperties, Volum
 
     name: string
 
-    type: DeviceType
+    type: DeviceType[keyof DeviceType]
 
     active: boolean
 
