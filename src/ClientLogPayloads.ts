@@ -99,13 +99,13 @@ declare namespace ClientLogPayloads {
 
     export type RTCStartSendingTrack = BaseReport & {
         trackId: string
-        kind: "video" | "audio"
+        kind: 'video' | 'audio'
         stats: RTCStatsReport
     }
 
     export type RTCStopSendingTrack = BaseReport & {
         trackId: string
-        kind: "video" | "audio"
+        kind: 'video' | 'audio'
         stats: RTCStatsReport
     }
 
