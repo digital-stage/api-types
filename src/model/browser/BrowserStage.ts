@@ -23,7 +23,7 @@
 import { Stage } from '../Stage'
 
 interface MediasoupStage extends Stage {
-    type: 'mediasoup'
+    type: 'browser'
 
     mediasoup: {
         url: string
