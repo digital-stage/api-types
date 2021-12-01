@@ -34,10 +34,10 @@ interface Stage<IdType = string> {
 
     iconUrl: string | null
 
-    videoType: DeviceType
+    videoType: DeviceType[keyof DeviceType]
     videoRouter: IdType | null
 
-    audioType: DeviceType
+    audioType: DeviceType[keyof DeviceType]
     audioRouter: IdType | null
 
     preferredPosition: {
