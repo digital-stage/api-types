@@ -30,10 +30,10 @@ import { CustomStageMemberPosition } from './CustomStageMemberPosition'
 import { CustomStageMemberVolume } from './CustomStageMemberVolume'
 import { CustomStageDevicePosition } from './CustomStageDevicePosition'
 import { CustomStageDeviceVolume } from './CustomStageDeviceVolume'
-import { Device } from './Device'
+import { Device, DeviceType } from './Device'
 import { Group } from './Group'
-import { AudioTrack } from './AudioTrack'
-import { VideoTrack } from './VideoTrack'
+import { AudioTrack, AudioTrackType } from './AudioTrack'
+import { VideoTrack, VideoTrackType } from './VideoTrack'
 import { Router } from './Router'
 import { SoundCard } from './SoundCard'
 import { Stage } from './Stage'
@@ -64,9 +64,12 @@ export type {
     CustomStageDevicePosition,
     CustomStageDeviceVolume,
     Device,
+    DeviceType,
     Group,
     AudioTrack,
+    AudioTrackType,
     VideoTrack,
+    VideoTrackType,
     Router,
     SoundCard,
     Stage,

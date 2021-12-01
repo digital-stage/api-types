@@ -23,7 +23,13 @@
 import { ThreeDimensionalProperties } from './ThreeDimensionalProperties'
 import { VolumeProperties } from './VolumeProperties'
 
-export type AudioTrackType = 'webrtc' | 'mediasoup' | 'jammer' | 'ov' | 'native'
+export interface AudioTrackType {
+    webrtc: 'webrtc'
+    mediasoup: 'mediasoup'
+    jammer: 'jammer'
+    ov: 'ov'
+    native: 'native'
+}
 
 export interface AudioTrack<IdType = string> extends ThreeDimensionalProperties, VolumeProperties {
     _id: IdType
@@ -36,7 +42,7 @@ export interface AudioTrack<IdType = string> extends ThreeDimensionalProperties,
     /**
      * The type of the producing device
      */
-    type: AudioTrackType
+    type: AudioTrackType[keyof AudioTrackType]
 
     sourceChannel?: number
 

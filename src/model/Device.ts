@@ -20,7 +20,12 @@
  * SOFTWARE.
  */
 
-export type DeviceType = 'browser' | 'jammer' | 'native' | 'ov'
+export interface DeviceType {
+    browser: 'browser'
+    jammer: 'jammer'
+    ov: 'ov'
+    native: 'native'
+}
 
 interface Device<IdType = string> {
     _id: IdType
@@ -29,7 +34,7 @@ interface Device<IdType = string> {
     /**
      * This _identifies the type of the device. Regarding to the type additional items may be available.
      */
-    type: DeviceType
+    type: DeviceType[keyof DeviceType]
 
     name: string
 
