@@ -20,8 +20,8 @@
  * SOFTWARE.
  */
 
-import {ThreeDimensionalProperties} from './ThreeDimensionalProperties'
-import {VolumeProperties} from './VolumeProperties'
+import { ThreeDimensionalProperties } from './ThreeDimensionalProperties'
+import { VolumeProperties } from './VolumeProperties'
 
 interface Group<IdType = string> extends ThreeDimensionalProperties, VolumeProperties {
     _id: IdType
@@ -39,4 +39,4 @@ interface Group<IdType = string> extends ThreeDimensionalProperties, VolumePrope
     iconUrl: string | null
 }
 
-export {Group}
+export { Group }

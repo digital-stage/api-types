@@ -40,7 +40,6 @@ interface Stage<IdType = string> {
     audioType: DeviceType[keyof DeviceType]
     audioRouter: IdType | null
 
-
     // 3D audio related settings
     width: number
     length: number
@@ -55,7 +54,6 @@ interface Stage<IdType = string> {
     numCols: number
     numLanes: number
     showLanes: boolean
-
 
     preferredPosition: {
         lat: number
