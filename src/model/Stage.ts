@@ -51,9 +51,9 @@ interface Stage<IdType = string> {
     renderReverb: boolean
 
     // Video related settings
+    displayMode?: 'boxes' | 'lanes'
     numCols: number
     numLanes: number
-    showLanes: boolean
 
     preferredPosition: {
         lat: number
