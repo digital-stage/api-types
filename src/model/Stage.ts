@@ -40,11 +40,8 @@ interface Stage<IdType = string> {
     audioType: DeviceType[keyof DeviceType]
     audioRouter: IdType | null
 
-    preferredPosition: {
-        lat: number
-        lng: number
-    }
 
+    // 3D audio related settings
     width: number
     length: number
     height: number
@@ -53,6 +50,17 @@ interface Stage<IdType = string> {
 
     render3DAudio: boolean
     renderReverb: boolean
+
+    // Video related settings
+    numCols: number
+    numLanes: number
+    showLanes: boolean
+
+
+    preferredPosition: {
+        lat: number
+        lng: number
+    }
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [additional: string]: any
