@@ -89,6 +89,9 @@ interface Device<IdType = string> {
     buffer: number
 
     // WEB CLIENT SPECIFIC
+    displayMode?: 'boxes' | 'lanes'
+    numLanes?: number
+    numBoxes?: number
     showOffline?: boolean
 
     // OV SPECIFIC
