@@ -33,7 +33,7 @@ interface Group<IdType = string> extends ThreeDimensionalProperties, VolumePrope
 
     index: number
 
-    numCols: number
+    numBoxes: number
     numLanes: number
 
     iconUrl: string | null
