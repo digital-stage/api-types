@@ -20,7 +20,7 @@
  * SOFTWARE.
  */
 
-import {DeviceType} from './Device'
+import { DeviceType } from './Device'
 
 interface Stage<IdType = string> {
     _id: IdType
@@ -64,4 +64,4 @@ interface Stage<IdType = string> {
     [additional: string]: any
 }
 
-export {Stage}
+export { Stage }
