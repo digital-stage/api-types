@@ -95,6 +95,7 @@ declare namespace ClientLogPayloads {
 
     export type PeerStats = BasePeerReport & {
         stats: RTCStatsReport
+        trackId: string
     }
 
     export type RTCStartSendingTrack = BaseReport & {

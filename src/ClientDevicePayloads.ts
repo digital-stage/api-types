@@ -24,8 +24,6 @@ import { Stage } from './model/Stage'
 import { Group } from './model/Group'
 import { StageMember } from './model/StageMember'
 import { AudioTrack } from './model/AudioTrack'
-import { ThreeDimensionalProperties } from './model/ThreeDimensionalProperties'
-import { VolumeProperties } from './model/VolumeProperties'
 import { CustomStageMemberVolume } from './model/CustomStageMemberVolume'
 import { Device } from './model/Device'
 import { Router } from './model/Router'
@@ -33,157 +31,123 @@ import { SoundCard } from './model/SoundCard'
 import { StageDevice } from './model/StageDevice'
 import { CustomStageDeviceVolume } from './model/CustomStageDeviceVolume'
 import { VideoTrack } from './model/VideoTrack'
+import {
+    CustomAudioTrackPosition,
+    CustomAudioTrackVolume,
+    CustomGroup,
+    CustomGroupPosition,
+    CustomGroupVolume,
+    CustomStageDevicePosition,
+    CustomStageMemberPosition,
+} from './model'
 
 declare namespace ClientDevicePayloads {
-    export type PayloadIdType = string
-    export type CustomGroupId = PayloadIdType
-    export type CustomGroupPositionId = PayloadIdType
-    export type CustomGroupVolumeId = PayloadIdType
-    export type CustomStageMemberPositionId = PayloadIdType
-    export type CustomStageMemberVolumeId = PayloadIdType
-    export type CustomStageDevicePositionId = PayloadIdType
-    export type CustomStageDeviceVolumeId = PayloadIdType
-    export type CustomAudioTrackPositionId = PayloadIdType
-    export type CustomAudioTrackVolumeId = PayloadIdType
-    export type DeviceId = PayloadIdType
-    export type GroupId = PayloadIdType
-    export type AudioTrackId = PayloadIdType
-    export type StageId = PayloadIdType
-    export type StageMemberId = PayloadIdType
-    export type StageDeviceId = PayloadIdType
-    export type UserId = PayloadIdType
-    export type RouterId = PayloadIdType
-    export type SoundCardId = PayloadIdType
-    export type VideoTrackId = PayloadIdType
+    /* General type definitions */
+    export type IdType = string
+    export type CreatePayload<T> = T & { _id: IdType }
+    export type UpdatePayload<T> = Partial<T> & { _id: IdType }
+    export type SetPayload<T> = UpdatePayload<T>
+    export type DeletePayload<T> = IdType
 
     export type RouterAdded = Router
-    export type RouterChanged = { _id: RouterId } & Partial<Router>
-    export type RouterRemoved = UserId
+    export type RouterChanged = { _id: IdType } & Partial<Router>
+    export type RouterRemoved = IdType
 
     export type SendChatMessage = string
 
-    export interface ChangeUser {
-        name: string
-        avatarUrl?: string
-    }
-
     /* DEVICE */
-    export type ChangeDevice = { _id: DeviceId } & Partial<Device>
-    export type RemoveDevice = DeviceId
+    export type ChangeDevice = UpdatePayload<Device>
+    export type RemoveDevice = IdType
 
     /* SDUND CARD */
-    export type SetSoundCard = {
-        audioDriver: string
-        type: 'input' | 'output'
-        uuid: string
-    } & Partial<SoundCard>
-    export type ChangeSoundCard = { _id: SoundCardId } & Partial<SoundCard>
+    export type CreateSoundCard = CreatePayload<SoundCard>
+    export type ChangeSoundCard = UpdatePayload<SoundCard>
+    export type RemoveSoundCard = DeletePayload<SoundCard>
 
     /* STAGE */
-    export type CreateStage = Partial<Omit<Stage, '_id'>>
-    export type ChangeStage = { _id: StageId } & Partial<Stage>
-    export type RemoveStage = StageId
+    export type CreateStage = CreatePayload<Stage>
+    export type ChangeStage = UpdatePayload<Stage>
+    export type RemoveStage = DeletePayload<Stage>
 
     /* GROUP */
-    export type CreateGroup = Partial<Omit<Group, '_id'>> & {
-        stageId: StageId
-    }
-    export type ChangeGroup = { _id: GroupId } & Partial<Group>
-    export type RemoveGroup = GroupId
+    export type CreateGroup = CreatePayload<Group>
+    export type ChangeGroup = UpdatePayload<Group>
+    export type RemoveGroup = DeletePayload<Group>
 
-    export type SetCustomGroup = {
-        groupId: GroupId
-        targetGroupId: GroupId
-    } & Partial<VolumeProperties & ThreeDimensionalProperties>
-    export type RemoveCustomGroup = CustomGroupId
+    export type CreateCustomGroup = CreatePayload<CustomGroup>
+    export type ChangeCustomGroup = UpdatePayload<CustomGroup>
+    export type RemoveCustomGroup = DeletePayload<CustomGroup>
 
-    export type SetCustomGroupVolume = {
-        groupId: GroupId
-        deviceId: DeviceId
-    } & Partial<VolumeProperties>
-    export type SetCustomGroupPosition = {
-        groupId: GroupId
-        deviceId: DeviceId
-    } & Partial<ThreeDimensionalProperties>
-    export type RemoveCustomGroupVolume = CustomGroupVolumeId
-    export type RemoveCustomGroupPosition = CustomGroupPositionId
+    export type CreateCustomGroupVolume = CreatePayload<CustomGroupVolume>
+    export type ChangeCustomGroupVolume = UpdatePayload<CustomGroupVolume>
+    export type RemoveCustomGroupVolume = DeletePayload<CustomGroupVolume>
+
+    export type CreateCustomGroupPosition = CreatePayload<CustomGroupPosition>
+    export type ChangeCustomGroupPosition = UpdatePayload<CustomGroupPosition>
+    export type RemoveCustomGroupPosition = DeletePayload<CustomGroupPosition>
 
     /* STAGE MEMBER */
-    export type ChangeStageMember = { _id: StageMemberId } & Partial<StageMember>
-    export type RemoveStageMember = StageMemberId
-    export type StageMemberChanged = {
-        _id: StageMemberId
-    } & Partial<StageMember>
-    export type SetCustomStageMemberVolume = {
-        stageMemberId: StageMemberId
-        deviceId: DeviceId
-    } & Partial<VolumeProperties>
-    export type SetCustomStageMemberPosition = {
-        stageMemberId: StageMemberId
-        deviceId: DeviceId
-    } & Partial<ThreeDimensionalProperties>
-    export type RemoveCustomStageMemberVolume = CustomStageMemberVolumeId
-    export type RemoveCustomStageMemberPosition = CustomStageMemberPositionId
-    export type CustomStageMemberVolumeAdded = CustomStageMemberVolume
+    export type CreateStageMember = CreatePayload<StageMember>
+    export type ChangeStageMember = UpdatePayload<StageMember>
+    export type RemoveStageMember = DeletePayload<StageMember>
+
+    export type CreateCustomStageMemberVolume = CreatePayload<CustomStageMemberVolume>
+    export type ChangeCustomStageMemberVolume = UpdatePayload<CustomStageMemberVolume>
+    export type RemoveCustomStageMemberVolume = DeletePayload<CustomStageMemberVolume>
+
+    export type CreateCustomStageMemberPosition = CreatePayload<CustomStageMemberPosition>
+    export type ChangeCustomStageMemberPosition = UpdatePayload<CustomStageMemberPosition>
+    export type RemoveCustomStageMemberPosition = DeletePayload<CustomStageMemberPosition>
 
     /* STAGE DEVICE */
-    export type ChangeStageDevice = { _id: StageDeviceId } & Partial<StageDevice>
-    export type RemoveStageDevice = StageDeviceId
-    export type StageDeviceChanged = {
-        _id: StageDeviceId
-    } & Partial<StageDevice>
-    export type SetCustomStageDeviceVolume = {
-        stageDeviceId: StageDeviceId
-        deviceId: DeviceId
-    } & Partial<VolumeProperties>
-    export type SetCustomStageDevicePosition = {
-        stageDeviceId: StageDeviceId
-        deviceId: DeviceId
-    } & Partial<ThreeDimensionalProperties>
-    export type RemoveCustomStageDeviceVolume = CustomStageDeviceVolumeId
-    export type RemoveCustomStageDevicePosition = CustomStageDevicePositionId
-    export type CustomStageDeviceVolumeAdded = CustomStageDeviceVolume
+    export type CreateStageDevice = CreatePayload<StageDevice>
+    export type ChangeStageDevice = UpdatePayload<StageDevice>
+    export type RemoveStageDevice = DeletePayload<StageDevice>
+
+    export type CreateCustomStageDeviceVolume = CreatePayload<CustomStageDeviceVolume>
+    export type ChangeCustomStageDeviceVolume = UpdatePayload<CustomStageDeviceVolume>
+    export type RemoveCustomStageDeviceVolume = DeletePayload<CustomStageDeviceVolume>
+
+    export type CreateCustomStageDevicePosition = CreatePayload<CustomStageDevicePosition>
+    export type ChangeCustomStageDevicePosition = UpdatePayload<CustomStageDevicePosition>
+    export type RemoveCustomStageDevicePosition = DeletePayload<CustomStageDevicePosition>
 
     /* VIDEO TRACKS */
-    export type CreateVideoTrack = Partial<Omit<VideoTrack, '_id'>> & { stageId: StageId }
-    export type ChangeVideoTrack = {
-        _id: VideoTrackId
-    } & Partial<VideoTrack>
-    export type RemoveVideoTrack = VideoTrackId
+    export type CreateVideoTrack = CreatePayload<VideoTrack>
+    export type ChangeVideoTrack = UpdatePayload<VideoTrack>
+    export type RemoveVideoTrack = DeletePayload<VideoTrack>
 
     /* AUDIO TRACKS */
-    export type CreateAudioTrack = Partial<Omit<AudioTrack, '_id'>> & { stageId: StageId }
-    export type ChangeAudioTrack = {
-        _id: AudioTrackId
-    } & Partial<AudioTrack>
-    export type RemoveAudioTrack = AudioTrackId
+    export type CreateAudioTrack = CreatePayload<AudioTrack>
+    export type ChangeAudioTrack = UpdatePayload<AudioTrack>
+    export type RemoveAudioTrack = DeletePayload<AudioTrack>
 
-    export type SetCustomAudioTrackVolume = {
-        audioTrackId: AudioTrackId
-        deviceId: DeviceId
-    } & Partial<VolumeProperties>
-    export type SetCustomAudioTrackPosition = {
-        audioTrackId: AudioTrackId
-        deviceId: DeviceId
-    } & Partial<ThreeDimensionalProperties>
-    export type RemoveCustomAudioTrackVolume = CustomAudioTrackVolumeId
-    export type RemoveCustomAudioTrackPosition = CustomAudioTrackPositionId
+    export type CreateCustomAudioTrackVolume = CreatePayload<CustomAudioTrackVolume>
+    export type ChangeCustomAudioTrackVolume = UpdatePayload<CustomAudioTrackVolume>
+    export type RemoveCustomAudioTrackVolume = DeletePayload<CustomAudioTrackVolume>
 
+    export type CreateCustomAudioTrackPosition = CreatePayload<CustomAudioTrackPosition>
+    export type ChangeCustomAudioTrackPosition = UpdatePayload<CustomAudioTrackPosition>
+    export type RemoveCustomAudioTrackPosition = DeletePayload<CustomAudioTrackPosition>
+
+    /* STAGE HANDLING */
     export interface JoinStage {
-        stageId: string
-        groupId?: string
+        stageId: IdType
+        groupId?: IdType
         password?: string
     }
-
-    export type LeaveStageForGood = string
+    export type StageId = IdType
+    export type LeaveStageForGood = StageId
 
     export type EncodeInviteCode = {
-        stageId: string
-        groupId?: string
+        stageId: IdType
+        groupId?: IdType
     }
     export type RevokeInviteCode = EncodeInviteCode
     export type DecodeInviteCode = string
 
+    /* WebRTC */
+    export type StageDeviceId = IdType
     export type SendP2PRestart = {
         from: StageDeviceId
         to: StageDeviceId

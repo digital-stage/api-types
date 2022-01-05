@@ -47,7 +47,7 @@ export interface AudioTrack<IdType = string> extends ThreeDimensionalProperties,
     /**
      * The name of this audio track (used by our PC client to identify local channels)
      */
-    name?: string;
+    name?: string
 
     sourceChannel?: number
 
