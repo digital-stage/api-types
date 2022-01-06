@@ -27,13 +27,6 @@ interface Router<IdType = string> {
         [type: string]: number
     }
 
-    countryCode: string
-    city: string
-    position: {
-        lat: number
-        lng: number
-    }
-
     turnUrl?: string
 
     apiServer: string
