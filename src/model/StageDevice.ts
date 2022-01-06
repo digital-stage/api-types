@@ -20,41 +20,26 @@
  * SOFTWARE.
  */
 
-import { ThreeDimensionalProperties } from './ThreeDimensionalProperties'
-import { VolumeProperties } from './VolumeProperties'
-
-export interface AudioTrackType {
-    webrtc: 'webrtc'
-    mediasoup: 'mediasoup'
-    jammer: 'jammer'
-    ov: 'ov'
-    native: 'native'
-}
-
-export interface AudioTrack<IdType = string> extends ThreeDimensionalProperties, VolumeProperties {
-    uuid: string
+interface StageDevice<IdType = string> {
     _id: IdType
     userId: IdType
     deviceId: IdType
     stageId: IdType
+    groupId: IdType
     stageMemberId: IdType
-    stageDeviceId: IdType
 
-    /**
-     * The type of the producing device
-     */
-    type: AudioTrackType[keyof AudioTrackType]
+    name: string
 
-    /**
-     * The name of this audio track (used by our PC client to identify local channels)
-     */
-    name?: string
+    type: 'browser' | 'mediasoup' | 'ov' | 'jammer'
 
-    sourceChannel?: number
+    active: boolean
 
-    /**
-     * Additional type specific payload
-     */
+    order: number
+
+    sendLocal: boolean
+
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    [id: string]: any
+    [additional: string]: any
 }
+
+export { StageDevice }

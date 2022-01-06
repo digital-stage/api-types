@@ -33,6 +33,7 @@ export interface VideoTrack<IdType = string> {
     deviceId: IdType
     stageId: IdType
     stageMemberId: IdType
+    stageDeviceId: IdType
 
     /**
      * The type of the producing device

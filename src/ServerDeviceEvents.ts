@@ -64,6 +64,10 @@ const ServerDeviceEvents = {
     StageMemberChanged: 'sm-c',
     StageMemberRemoved: 'sm-r',
 
+    StageDeviceAdded: 'sd-a',
+    StageDeviceChanged: 'sd-c',
+    StageDeviceRemoved: 'sd-r',
+
     VideoTrackAdded: 'v-a',
     VideoTrackChanged: 'v-c',
     VideoTrackRemoved: 'v-r',

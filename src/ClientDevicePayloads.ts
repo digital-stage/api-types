@@ -44,6 +44,10 @@ declare namespace ClientDevicePayloads {
 
     export type SendChatMessage = string
 
+    /* USER */
+    export type ChangeUser = UpdatePayload<Device>
+    export type RemoveUser = void
+
     /* DEVICE */
     export type ChangeDevice = UpdatePayload<Device>
     export type RemoveDevice = IdType
@@ -72,10 +76,14 @@ declare namespace ClientDevicePayloads {
     export type RemoveStageMember = DeletePayload<StageMember>
 
     /* VIDEO TRACKS */
+    export type CreateVideoTrack = CreatePayload<VideoTrack>
+    export type UpdateVideoTrack = UpdatePayload<VideoTrack>
     export type SetVideoTrack = SetPayload<VideoTrack>
     export type RemoveVideoTrack = DeletePayload<VideoTrack>
 
     /* AUDIO TRACKS */
+    export type CreateAudioTrack = CreatePayload<AudioTrack>
+    export type UpdateAudioTrack = UpdatePayload<AudioTrack>
     export type SetAudioTrack = SetPayload<AudioTrack>
     export type RemoveAudioTrack = DeletePayload<AudioTrack>
 

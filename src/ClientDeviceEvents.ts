@@ -48,9 +48,13 @@ const ClientDeviceEvents = {
     ChangeStageMember: 'change-stage-member',
     RemoveStageMember: 'remove-stage-member',
 
+    CreateVideoTrack: 'create-video-track',
+    UpdateVideoTrack: 'update-video-track',
     SetVideoTrack: 'set-video-track',
     RemoveVideoTrack: 'remove-video-track',
 
+    CreateAudioTrack: 'create-audio-track',
+    UpdateAudioTrack: 'update-audio-track',
     SetAudioTrack: 'set-audio-track',
     RemoveAudioTrack: 'remove-audio-track',
 

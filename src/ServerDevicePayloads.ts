@@ -32,6 +32,7 @@ import { SoundCard } from './model/SoundCard'
 import { ChatMessage } from './model/ChatMessage'
 import { VideoTrack } from './model/VideoTrack'
 import { CustomGroup } from './model/CustomGroup'
+import { StageDevice } from './model/StageDevice'
 
 declare namespace ServerDevicePayloads {
     /* General type definitions */
@@ -91,6 +92,11 @@ declare namespace ServerDevicePayloads {
     export type StageMemberAdded = CreatedPayload<StageMember>
     export type StageMemberChanged = UpdatedPayload<StageMember>
     export type StageMemberRemoved = DeletedPayload<StageMember>
+
+    /* STAGE DEVICE */
+    export type StageDeviceAdded = CreatedPayload<StageDevice>
+    export type StageDeviceChanged = UpdatedPayload<StageDevice>
+    export type StageDeviceRemoved = DeletedPayload<StageDevice>
 
     /* VIDEO TRACKS */
     export type VideoTrackAdded = CreatedPayload<VideoTrack>
