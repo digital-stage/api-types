@@ -31,8 +31,7 @@ const ClientDeviceEvents = {
     ChangeDevice: 'change-device',
     RemoveDevice: 'remove-device',
 
-    CreateSoundCard: 'create-sound-card',
-    ChangeSoundCard: 'change-sound-card',
+    SetSoundCard: 'set-sound-card',
     RemoveSoundCard: 'remove-sound-card',
 
     CreateStage: 'create-stage',
@@ -49,12 +48,10 @@ const ClientDeviceEvents = {
     ChangeStageMember: 'change-stage-member',
     RemoveStageMember: 'remove-stage-member',
 
-    CreateVideoTrack: 'create-video-track',
-    ChangeVideoTrack: 'change-video-track',
+    SetVideoTrack: 'set-video-track',
     RemoveVideoTrack: 'remove-video-track',
 
-    CreateAudioTrack: 'create-audio-track',
-    ChangeAudioTrack: 'change-audio-track',
+    SetAudioTrack: 'set-audio-track',
     RemoveAudioTrack: 'remove-audio-track',
 
     JoinStage: 'join-stage',

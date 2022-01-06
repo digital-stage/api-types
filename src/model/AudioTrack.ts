@@ -32,6 +32,7 @@ export interface AudioTrackType {
 }
 
 export interface AudioTrack<IdType = string> extends ThreeDimensionalProperties, VolumeProperties {
+    uuid: string
     _id: IdType
     userId: IdType
     deviceId: IdType

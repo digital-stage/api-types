@@ -33,10 +33,10 @@ import { CustomGroup } from './model/CustomGroup'
 declare namespace ClientDevicePayloads {
     /* General type definitions */
     export type IdType = string
-    export type CreatePayload<T> = T & { _id: IdType }
-    export type UpdatePayload<T> = Partial<T> & { _id: IdType }
-    export type SetPayload<T> = UpdatePayload<T>
-    export type DeletePayload<T> = IdType
+    export type CreatePayload<T extends { _id: IdType }> = Omit<T, '_id'>
+    export type UpdatePayload<T extends { _id: IdType }> = Partial<T> & { _id: IdType }
+    export type SetPayload<T extends { _id: IdType }> = CreatePayload<T>
+    export type DeletePayload<T extends { _id: IdType }> = IdType
 
     export type RouterAdded = Router
     export type RouterChanged = { _id: IdType } & Partial<Router>
@@ -49,8 +49,7 @@ declare namespace ClientDevicePayloads {
     export type RemoveDevice = IdType
 
     /* SDUND CARD */
-    export type CreateSoundCard = CreatePayload<SoundCard>
-    export type ChangeSoundCard = UpdatePayload<SoundCard>
+    export type SetSoundCard = SetPayload<SoundCard>
     export type RemoveSoundCard = DeletePayload<SoundCard>
 
     /* STAGE */
@@ -63,8 +62,8 @@ declare namespace ClientDevicePayloads {
     export type ChangeGroup = UpdatePayload<Group>
     export type RemoveGroup = DeletePayload<Group>
 
-    export type CreateCustomGroup = CreatePayload<CustomGroup>
-    export type ChangeCustomGroup = UpdatePayload<CustomGroup>
+    /* CUSTOM GROUP */
+    export type SetCustomGroup = SetPayload<CustomGroup>
     export type RemoveCustomGroup = DeletePayload<CustomGroup>
 
     /* STAGE MEMBER */
@@ -73,13 +72,11 @@ declare namespace ClientDevicePayloads {
     export type RemoveStageMember = DeletePayload<StageMember>
 
     /* VIDEO TRACKS */
-    export type CreateVideoTrack = CreatePayload<VideoTrack>
-    export type ChangeVideoTrack = UpdatePayload<VideoTrack>
+    export type SetVideoTrack = SetPayload<VideoTrack>
     export type RemoveVideoTrack = DeletePayload<VideoTrack>
 
     /* AUDIO TRACKS */
-    export type CreateAudioTrack = CreatePayload<AudioTrack>
-    export type ChangeAudioTrack = UpdatePayload<AudioTrack>
+    export type SetAudioTrack = SetPayload<AudioTrack>
     export type RemoveAudioTrack = DeletePayload<AudioTrack>
 
     /* STAGE HANDLING */

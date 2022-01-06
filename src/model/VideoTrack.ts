@@ -27,6 +27,7 @@ export interface VideoTrackType {
 
 /* eslint @typescript-eslint/no-explicit-any: ["error", { "ignoreRestArgs": true }] */
 export interface VideoTrack<IdType = string> {
+    uuid: string
     _id: IdType
     userId: IdType
     deviceId: IdType
