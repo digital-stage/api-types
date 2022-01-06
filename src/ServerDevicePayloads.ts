@@ -25,21 +25,12 @@ import { Group } from './model/Group'
 import { StageMember } from './model/StageMember'
 import { AudioTrack } from './model/AudioTrack'
 import { User } from './model/User'
-import { CustomGroupVolume } from './model/CustomGroupVolume'
-import { CustomGroupPosition } from './model/CustomGroupPosition'
-import { CustomStageMemberVolume } from './model/CustomStageMemberVolume'
-import { CustomStageMemberPosition } from './model/CustomStageMemberPosition'
-import { CustomAudioTrackVolume } from './model/CustomAudioTrackVolume'
-import { CustomAudioTrackPosition } from './model/CustomAudioTrackPosition'
 import { StagePackage } from './model/StagePackage'
 import { Router } from './model/Router'
 import { Device } from './model/Device'
 import { SoundCard } from './model/SoundCard'
 import { ChatMessage } from './model/ChatMessage'
 import { VideoTrack } from './model/VideoTrack'
-import { StageDevice } from './model/StageDevice'
-import { CustomStageDeviceVolume } from './model/CustomStageDeviceVolume'
-import { CustomStageDevicePosition } from './model/CustomStageDevicePosition'
 import { CustomGroup } from './model/CustomGroup'
 
 declare namespace ServerDevicePayloads {
@@ -96,39 +87,10 @@ declare namespace ServerDevicePayloads {
     export type CustomGroupChanged = UpdatedPayload<CustomGroup>
     export type CustomGroupRemoved = DeletedPayload<CustomGroup>
 
-    export type CustomGroupVolumeAdded = CreatedPayload<CustomGroupVolume>
-    export type CustomGroupVolumeChanged = UpdatedPayload<CustomGroupVolume>
-    export type CustomGroupVolumeRemoved = DeletedPayload<CustomGroupVolume>
-
-    export type CustomGroupPositionAdded = CreatedPayload<CustomGroupPosition>
-    export type CustomGroupPositionChanged = UpdatedPayload<CustomGroupPosition>
-    export type CustomGroupPositionRemoved = DeletedPayload<CustomGroupPosition>
-
     /* STAGE MEMBER */
     export type StageMemberAdded = CreatedPayload<StageMember>
     export type StageMemberChanged = UpdatedPayload<StageMember>
     export type StageMemberRemoved = DeletedPayload<StageMember>
-
-    export type CustomStageMemberVolumeAdded = CreatedPayload<CustomStageMemberVolume>
-    export type CustomStageMemberVolumeChanged = UpdatedPayload<CustomStageMemberVolume>
-    export type CustomStageMemberVolumeRemoved = DeletedPayload<CustomStageMemberVolume>
-
-    export type CustomStageMemberPositionAdded = CreatedPayload<CustomStageMemberPosition>
-    export type CustomStageMemberPositionChanged = UpdatedPayload<CustomStageMemberPosition>
-    export type CustomStageMemberPositionRemoved = DeletedPayload<CustomStageMemberPosition>
-
-    /* STAGE DEVICE */
-    export type StageDeviceAdded = CreatedPayload<StageDevice>
-    export type StageDeviceChanged = UpdatedPayload<StageDevice>
-    export type StageDeviceRemoved = DeletedPayload<StageDevice>
-
-    export type CustomStageDeviceVolumeAdded = CreatedPayload<CustomStageDeviceVolume>
-    export type CustomStageDeviceVolumeChanged = UpdatedPayload<CustomStageDeviceVolume>
-    export type CustomStageDeviceVolumeRemoved = DeletedPayload<CustomStageDeviceVolume>
-
-    export type CustomStageDevicePositionAdded = CreatedPayload<CustomStageDevicePosition>
-    export type CustomStageDevicePositionChanged = UpdatedPayload<CustomStageDevicePosition>
-    export type CustomStageDevicePositionRemoved = DeletedPayload<CustomStageDevicePosition>
 
     /* VIDEO TRACKS */
     export type VideoTrackAdded = CreatedPayload<VideoTrack>
@@ -139,14 +101,6 @@ declare namespace ServerDevicePayloads {
     export type AudioTrackAdded = CreatedPayload<AudioTrack>
     export type AudioTrackChanged = UpdatedPayload<AudioTrack>
     export type AudioTrackRemoved = DeletedPayload<AudioTrack>
-
-    export type CustomAudioTrackVolumeAdded = CreatedPayload<CustomAudioTrackVolume>
-    export type CustomAudioTrackVolumeChanged = UpdatedPayload<CustomAudioTrackVolume>
-    export type CustomAudioTrackVolumeRemoved = DeletedPayload<CustomAudioTrackVolume>
-
-    export type CustomAudioTrackPositionAdded = CreatedPayload<CustomAudioTrackPosition>
-    export type CustomAudioTrackPositionChanged = UpdatedPayload<CustomAudioTrackPosition>
-    export type CustomAudioTrackPositionRemoved = DeletedPayload<CustomAudioTrackPosition>
 
     /* WebRTC related */
     export type TurnServersChanged = string[]

@@ -20,16 +20,7 @@
  * SOFTWARE.
  */
 
-import { StageDevice } from './StageDevice'
 import { ChatMessage } from './ChatMessage'
-import { CustomGroupPosition } from './CustomGroupPosition'
-import { CustomGroupVolume } from './CustomGroupVolume'
-import { CustomAudioTrackPosition } from './CustomAudioTrackPosition'
-import { CustomAudioTrackVolume } from './CustomAudioTrackVolume'
-import { CustomStageMemberPosition } from './CustomStageMemberPosition'
-import { CustomStageMemberVolume } from './CustomStageMemberVolume'
-import { CustomStageDevicePosition } from './CustomStageDevicePosition'
-import { CustomStageDeviceVolume } from './CustomStageDeviceVolume'
 import { Device, DeviceType } from './Device'
 import { Group } from './Group'
 import { AudioTrack, AudioTrackType } from './AudioTrack'
@@ -55,14 +46,6 @@ export * from './ov'
 export type {
     ChatMessage,
     CustomGroup,
-    CustomGroupPosition,
-    CustomGroupVolume,
-    CustomAudioTrackPosition,
-    CustomAudioTrackVolume,
-    CustomStageMemberPosition,
-    CustomStageMemberVolume,
-    CustomStageDevicePosition,
-    CustomStageDeviceVolume,
     Device,
     DeviceType,
     Group,
@@ -74,7 +57,6 @@ export type {
     SoundCard,
     Stage,
     StageMember,
-    StageDevice,
     StagePackage,
     ThreeDimensionalProperties,
     User,

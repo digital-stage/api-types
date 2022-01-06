@@ -34,8 +34,8 @@ interface OvStage<IdType = string> extends Stage<IdType> {
     ovPin: number
     ovJitter?: number
     ovLatency?: {
-        [srcOvStageDeviceId: number]: {
-            [desOvStageDeviceId: number]: {
+        [srcDeviceId: number]: {
+            [desDeviceId: number]: {
                 latency: number
                 jitter: number
             }

@@ -37,7 +37,6 @@ export interface AudioTrack<IdType = string> extends ThreeDimensionalProperties,
     deviceId: IdType
     stageId: IdType
     stageMemberId: IdType
-    stageDeviceId: IdType
 
     /**
      * The type of the producing device

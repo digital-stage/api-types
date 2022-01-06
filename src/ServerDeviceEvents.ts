@@ -60,37 +60,9 @@ const ServerDeviceEvents = {
     CustomGroupChanged: 'c-g-c',
     CustomGroupRemoved: 'c-g-r',
 
-    CustomGroupPositionAdded: 'c-g-p-a',
-    CustomGroupPositionChanged: 'c-g-p-c',
-    CustomGroupPositionRemoved: 'c-g-p-r',
-
-    CustomGroupVolumeAdded: 'c-g-v-a',
-    CustomGroupVolumeChanged: 'c-g-v-c',
-    CustomGroupVolumeRemoved: 'c-g-v-r',
-
     StageMemberAdded: 'sm-a',
     StageMemberChanged: 'sm-c',
     StageMemberRemoved: 'sm-r',
-
-    CustomStageMemberPositionAdded: 'c-sm-p-a',
-    CustomStageMemberPositionChanged: 'c-sm-p-c',
-    CustomStageMemberPositionRemoved: 'c-sm-p-r',
-
-    CustomStageMemberVolumeAdded: 'c-sm-v-a',
-    CustomStageMemberVolumeChanged: 'c-sm-v-c',
-    CustomStageMemberVolumeRemoved: 'c-sm-v-r',
-
-    StageDeviceAdded: 'sd-a',
-    StageDeviceChanged: 'sd-c',
-    StageDeviceRemoved: 'sd-r',
-
-    CustomStageDevicePositionAdded: 'c-sd-p-a',
-    CustomStageDevicePositionChanged: 'c-sd-p-c',
-    CustomStageDevicePositionRemoved: 'c-sd-p-r',
-
-    CustomStageDeviceVolumeAdded: 'c-sd-v-a',
-    CustomStageDeviceVolumeChanged: 'c-sd-v-c',
-    CustomStageDeviceVolumeRemoved: 'c-sd-v-r',
 
     VideoTrackAdded: 'v-a',
     VideoTrackChanged: 'v-c',
@@ -99,14 +71,6 @@ const ServerDeviceEvents = {
     AudioTrackAdded: 'a-a',
     AudioTrackChanged: 'a-c',
     AudioTrackRemoved: 'a-r',
-
-    CustomAudioTrackPositionAdded: 'c-a-p-a',
-    CustomAudioTrackPositionChanged: 'c-a-p-c',
-    CustomAudioTrackPositionRemoved: 'c-a-p-r',
-
-    CustomAudioTrackVolumeAdded: 'c-a-v-a',
-    CustomAudioTrackVolumeChanged: 'c-a-v-c',
-    CustomAudioTrackVolumeRemoved: 'c-a-v-r',
 
     TurnServersChanged: 't',
     P2PRestart: 'p2p-r',

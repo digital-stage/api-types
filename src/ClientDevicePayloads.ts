@@ -24,22 +24,11 @@ import { Stage } from './model/Stage'
 import { Group } from './model/Group'
 import { StageMember } from './model/StageMember'
 import { AudioTrack } from './model/AudioTrack'
-import { CustomStageMemberVolume } from './model/CustomStageMemberVolume'
 import { Device } from './model/Device'
 import { Router } from './model/Router'
 import { SoundCard } from './model/SoundCard'
-import { StageDevice } from './model/StageDevice'
-import { CustomStageDeviceVolume } from './model/CustomStageDeviceVolume'
 import { VideoTrack } from './model/VideoTrack'
-import {
-    CustomAudioTrackPosition,
-    CustomAudioTrackVolume,
-    CustomGroup,
-    CustomGroupPosition,
-    CustomGroupVolume,
-    CustomStageDevicePosition,
-    CustomStageMemberPosition,
-} from './model'
+import { CustomGroup } from './model/CustomGroup'
 
 declare namespace ClientDevicePayloads {
     /* General type definitions */
@@ -78,39 +67,10 @@ declare namespace ClientDevicePayloads {
     export type ChangeCustomGroup = UpdatePayload<CustomGroup>
     export type RemoveCustomGroup = DeletePayload<CustomGroup>
 
-    export type CreateCustomGroupVolume = CreatePayload<CustomGroupVolume>
-    export type ChangeCustomGroupVolume = UpdatePayload<CustomGroupVolume>
-    export type RemoveCustomGroupVolume = DeletePayload<CustomGroupVolume>
-
-    export type CreateCustomGroupPosition = CreatePayload<CustomGroupPosition>
-    export type ChangeCustomGroupPosition = UpdatePayload<CustomGroupPosition>
-    export type RemoveCustomGroupPosition = DeletePayload<CustomGroupPosition>
-
     /* STAGE MEMBER */
     export type CreateStageMember = CreatePayload<StageMember>
     export type ChangeStageMember = UpdatePayload<StageMember>
     export type RemoveStageMember = DeletePayload<StageMember>
-
-    export type CreateCustomStageMemberVolume = CreatePayload<CustomStageMemberVolume>
-    export type ChangeCustomStageMemberVolume = UpdatePayload<CustomStageMemberVolume>
-    export type RemoveCustomStageMemberVolume = DeletePayload<CustomStageMemberVolume>
-
-    export type CreateCustomStageMemberPosition = CreatePayload<CustomStageMemberPosition>
-    export type ChangeCustomStageMemberPosition = UpdatePayload<CustomStageMemberPosition>
-    export type RemoveCustomStageMemberPosition = DeletePayload<CustomStageMemberPosition>
-
-    /* STAGE DEVICE */
-    export type CreateStageDevice = CreatePayload<StageDevice>
-    export type ChangeStageDevice = UpdatePayload<StageDevice>
-    export type RemoveStageDevice = DeletePayload<StageDevice>
-
-    export type CreateCustomStageDeviceVolume = CreatePayload<CustomStageDeviceVolume>
-    export type ChangeCustomStageDeviceVolume = UpdatePayload<CustomStageDeviceVolume>
-    export type RemoveCustomStageDeviceVolume = DeletePayload<CustomStageDeviceVolume>
-
-    export type CreateCustomStageDevicePosition = CreatePayload<CustomStageDevicePosition>
-    export type ChangeCustomStageDevicePosition = UpdatePayload<CustomStageDevicePosition>
-    export type RemoveCustomStageDevicePosition = DeletePayload<CustomStageDevicePosition>
 
     /* VIDEO TRACKS */
     export type CreateVideoTrack = CreatePayload<VideoTrack>
@@ -122,14 +82,6 @@ declare namespace ClientDevicePayloads {
     export type ChangeAudioTrack = UpdatePayload<AudioTrack>
     export type RemoveAudioTrack = DeletePayload<AudioTrack>
 
-    export type CreateCustomAudioTrackVolume = CreatePayload<CustomAudioTrackVolume>
-    export type ChangeCustomAudioTrackVolume = UpdatePayload<CustomAudioTrackVolume>
-    export type RemoveCustomAudioTrackVolume = DeletePayload<CustomAudioTrackVolume>
-
-    export type CreateCustomAudioTrackPosition = CreatePayload<CustomAudioTrackPosition>
-    export type ChangeCustomAudioTrackPosition = UpdatePayload<CustomAudioTrackPosition>
-    export type RemoveCustomAudioTrackPosition = DeletePayload<CustomAudioTrackPosition>
-
     /* STAGE HANDLING */
     export interface JoinStage {
         stageId: IdType
@@ -137,7 +89,7 @@ declare namespace ClientDevicePayloads {
         password?: string
     }
     export type StageId = IdType
-    export type LeaveStageForGood = StageId
+    export type ForgetStage = StageId
 
     export type EncodeInviteCode = {
         stageId: IdType
