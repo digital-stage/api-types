@@ -20,6 +20,8 @@
  * SOFTWARE.
  */
 
+import { DeviceType } from './Device'
+
 interface StageDevice<IdType = string> {
     _id: IdType
     userId: IdType
@@ -30,7 +32,7 @@ interface StageDevice<IdType = string> {
 
     name: string
 
-    type: 'browser' | 'mediasoup' | 'ov' | 'jammer'
+    type: DeviceType[keyof DeviceType]
 
     active: boolean
 

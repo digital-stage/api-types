@@ -38,6 +38,7 @@ import { User } from './User'
 import { DefaultVolumeProperties, VolumeProperties } from './VolumeProperties'
 import { InitialStagePackage } from './InitialStagePackage'
 import { CustomGroup } from './CustomGroup'
+import { StageDevice } from './StageDevice'
 
 export * from './browser'
 export * from './jammer'
@@ -57,6 +58,7 @@ export type {
     SoundCard,
     Stage,
     StageMember,
+    StageDevice,
     StagePackage,
     ThreeDimensionalProperties,
     User,
