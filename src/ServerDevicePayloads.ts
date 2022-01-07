@@ -39,7 +39,7 @@ declare namespace ServerDevicePayloads {
     export type IdType = string
     export type CreatedPayload<T> = T & { _id: IdType }
     export type UpdatedPayload<T> = Partial<T> & { _id: IdType }
-    export type DeletedPayload<T> = T & { _id: IdType }
+    export type DeletedPayload<T> = IdType
 
     export type Ready = {
         turn?: {
