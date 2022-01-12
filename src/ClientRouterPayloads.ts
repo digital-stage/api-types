@@ -20,7 +20,7 @@
  * SOFTWARE.
  */
 
-import {Router} from './model/Router'
+import { Router } from './model/Router'
 
 declare namespace ClientRouterPayloads {
     export type ConnectAsRouter = {
@@ -30,7 +30,8 @@ declare namespace ClientRouterPayloads {
 
     export type JammerStarted = {
         stageId: string
-        url: string
+        ipv4: string
+        ipv6: string
         port: number
         key: string
     }
@@ -41,9 +42,17 @@ declare namespace ClientRouterPayloads {
         port: number
     }
 
+    export type OvStarted = {
+        stageId: string
+        ipv4: string
+        ipv6: string
+        port: number
+        pin: string
+    }
+
     export type StageId = string
     export type JammerStopped = StageId
     export type MediasoupStopped = StageId
-
+    export type OvStopped = StageId
 }
-export {ClientRouterPayloads}
+export { ClientRouterPayloads }

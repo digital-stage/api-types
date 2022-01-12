@@ -30,5 +30,8 @@ const ClientRouterEvents = {
 
     MediasoupStarted: 'mediasoup-started',
     MediasoupStopped: 'mediasoup-started',
+
+    OvStarted: 'ov-started',
+    OvStopped: 'ov-started',
 }
 export { ClientRouterEvents }

@@ -28,5 +28,8 @@ const ServerRouterEvents = {
 
     StartMediasoup: 'start-mediasoup',
     StopMediasoup: 'stop-mediasoup',
+
+    StartOv: 'start-ov',
+    StopOv: 'stop-ov',
 }
 export { ServerRouterEvents }
