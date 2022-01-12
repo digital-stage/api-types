@@ -55,11 +55,6 @@ interface Stage<IdType = string> {
     numBoxes: number
     numLanes: number
 
-    preferredPosition: {
-        lat: number
-        lng: number
-    }
-
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [additional: string]: any
 }

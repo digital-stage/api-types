@@ -21,10 +21,14 @@
  */
 
 const ClientRouterEvents = {
+    ConnectAsRouter: 'router',
+
     Ready: 'ready',
-    ChangeRouter: 'change-router',
-    StageServed: 'stage-served',
-    ChangeStage: 'change-stage',
-    StageUnServed: 'stage-unserved',
+
+    JammerStarted: 'jammer-started',
+    JammerStopped: 'jammer-started',
+
+    MediasoupStarted: 'mediasoup-started',
+    MediasoupStopped: 'mediasoup-started',
 }
 export { ClientRouterEvents }

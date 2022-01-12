@@ -22,8 +22,6 @@
 
 const ClientDeviceEvents = {
     SendChatMessage: 'send-message',
-    ConnectAsRouter: 'router',
-    ConnectWithToken: 'token',
 
     ChangeUser: 'change-user',
     RemoveUser: 'remove-user',
@@ -32,6 +30,7 @@ const ClientDeviceEvents = {
     RemoveDevice: 'remove-device',
 
     SetSoundCard: 'set-sound-card',
+    ChangeSoundCard: 'change-sound-card',
     RemoveSoundCard: 'remove-sound-card',
 
     CreateStage: 'create-stage',
@@ -49,12 +48,12 @@ const ClientDeviceEvents = {
     RemoveStageMember: 'remove-stage-member',
 
     CreateVideoTrack: 'create-video-track',
-    UpdateVideoTrack: 'update-video-track',
+    ChangeVideoTrack: 'change-video-track',
     SetVideoTrack: 'set-video-track',
     RemoveVideoTrack: 'remove-video-track',
 
     CreateAudioTrack: 'create-audio-track',
-    UpdateAudioTrack: 'update-audio-track',
+    ChangeAudioTrack: 'change-audio-track',
     SetAudioTrack: 'set-audio-track',
     RemoveAudioTrack: 'remove-audio-track',
 

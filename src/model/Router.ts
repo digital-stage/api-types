@@ -29,7 +29,7 @@ interface Router<IdType = string> {
 
     turnUrl?: string
 
-    apiServer: string
+    apiServer: IdType
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [additional: string]: any

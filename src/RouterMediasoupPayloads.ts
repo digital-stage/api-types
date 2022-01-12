@@ -20,7 +20,7 @@
  * SOFTWARE.
  */
 
-declare namespace ServerMediasoupPayloads {
+declare namespace RouterMediasoupPayloads {
     export type TransportPaused = string // = transportId
     export type TransportResumed = string // = transportId
     export type TransportClosed = string // = transportId
@@ -29,4 +29,4 @@ declare namespace ServerMediasoupPayloads {
     export type DataProducerClosed = string // = producerId
     export type DataConsumerClosed = string // = consumerId
 }
-export { ServerMediasoupPayloads }
+export { RouterMediasoupPayloads }

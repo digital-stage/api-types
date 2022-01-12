@@ -39,12 +39,14 @@ import { DefaultVolumeProperties, VolumeProperties } from './VolumeProperties'
 import { InitialStagePackage } from './InitialStagePackage'
 import { CustomGroup } from './CustomGroup'
 import { StageDevice } from './StageDevice'
+import { ApiServer } from './ApiServer'
 
 export * from './browser'
 export * from './jammer'
 export * from './ov'
 
 export type {
+    ApiServer,
     ChatMessage,
     CustomGroup,
     Device,

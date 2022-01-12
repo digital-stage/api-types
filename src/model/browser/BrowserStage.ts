@@ -22,13 +22,11 @@
 
 import { Stage } from '../Stage'
 
-interface BrowserStage extends Stage {
+interface BrowserStage<IdType = string> extends Stage<IdType> {
     videoType: 'browser'
     audioType: 'browser'
 
-    mediasoup: {
-        url: string
-        port: number
-    }
+    mediasoupUrl: string
+    mediasoupPort: number
 }
 export { BrowserStage }

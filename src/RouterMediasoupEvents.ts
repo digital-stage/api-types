@@ -20,7 +20,7 @@
  * SOFTWARE.
  */
 
-const ServerMediasoupEvents = {
+const RouterMediasoupEvents = {
     TransportPaused: 'transport-paused',
     TransportResumed: 'transport-resumed',
     TransportClosed: 'transport-closed',
@@ -29,4 +29,4 @@ const ServerMediasoupEvents = {
     DataProducerClosed: 'data-producer-closed',
     DataConsumerClosed: 'data-consumer-closed',
 }
-export { ServerMediasoupEvents }
+export { RouterMediasoupEvents }

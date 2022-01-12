@@ -39,6 +39,7 @@ declare namespace ServerDevicePayloads {
     export type IdType = string
     export type CreatedPayload<T> = T & { _id: IdType }
     export type UpdatedPayload<T> = Partial<T> & { _id: IdType }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     export type DeletedPayload<T> = IdType
 
     export type Ready = {
@@ -76,6 +77,7 @@ declare namespace ServerDevicePayloads {
     export type StageJoined = {
         stageId: IdType
         stageMemberId: IdType
+        stageDeviceId: IdType
         groupId: IdType | null
     } & StagePackage
 

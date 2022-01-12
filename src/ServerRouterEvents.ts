@@ -23,11 +23,10 @@
 const ServerRouterEvents = {
     Ready: 'ok',
 
-    RouterAdded: 'router-added',
-    RouterChanged: 'router-changed',
-    RouterRemoved: 'router-removed',
+    StartJammer: 'start-jammer',
+    StopJammer: 'stop-jammer',
 
-    ServeStage: 'serve-stage',
-    UnServeStage: 'un-serve-stage',
+    StartMediasoup: 'start-mediasoup',
+    StopMediasoup: 'stop-mediasoup',
 }
 export { ServerRouterEvents }

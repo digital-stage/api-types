@@ -108,7 +108,7 @@ interface Device<IdType = string> {
     [additional: string]: any
 
     // Additional information about connected api server
-    apiServer: string
+    apiServer: IdType
 }
 
 export const getDefaultDeviceValues = <IdType = string>(): Omit<
