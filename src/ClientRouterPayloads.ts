@@ -28,6 +28,8 @@ declare namespace ClientRouterPayloads {
         router: Omit<Router, '_id'>
     }
 
+    export type Update = Partial<Omit<Router, '_id'>>
+
     export type JammerStarted = {
         stageId: string
         ipv4: string
@@ -35,6 +37,8 @@ declare namespace ClientRouterPayloads {
         port: number
         key: string
     }
+
+    export type JammerUpdated = Partial<JammerStarted>
 
     export type MediasoupStarted = {
         stageId: string
@@ -47,8 +51,10 @@ declare namespace ClientRouterPayloads {
         ipv4: string
         ipv6: string
         port: number
-        pin: string
+        pin?: string
     }
+
+    export type OvUpdated = Partial<OvStarted>
 
     export type StageId = string
     export type JammerStopped = StageId
