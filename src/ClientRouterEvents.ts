@@ -29,13 +29,13 @@ const ClientRouterEvents = {
 
     JammerStarted: 'jammer-started',
     JammerUpdated: 'jammer-updated',
-    JammerStopped: 'jammer-started',
+    JammerStopped: 'jammer-stopped',
 
     MediasoupStarted: 'mediasoup-started',
-    MediasoupStopped: 'mediasoup-started',
+    MediasoupStopped: 'mediasoup-stopped',
 
     OvStarted: 'ov-started',
     OvUpdated: 'ov-updated',
-    OvStopped: 'ov-started',
+    OvStopped: 'ov-stopped',
 }
 export { ClientRouterEvents }
