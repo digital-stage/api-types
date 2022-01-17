@@ -20,9 +20,9 @@
  * SOFTWARE.
  */
 
-import {DeviceType} from './Device'
-import {VolumeProperties} from "./VolumeProperties";
-import {ThreeDimensionalProperties} from "./ThreeDimensionalProperties";
+import { DeviceType } from './Device'
+import { VolumeProperties } from './VolumeProperties'
+import { ThreeDimensionalProperties } from './ThreeDimensionalProperties'
 
 /**
  * VolumeProperties and ThreeDimensionalProperties are only for compatibility, please do not use them in productive code, since they'll never change
@@ -45,9 +45,8 @@ interface StageDevice<IdType = string> extends VolumeProperties, ThreeDimensiona
 
     sendLocal: boolean
 
-
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [additional: string]: any
 }
 
-export {StageDevice}
+export { StageDevice }

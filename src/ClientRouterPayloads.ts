@@ -27,6 +27,7 @@ declare namespace ClientRouterPayloads {
         apiKey: string
         router: Omit<Router, '_id'>
     }
+    export type Ready = undefined
 
     export type Update = Partial<Router>
 

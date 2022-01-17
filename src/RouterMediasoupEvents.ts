@@ -21,6 +21,7 @@
  */
 
 const RouterMediasoupEvents = {
+    Ready: 'ok',
     TransportPaused: 'transport-paused',
     TransportResumed: 'transport-resumed',
     TransportClosed: 'transport-closed',

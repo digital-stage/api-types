@@ -41,13 +41,13 @@ interface StagePackage<IdType = string> {
     videoTracks: VideoTrack<IdType>[]
 
     // Compatibility to older clients
-    customGroupVolumes: [],
-    customGroupPositions: [],
-    customStageMemberVolumes: [],
-    customStageMemberPositions: [],
-    customStageDeviceVolumes: [],
-    customStageDevicePositions: [],
-    customAudioTrackPositions: [],
+    customGroupVolumes: []
+    customGroupPositions: []
+    customStageMemberVolumes: []
+    customStageMemberPositions: []
+    customStageDeviceVolumes: []
+    customStageDevicePositions: []
+    customAudioTrackPositions: []
     customAudioTrackVolumes: []
 }
 

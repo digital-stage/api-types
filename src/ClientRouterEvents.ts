@@ -23,7 +23,7 @@
 const ClientRouterEvents = {
     ConnectAsRouter: 'router',
 
-    Ready: 'ready',
+    Ready: 'ok',
 
     Update: 'update',
 

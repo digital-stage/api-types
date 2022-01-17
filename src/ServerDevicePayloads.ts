@@ -50,6 +50,11 @@ declare namespace ServerDevicePayloads {
         }
     }
 
+    export type FatalError = {
+        code: number
+        message: string
+    }
+
     export type RouterAdded = CreatedPayload<Router>
     export type RouterChanged = UpdatedPayload<Router>
     export type RouterRemoved = DeletedPayload<Router>

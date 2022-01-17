@@ -39,6 +39,11 @@ declare namespace ClientDevicePayloads {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     export type DeletePayload<T extends { _id: IdType }> = IdType
 
+    export interface ConnectWithToken {
+        token: string
+        device?: Partial<Omit<Device, '_id'>> & { uuid: string }
+    }
+
     export type SendChatMessage = string
 
     /* USER */

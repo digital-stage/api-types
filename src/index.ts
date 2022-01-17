@@ -32,7 +32,6 @@ import { getDefaultDeviceValues } from './model/Device'
 import { ServerDeviceEvents } from './ServerDeviceEvents'
 import { RouterMediasoupPayloads } from './RouterMediasoupPayloads'
 import { ServerDevicePayloads } from './ServerDevicePayloads'
-import { Payloads } from './ServerPayloads'
 import { ServerRouterEvents } from './ServerRouterEvents'
 import { ServerRouterPayloads } from './ServerRouterPayloads'
 import { RouterMediasoupEvents } from './RouterMediasoupEvents'
@@ -48,7 +47,6 @@ export type {
     ServerDevicePayloads,
     ServerRouterPayloads,
     RouterMediasoupPayloads,
-    Payloads,
     ErrorCode,
 }
 

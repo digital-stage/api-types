@@ -21,6 +21,7 @@
  */
 
 declare namespace RouterMediasoupPayloads {
+    export type Ready = undefined
     export type TransportPaused = string // = transportId
     export type TransportResumed = string // = transportId
     export type TransportClosed = string // = transportId

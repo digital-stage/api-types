@@ -23,9 +23,9 @@
 interface Router<IdType = string> {
     _id: IdType
 
-    browser?: number,
-    jammer?: number,
-    ov?: number,
+    browser?: number
+    jammer?: number
+    ov?: number
 
     turnUrl?: string
 

@@ -21,6 +21,8 @@
  */
 
 const ClientDeviceEvents = {
+    ConnectWithToken: 'token',
+
     SendChatMessage: 'send-message',
 
     ChangeUser: 'change-user',
