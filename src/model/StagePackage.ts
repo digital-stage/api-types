@@ -39,6 +39,16 @@ interface StagePackage<IdType = string> {
     stageDevices: StageDevice<IdType>[]
     audioTracks: AudioTrack<IdType>[]
     videoTracks: VideoTrack<IdType>[]
+
+    // Compatibility to older clients
+    customGroupVolumes: [],
+    customGroupPositions: [],
+    customStageMemberVolumes: [],
+    customStageMemberPositions: [],
+    customStageDeviceVolumes: [],
+    customStageDevicePositions: [],
+    customAudioTrackPositions: [],
+    customAudioTrackVolumes: []
 }
 
 export { StagePackage }

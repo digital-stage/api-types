@@ -28,7 +28,7 @@ declare namespace ClientRouterPayloads {
         router: Omit<Router, '_id'>
     }
 
-    export type Update = Partial<Router> & {_id: string}
+    export type Update = Partial<Router>
 
     export type JammerStarted = {
         stageId: string
