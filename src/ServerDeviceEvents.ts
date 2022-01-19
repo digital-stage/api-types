@@ -27,7 +27,7 @@ const ServerDeviceEvents = {
     UserReady: 'u-r',
     Ready: 'ok',
 
-    FatalError: 'error',
+    FatalError: 'fatal-error',
 
     UserAdded: 'u-a',
     UserChanged: 'u-c',

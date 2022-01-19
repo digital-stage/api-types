@@ -82,7 +82,6 @@ declare namespace ServerDevicePayloads {
     export type StageJoined = {
         stageId: IdType
         stageMemberId: IdType
-        stageDeviceId: IdType
         groupId: IdType | null
     } & StagePackage
 
