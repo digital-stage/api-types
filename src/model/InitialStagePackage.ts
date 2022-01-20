@@ -25,7 +25,6 @@ import { StagePackage } from './StagePackage'
 interface InitialStagePackage<IdType = string> extends StagePackage<IdType> {
     stageId: IdType
     stageMemberId: IdType
-    stageDeviceId: IdType
     groupId: IdType | null
 }
 

@@ -20,53 +20,6 @@
  * SOFTWARE.
  */
 
-type BaseReport = {
-    /**
-     * Unique device ID, is unique for each browser window
-     * @see Device
-     * */
-    deviceId: string
-    /**
-     * Unique user ID
-     * @see User
-     * */
-    userId: string
-    /** Unique email for this user * */
-    email: string
-    /**
-     * Unique ID of stage, where the user is currently logged in
-     * @see Stage
-     * */
-    stageId: string
-    /**
-     * Timestamp
-     */
-    timestamp: number
-}
-
-type BasePeerReport = BaseReport & {
-    /** Device ID of the other peer * */
-    targetDeviceId: string
-}
-
-type BaseMediasoupReport = BaseReport & {
-    routerUrl: string
-}
-
-type BaseMediasoupProducerReport = BaseMediasoupReport & {
-    producerId: string
-    /** The track ID is the globally unique ID of this video or audio track * */
-    trackId: string
-}
-
-type BaseMediasoupConsumerReport = BaseMediasoupReport & {
-    /** The unique ID of the consumer (usualley only used by the client itself) * */
-    consumerId: string
-    /** The ID of the producer that is consumed * */
-    producerId: string
-    /** The track ID is the globally unique ID of this video or audio track * */
-    trackId: string
-}
 
 /**
  * The payloads describes the body of all log REST queries according the central logging service
@@ -75,6 +28,54 @@ type BaseMediasoupConsumerReport = BaseMediasoupReport & {
  * https://myloggingserivce/p-connecting
  */
 declare namespace ClientLogPayloads {
+    export type BaseReport = {
+        /**
+         * Unique device ID, is unique for each browser window
+         * @see Device
+         * */
+        deviceId: string
+        /**
+         * Unique user ID
+         * @see User
+         * */
+        userId: string
+        /** Unique email for this user * */
+        email: string
+        /**
+         * Unique ID of stage, where the user is currently logged in
+         * @see Stage
+         * */
+        stageId: string
+        /**
+         * Timestamp
+         */
+        timestamp: number
+    }
+
+    export type BasePeerReport = BaseReport & {
+        /** Device ID of the other peer * */
+        targetDeviceId: string
+    }
+
+    export type BaseMediasoupReport = BaseReport & {
+        routerUrl: string
+    }
+
+    export type BaseMediasoupProducerReport = BaseMediasoupReport & {
+        producerId: string
+        /** The track ID is the globally unique ID of this video or audio track * */
+        trackId: string
+    }
+
+    export type BaseMediasoupConsumerReport = BaseMediasoupReport & {
+        /** The unique ID of the consumer (usualley only used by the client itself) * */
+        consumerId: string
+        /** The ID of the producer that is consumed * */
+        producerId: string
+        /** The track ID is the globally unique ID of this video or audio track * */
+        trackId: string
+    }
+
     export type Ready = BaseReport
 
     export type RTCSignalingStateChanged = BasePeerReport & {
