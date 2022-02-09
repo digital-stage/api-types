@@ -33,11 +33,11 @@ interface ThreeDimensionalProperties {
 const DefaultThreeDimensionalProperties: ThreeDimensionalProperties = {
     directivity: 'cardoid',
     x: 0,
-    y: -1,
+    y: 0,
     z: 0,
     rX: 0,
     rY: 0,
-    rZ: -180,
+    rZ: 0,
 }
 export { DefaultThreeDimensionalProperties }
 export { ThreeDimensionalProperties }

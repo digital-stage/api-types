@@ -32,6 +32,12 @@ interface StageMember<IdType = string> extends ThreeDimensionalProperties, Volum
 
     index: number
 
+    /**
+     * This is a duplicate of the user's name
+     * Please only change the name of the user, this value will be sync automatically by the api server
+     */
+    name: string
+
     active: boolean
     isDirector: boolean
 }

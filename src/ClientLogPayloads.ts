@@ -20,7 +20,6 @@
  * SOFTWARE.
  */
 
-
 /**
  * The payloads describes the body of all log REST queries according the central logging service
  * @see ClientLogEvents
@@ -45,7 +44,7 @@ declare namespace ClientLogPayloads {
          * Unique ID of stage, where the user is currently logged in
          * @see Stage
          * */
-        stageId: string
+        stageId?: string
         /**
          * Timestamp
          */
@@ -96,7 +95,7 @@ declare namespace ClientLogPayloads {
 
     export type PeerStats = BasePeerReport & {
         stats: RTCStatsReport
-        trackId: string
+        trackId?: string
     }
 
     export type RTCStartSendingTrack = BaseReport & {

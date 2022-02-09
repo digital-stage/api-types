@@ -33,6 +33,7 @@ const ErrorCodes = {
     MaxMembersReached: 'No more members possible, max of 30 reached',
     StageIsAlreadyFullyServed: 'Stage is already fully served',
     NoPrivileges: 'No privileges',
+    InvalidInviteCode: 'Invalid invite code',
 }
 export type ErrorCode = keyof typeof ErrorCodes
 export { ErrorCodes }
