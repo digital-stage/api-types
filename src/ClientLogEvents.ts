@@ -49,9 +49,13 @@ const ClientLogEvents = {
      * @see {@link https://www.w3.org/TR/webrtc-stats/} * */
     PeerStats: 'p-s',
 
-    RTCStartSendingTrack: 'p-start-track',
+    RTCStartSendingTrack: 'p-start-sending-track',
 
-    RTCStopSendingTrack: 'p-stop-track',
+    RTCStopSendingTrack: 'p-stop-sending-track',
+
+    RTCStartReceivingTrack: 'p-start-receiving-track',
+
+    RTCStopReceivingTrack: 'p-stop-receiving-track',
 
     /**
      * MEDIASOUP CONNECTION ITERATION:

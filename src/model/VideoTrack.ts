@@ -40,7 +40,7 @@ export interface VideoTrack<IdType = string> {
      */
     type: VideoTrackType[keyof VideoTrackType]
 
-    isConductor?: boolean
+    solo?: boolean
 
     /**
      * Type specific payload

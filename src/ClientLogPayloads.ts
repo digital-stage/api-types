@@ -46,6 +46,11 @@ declare namespace ClientLogPayloads {
          * */
         stageId?: string
         /**
+         * Name of the stage, may change during its lifetime
+         * @see Stage
+         */
+        stageName?: string
+        /**
          * Timestamp
          */
         timestamp: number
@@ -95,19 +100,54 @@ declare namespace ClientLogPayloads {
 
     export type PeerStats = BasePeerReport & {
         stats: RTCStatsReport
+    }
+
+    export type RTCStartSendingTrack = BasePeerReport & {
+        /**
+         * Stream ID, is unique for each track. But cannot guarantee uniqueness, but web standards do (but browsers, too?)
+         */
+        streamId: string
+        /**
+         * Optional track ID, may NOT be unique globally, usually every browser generates its own
+         */
         trackId?: string
+        kind: 'video' | 'audio'
     }
 
-    export type RTCStartSendingTrack = BaseReport & {
-        trackId: string
+    export type RTCStopSendingTrack = BasePeerReport & {
+        /**
+         * Stream ID, is unique for each track. But cannot guarantee uniqueness, but web standards do (but browsers, too?)
+         */
+        streamId: string
+        /**
+         * Optional track ID, may NOT be unique globally, usually every browser generates its own
+         */
+        trackId?: string
         kind: 'video' | 'audio'
-        stats: RTCStatsReport
     }
 
-    export type RTCStopSendingTrack = BaseReport & {
-        trackId: string
+    export type RTCStartReceivingTrack = BasePeerReport & {
+        /**
+         * Stream ID, is unique for each track. But cannot guarantee uniqueness, but web standards do (but browsers, too?)
+         */
+        streamId: string
+        /**
+         * Optional track ID, may NOT be unique globally, usually every browser generates its own
+         */
+        trackId?: string
         kind: 'video' | 'audio'
-        stats: RTCStatsReport
+    }
+
+    export type RTCStopReceivingTrack = BasePeerReport & {
+        /**
+         * Stream ID, is unique for each track. But cannot guarantee uniqueness, but web standards do (but browsers, too?)
+         */
+        streamId: string
+        /**
+         * Optional track ID, may NOT be unique globally, usually every browser generates its own
+         */
+        trackId?: string
+        kind: 'video' | 'audio'
     }
 
     export type MediasoupConnecting = BaseMediasoupReport
