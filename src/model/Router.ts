@@ -27,8 +27,6 @@ interface Router<IdType = string> {
     jammer?: number
     ov?: number
 
-    turnUrl?: string
-
     apiServer: IdType
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
