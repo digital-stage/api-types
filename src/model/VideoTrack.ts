@@ -42,6 +42,8 @@ export interface VideoTrack<IdType = string> {
 
     solo?: boolean
 
+    verticalPosition?: 'center' | 'bottom' | 'top'
+
     /**
      * Type specific payload
      */
