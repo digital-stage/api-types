@@ -29,9 +29,7 @@ interface User<IdType = string> {
 
     canCreateStage: boolean
 
-    stageId: IdType | null
-    groupId: IdType | null // Redundancy, but needed for performance issues
-    stageMemberId: IdType | null // Redundancy, but needed for performance issues
+    stageMemberId: IdType | null
 }
 
 export { User }

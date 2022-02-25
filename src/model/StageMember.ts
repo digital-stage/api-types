@@ -41,6 +41,11 @@ interface StageMember<IdType = string> extends ThreeDimensionalProperties, Volum
     active: boolean
 
     solo?: boolean
+
+    /*
+    Deprecated, use solo instead
+     */
+    isDirector: boolean
 }
 
 export { StageMember }
