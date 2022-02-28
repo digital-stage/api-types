@@ -32,7 +32,6 @@ interface StageDevice<IdType = string> extends VolumeProperties, ThreeDimensiona
     userId: IdType
     deviceId: IdType
     stageId: IdType
-    groupId: IdType
     stageMemberId: IdType
 
     name: string
