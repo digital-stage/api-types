@@ -23,9 +23,13 @@
 interface Router<IdType = string> {
     _id: IdType
 
+    wsPrefix: string
+    restPrefix: string
+    url: string
+    path?: string
     ipv4: string
     ipv6?: string
-    domain: string
+    port: number
 
     jammer: boolean
     jammerMinPort?: number
@@ -42,9 +46,6 @@ interface Router<IdType = string> {
     ovMaxPort?: number
 
     apiServer: IdType
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    [additional: string]: any
 }
 
 export { Router }
