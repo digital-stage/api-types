@@ -23,9 +23,23 @@
 interface Router<IdType = string> {
     _id: IdType
 
-    browser?: number
-    jammer?: number
-    ov?: number
+    ipv4: string
+    ipv6?: string
+    domain: string
+
+    jammer: boolean
+    jammerMinPort?: number
+    jammerMaxPort?: number
+    jammerCount?: number
+
+    mediasoup: boolean
+    mediasoupMinPort?: number
+    mediasoupMaxPort?: number
+    mediasoupCount?: number
+
+    ov: boolean
+    ovMinPort?: number
+    ovMaxPort?: number
 
     apiServer: IdType
 
