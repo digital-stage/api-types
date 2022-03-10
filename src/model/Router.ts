@@ -35,6 +35,7 @@ interface Router<IdType = string> {
     jammerMinPort?: number
     jammerMaxPort?: number
     jammerCount?: number
+    jammerAvailable?: number
 
     mediasoup: boolean
     mediasoupMinPort?: number
@@ -45,6 +46,8 @@ interface Router<IdType = string> {
     ov: boolean
     ovMinPort?: number
     ovMaxPort?: number
+    ovCount?: number
+    ovAvailable?: number
 
     apiServer: IdType
 }
