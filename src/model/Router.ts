@@ -40,6 +40,7 @@ interface Router<IdType = string> {
     mediasoupMinPort?: number
     mediasoupMaxPort?: number
     mediasoupCount?: number
+    mediasoupAvailable?: number
 
     ov: boolean
     ovMinPort?: number

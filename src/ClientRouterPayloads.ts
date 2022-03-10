@@ -25,7 +25,7 @@ import { Router } from './model/Router'
 declare namespace ClientRouterPayloads {
     export type ConnectAsRouter = {
         apiKey: string
-        router: Omit<Router, '_id'>
+        router: Omit<Router, '_id' | 'apiServer'>
     }
     export type Ready = undefined
 
