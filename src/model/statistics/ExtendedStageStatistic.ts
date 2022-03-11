@@ -1,4 +1,4 @@
-import { StageStatistic } from './StageStatistic'
+import {StageStatistic} from './StageStatistic'
 
 export type ExtendedStageStatistic = StageStatistic & {
     createdAt: number
@@ -12,6 +12,7 @@ export type ExtendedStageStatistic = StageStatistic & {
         mediasoup: number
     }
     audioTracks: {
+        webrtc: number
         jammer: number
         mediasoup: number
     }
