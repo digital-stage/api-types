@@ -44,6 +44,7 @@ import { ApiServer } from './ApiServer'
 export * from './browser'
 export * from './jammer'
 export * from './ov'
+export * from './statistics'
 
 export type {
     ApiServer,
