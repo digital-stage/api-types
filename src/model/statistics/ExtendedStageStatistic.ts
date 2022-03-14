@@ -1,4 +1,4 @@
-import {StageStatistic} from './StageStatistic'
+import { StageStatistic } from './StageStatistic'
 
 export type ExtendedStageStatistic = StageStatistic & {
     createdAt: number
