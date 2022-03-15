@@ -40,6 +40,7 @@ import { InitialStagePackage } from './InitialStagePackage'
 import { CustomGroup } from './CustomGroup'
 import { StageDevice } from './StageDevice'
 import { ApiServer } from './ApiServer'
+import { AuthUser } from './AuthUser'
 
 export * from './browser'
 export * from './jammer'
@@ -65,6 +66,7 @@ export type {
     StagePackage,
     ThreeDimensionalProperties,
     User,
+    AuthUser,
     VolumeProperties,
     InitialStagePackage,
 }
