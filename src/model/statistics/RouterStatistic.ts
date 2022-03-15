@@ -1,4 +1,4 @@
-import { JammerStageStatistic } from './JammerStageStatistic'
+import { StageStatistic } from './StageStatistic'
 
 export type RouterStatistic = {
     routerId: string
@@ -20,5 +20,5 @@ export type RouterStatistic = {
 
     apiServerId: string
 
-    jammerStages: JammerStageStatistic[]
+    stages: StageStatistic[]
 }

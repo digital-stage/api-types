@@ -1,4 +1,19 @@
-import { ExtendedStageStatistic } from './ExtendedStageStatistic'
+import { StageStatistic } from './StageStatistic'
+
+export type ExtendedStageStatistic = StageStatistic & {
+    createdAt: number
+    videoServed: boolean
+    audioServed: boolean
+    videos: {
+        webrtc: number
+        mediasoup: number
+    }
+    audioTracks: {
+        webrtc: number
+        jammer: number
+        mediasoup: number
+    }
+}
 
 export type LiveStatistic = {
     stageCount: number

@@ -3,4 +3,7 @@ export type StageStatistic = {
     stageName: string
     memberCount: number
     activeMemberCount: number
+    audioType: string
+    videoType: string
+    jammerPort?: number
 }
