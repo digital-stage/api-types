@@ -41,6 +41,8 @@ import { CustomGroup } from './CustomGroup'
 import { StageDevice } from './StageDevice'
 import { ApiServer } from './ApiServer'
 import { AuthUser } from './AuthUser'
+import { Organization, PublicOrganization } from './Organization'
+import { OrganizationReport } from './OrganizationReport'
 
 export * from './browser'
 export * from './jammer'
@@ -69,6 +71,9 @@ export type {
     AuthUser,
     VolumeProperties,
     InitialStagePackage,
+    PublicOrganization,
+    Organization,
+    OrganizationReport,
 }
 
 export { DefaultThreeDimensionalProperties, DefaultVolumeProperties }
