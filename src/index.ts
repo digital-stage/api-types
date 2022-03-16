@@ -36,6 +36,7 @@ import { ServerRouterEvents } from './ServerRouterEvents'
 import { ServerRouterPayloads } from './ServerRouterPayloads'
 import { RouterMediasoupEvents } from './RouterMediasoupEvents'
 import { ClientMediasoupEvents } from './ClientMediasoupEvents'
+import { validatePayload, ValidationKey, ValidationTypes } from './validatePayload'
 
 export * from './model'
 
@@ -48,6 +49,8 @@ export type {
     ServerRouterPayloads,
     RouterMediasoupPayloads,
     ErrorCode,
+    ValidationTypes,
+    ValidationKey,
 }
 
 export {
@@ -60,4 +63,5 @@ export {
     RouterMediasoupEvents,
     getDefaultDeviceValues,
     ErrorCodes,
+    validatePayload,
 }
