@@ -10,24 +10,28 @@ export type ValidationKey =
     | [string, ValidationTypes[keyof ValidationTypes], boolean]
 
 const validatePayload = (payload: unknown, ...keys: ValidationKey[]): void => {
-    if (!payload || typeof payload !== 'object') {
+    if (!payload) {
         throw new Error('Invalid payload')
     }
-    keys.map((key) => {
+    if (typeof payload !== 'object') {
+        throw new Error('Invalid payload')
+    }
+    const obj = payload as Record<string, unknown>
+    for (const key of keys) {
         if (Array.isArray(key)) {
             const required = key.length === 2 || key[2]
-            if (payload[key[0]]) {
-                if (typeof payload[key[0]] !== key[1]) {
-                    throw new Error(`Invalid value ${typeof payload[key[0]]} for key: ${key[0]}`)
+            if (obj[key[0]]) {
+                if (typeof obj[key[0]] !== key[1]) {
+                    throw new Error(`Invalid value ${typeof obj[key[0]]} for key: ${key[0]}`)
                 }
             } else if (required) {
                 throw new Error(`Missing key: ${key[0]}`)
             }
         } else {
-            if (!payload[key]) {
+            if (!obj[key]) {
                 throw new Error(`Missing key: ${key}`)
             }
         }
-    })
+    }
 }
 export { validatePayload }
