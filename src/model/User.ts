@@ -22,7 +22,7 @@
 
 interface User<IdType = string> {
     _id: IdType
-    uid: string
+    uid: IdType
     name: string
 
     avatarUrl: string | null

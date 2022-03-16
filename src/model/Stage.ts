@@ -25,7 +25,7 @@ import { DeviceType } from './Device'
 interface Stage<IdType = string> {
     _id: IdType
 
-    organization: IdType
+    organizationId: IdType
 
     name: string
     description: string

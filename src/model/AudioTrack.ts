@@ -52,9 +52,6 @@ export interface AudioTrack<IdType = string> extends ThreeDimensionalProperties,
 
     sourceChannel?: number
 
-    createdAt: string
-    modifiedAt: string
-
     /**
      * Additional type specific payload
      */
