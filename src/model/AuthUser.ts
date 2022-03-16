@@ -5,9 +5,10 @@ interface AuthUser {
     avatarUrl?: string
     active?: boolean
 
+    isAdmin?: boolean
     canCreateStage?: boolean
 
-    createdAt?: Date
-    updatedAt?: Date
+    createdAt?: string
+    updatedAt?: string
 }
 export { AuthUser }
