@@ -4,9 +4,9 @@ interface OrganizationReport<IdType = string> {
     stageId: IdType
     stageMemberId: IdType
     authUserId: IdType
-    start: string
-    end?: string
-    seconds?: number
+    start: number
+    end?: number
+    duration?: number
 }
 
 export { OrganizationReport }
