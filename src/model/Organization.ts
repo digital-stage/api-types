@@ -10,7 +10,7 @@ interface PublicOrganization<IdType = string> {
 /**
  * The full interface for an organization, visible only for organization users
  */
-interface Organization<IdType = string> extends PublicOrganization<IdType> {
+interface StageMemberTimer<IdType = string> extends PublicOrganization<IdType> {
     /**
      * The amount of stage person hours per month for this organization
      */
@@ -18,10 +18,10 @@ interface Organization<IdType = string> extends PublicOrganization<IdType> {
     /**
      * How many stages a organization may create
      */
-    maxStageCapacity: number
+    maxStageCount: number
 
     createdAt: string
     updatedAt: string
 }
 
-export { Organization, PublicOrganization }
+export { StageMemberTimer, PublicOrganization }
