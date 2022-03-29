@@ -1,12 +1,14 @@
-interface OrganizationReport<IdType = string> {
+/**
+ * This timer is started if the first Audio- or VideoTrack of the stage member is created and will be deleted,
+ * when the last Audio- or VideoTrack of the stage member is destroyed.
+ * When destroyed the API server will send a report to the auth server.
+ */
+interface StageMemberTimer<IdType = string> {
     _id: IdType
-    organizationId: IdType
-    stageId: IdType
+    organizationId: string
     stageMemberId: IdType
-    authUserId: IdType
     start: number
-    end?: number
-    duration?: number
+    //end?: number
 }
 
-export { OrganizationReport }
+export { StageMemberTimer }

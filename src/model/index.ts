@@ -41,8 +41,9 @@ import { CustomGroup } from './CustomGroup'
 import { StageDevice } from './StageDevice'
 import { ApiServer } from './ApiServer'
 import { AuthUser } from './AuthUser'
-import { Organization, PublicOrganization } from './Organization'
-import { OrganizationReport } from './OrganizationReport'
+import { AuthOrganization, Organization } from './Organization'
+import { StageMemberTimer } from './StageMemberTimer'
+import { ItemizedBill } from './ItemizedBill'
 
 export * from './browser'
 export * from './jammer'
@@ -64,16 +65,17 @@ export type {
     SoundCard,
     Stage,
     StageMember,
+    StageMemberTimer,
     StageDevice,
     StagePackage,
     ThreeDimensionalProperties,
     User,
-    AuthUser,
     VolumeProperties,
     InitialStagePackage,
-    PublicOrganization,
     Organization,
-    OrganizationReport,
+    ItemizedBill,
+    AuthUser,
+    AuthOrganization,
 }
 
 export { DefaultThreeDimensionalProperties, DefaultVolumeProperties }

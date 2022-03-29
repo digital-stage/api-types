@@ -25,7 +25,17 @@ import { DeviceType } from './Device'
 interface Stage<IdType = string> {
     _id: IdType
 
-    organizationId: IdType
+    /**
+     * Reference to the owning organization
+     */
+    organizationId?: string
+
+    /**
+     * The owning AUTH (!) user (is set when no organization is assigned)
+     */
+    authUserId?: string
+
+    createdAt?: number
 
     name: string
     description: string

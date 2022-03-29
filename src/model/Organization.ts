@@ -1,16 +1,16 @@
 /**
  * The public interface for an organization, visible for all users (of stages) of an organization
  */
-interface PublicOrganization<IdType = string> {
+interface Organization<IdType = string> {
     _id: IdType
     name: string
     avatarUrl?: string
 }
 
 /**
- * The full interface for an organization, visible only for organization users
+ * The full interface for an organization, visible only for organization users and living on the auth server
  */
-interface StageMemberTimer<IdType = string> extends PublicOrganization<IdType> {
+interface AuthOrganization<IdType = string> extends Organization<IdType> {
     /**
      * The amount of stage person hours per month for this organization
      */
@@ -24,4 +24,4 @@ interface StageMemberTimer<IdType = string> extends PublicOrganization<IdType> {
     updatedAt: string
 }
 
-export { StageMemberTimer, PublicOrganization }
+export { Organization, AuthOrganization }

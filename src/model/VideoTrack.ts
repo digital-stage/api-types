@@ -44,6 +44,8 @@ export interface VideoTrack<IdType = string> {
 
     verticalPosition?: 'center' | 'bottom' | 'top'
 
+    createdAt: number
+
     /**
      * Type specific payload
      */
