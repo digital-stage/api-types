@@ -1,6 +1,7 @@
 export interface ItemizedBill<IdType = string> {
     _id: IdType
-    organizationId: IdType
+    organizationId?: IdType
+    ownerAuthUserId?: IdType
     stageId: string
     stageName: string
     authUserId: IdType
