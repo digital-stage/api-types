@@ -41,10 +41,23 @@ declare namespace ClientRouterPayloads {
 
     export type JammerUpdated = Partial<JammerStarted>
 
+    export type JammerFailed = {
+        stageId: string
+        error: string
+        port?: number
+    }
+
     export type MediasoupStarted = {
         stageId: string
         url: string
         port: number
+    }
+
+    export type MediasoupUpdated = Partial<MediasoupStarted>
+
+    export type MediasoupFailed = {
+        stageId: string
+        error: string
     }
 
     export type OvStarted = {
@@ -53,6 +66,12 @@ declare namespace ClientRouterPayloads {
         ipv6: string
         port: number
         pin?: string
+    }
+
+    export type OvFailed = {
+        stageId: string
+        error: string
+        port?: number
     }
 
     export type OvUpdated = Partial<OvStarted>

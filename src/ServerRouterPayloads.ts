@@ -37,6 +37,6 @@ declare namespace ServerRouterPayloads {
     export type StageId = string
     export type StopJammer = StageId
     export type StopMediasoup = StageId
-    export type StoOv = StageId
+    export type StopOv = StageId
 }
 export { ServerRouterPayloads }
