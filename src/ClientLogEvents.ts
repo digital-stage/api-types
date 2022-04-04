@@ -45,7 +45,7 @@ const ClientLogEvents = {
     /** Called when an ice candidate error is captured **/
     IceCandidateError: 'p-ice-error',
 
-    RTCPeerConnectionLog: 'p',
+    PeerLog: 'p',
 
     /** General RTC statistics, refer to
      * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_Statistics_API}

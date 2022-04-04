@@ -7,8 +7,8 @@ export interface TrackDescription {
 }
 
 export interface WebRTCConnectionLogEntry {
-    stageMemberId: string
-    remoteStageMemberId: string
+    stageDeviceId: string
+    remoteStageDeviceId: string
     timestamp: number
     connectionState: RTCPeerConnectionState
     iceState: RTCIceConnectionState

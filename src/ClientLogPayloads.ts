@@ -20,6 +20,8 @@
  * SOFTWARE.
  */
 
+import { WebRTCConnectionLogEntry } from './model/log/WebRTCConnectionLogEntry'
+
 /**
  * The payloads describes the body of all log REST queries according the central logging service
  * @see ClientLogEvents
@@ -97,6 +99,8 @@ declare namespace ClientLogPayloads {
     export type IceCandidateError = BasePeerReport & {
         error: RTCPeerConnectionIceErrorEvent
     }
+
+    export type PeerLog = WebRTCConnectionLogEntry
 
     export type PeerStats = BasePeerReport & {
         stats: RTCStatsReport
