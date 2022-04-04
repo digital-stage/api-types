@@ -44,6 +44,9 @@ const ClientLogEvents = {
     RTCPeerConnectionStateChanged: 'p-connection',
     /** Called when an ice candidate error is captured **/
     IceCandidateError: 'p-ice-error',
+
+    RTCPeerConnectionLog: 'p',
+
     /** General RTC statistics, refer to
      * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_Statistics_API}
      * @see {@link https://www.w3.org/TR/webrtc-stats/} * */

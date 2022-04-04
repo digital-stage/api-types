@@ -5,7 +5,9 @@
  */
 interface StageMemberTimer<IdType = string> {
     _id: IdType
-    organizationId: string
+    // Either organization or owner (or both)
+    organizationId?: string
+    ownerAuthUserId?: string
     stageMemberId: IdType
     start: number
     //end?: number
