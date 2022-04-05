@@ -23,7 +23,7 @@
 import { ClientDeviceEvents } from './ClientDeviceEvents'
 import { ClientDevicePayloads } from './ClientDevicePayloads'
 import { ClientLogEvents } from './ClientLogEvents'
-import { ClientLogPayloads } from './ClientLogPayloads'
+import { ClientLogPayloads, WebRTCLogEntry } from './ClientLogPayloads'
 import { ClientMediasoupPayloads } from './ClientMediasoupPayloads'
 import { ClientRouterEvents } from './ClientRouterEvents'
 import { ClientRouterPayloads } from './ClientRouterPayloads'
@@ -51,6 +51,7 @@ export type {
     ErrorCode,
     ValidationTypes,
     ValidationKey,
+    WebRTCLogEntry,
 }
 
 export {

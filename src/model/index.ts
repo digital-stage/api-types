@@ -49,7 +49,6 @@ export * from './browser'
 export * from './jammer'
 export * from './ov'
 export * from './statistics'
-export * from './log'
 
 export type {
     ApiServer,

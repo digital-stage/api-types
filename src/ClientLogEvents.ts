@@ -30,27 +30,50 @@ const ClientLogEvents = {
     /** Called each time the application starts (also after an refresh of the browser tab) * */
     Ready: 'ready',
     // WebRTC specific logs
-    /**
-     * WEBRTC CONNECTION ITERATION
-     * - Connect to other peer
-     * - Negotiate ICE
-     * - Add track (will generate RTC statistics)
-     */
+
+    PeerTrackAdded: 'p-track-added',
+    PeerTrackRemoved: 'p-track-added',
+
+    RTCPeerConnectionRestarted: 'p-restarted',
+
+    RTCPeerConnectionRestartRequested: 'p-restart-requested',
+
     /** Called when the signaling state of this peer changed **/
     RTCSignalingStateChanged: 'p-signaling',
     /** Called when the ice connection state of this peer changed **/
     RTCIceConnectionStateChanged: 'p-ice-connection',
     /** Called when the general connection state of this peer changed **/
     RTCPeerConnectionStateChanged: 'p-connection',
+
+    RTCPeerConnectionWarning: 'p-warning',
+
+    RTCPeerConnectionError: 'p-error',
+
+    RTCNegotiationNeeded: 'p-negotiation',
+
+    RTCSessionDescriptionCreated: 'p-desc-created',
+
+    RTCSessionDescriptionAdded: 'p-desc-added',
+
+    RTCSessionDescriptionIgnored: 'p-desc-ignored',
+
+    RTCCreateOfferSkipped: 'p-offer-skipped',
+
+    RTCIceRestarted: 'p-ice-restart',
+
+    RTCIceCandidateCreated: 'p-ice-created',
+
+    RTCIceCandidateAdded: 'p-ice-added',
+
+    RTCIceCandidateAddFailed: 'p-ice-failed',
+
     /** Called when an ice candidate error is captured **/
     IceCandidateError: 'p-ice-error',
-
-    PeerLog: 'p',
 
     /** General RTC statistics, refer to
      * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_Statistics_API}
      * @see {@link https://www.w3.org/TR/webrtc-stats/} * */
-    PeerStats: 'p-s',
+    RTCPeerConnectionStats: 'p-s',
 
     RTCStartSendingTrack: 'p-start-sending-track',
 

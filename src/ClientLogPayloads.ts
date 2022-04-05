@@ -20,7 +20,7 @@
  * SOFTWARE.
  */
 
-import { WebRTCConnectionLogEntry } from './model/log/WebRTCConnectionLogEntry'
+import { WebRTCError, WebRTCStatistics } from './model'
 
 /**
  * The payloads describes the body of all log REST queries according the central logging service
@@ -31,7 +31,7 @@ import { WebRTCConnectionLogEntry } from './model/log/WebRTCConnectionLogEntry'
 declare namespace ClientLogPayloads {
     export type BaseReport = {
         /**
-         * Unique device ID, is unique for each browser window
+         * Unique Stage Device ID, is unique for each browser window
          * @see Device
          * */
         deviceId: string
@@ -58,9 +58,34 @@ declare namespace ClientLogPayloads {
         timestamp: number
     }
 
-    export type BasePeerReport = BaseReport & {
-        /** Device ID of the other peer * */
+    export interface TrackDescription {
+        /**
+         * Stream ID, is unique for each track. But cannot guarantee uniqueness, but web standards do (but browsers, too?)
+         */
+        streamId: string
+        /**
+         * Optional track ID, may NOT be unique globally, usually every browser generates its own
+         */
+        trackId?: string
+        /**
+         * Kind of track, may be video, audio or data (byte array over data channel)
+         */
+        kind: 'video' | 'audio' | 'data'
+    }
+
+    export type BaseRTCReport = BaseReport & {
+        /** Stage Device ID of the other peer * */
         targetDeviceId: string
+        /** The current connection state */
+        connectionState: RTCPeerConnectionState
+        /** The current ICE connection state */
+        iceState: RTCIceConnectionState
+        /** The current signaling state */
+        signalingState: RTCSignalingState
+        /** Current shortlisting of all tracks sending */
+        sending: TrackDescription[]
+        /** Curretn shortlisting of all tracks receiving */
+        receiving: TrackDescription[]
     }
 
     export type BaseMediasoupReport = BaseReport & {
@@ -84,75 +109,109 @@ declare namespace ClientLogPayloads {
 
     export type Ready = BaseReport
 
-    export type RTCSignalingStateChanged = BasePeerReport & {
+    /**
+     * Emitted when the whole peer connection has been stopped and started again
+     */
+    export type RTCPeerConnectionRestarted = BaseRTCReport
+
+    /**
+     * Emitted when a restart of the remote peer has been requested
+     */
+    export type RTCPeerConnectionRestartRequested = BaseRTCReport
+
+    export type RTCSignalingStateChanged = BaseRTCReport & {
         state: RTCSignalingState
     }
 
-    export type RTCIceConnectionStateChanged = BasePeerReport & {
+    export type RTCIceConnectionStateChanged = BaseRTCReport & {
         state: RTCIceConnectionState
     }
 
-    export type RTCPeerConnectionStateChanged = BasePeerReport & {
+    export type RTCPeerConnectionStateChanged = BaseRTCReport & {
         state: RTCPeerConnectionState
     }
 
-    export type IceCandidateError = BasePeerReport & {
+    export type RTCPeerConnectionWarning = BaseRTCReport & {
+        warning: string
+    }
+
+    export type RTCPeerConnectionError = BaseRTCReport & {
+        error?: WebRTCError
+    }
+
+    export type RTCNegotiationNeeded = BaseRTCReport
+
+    /**
+     * When a session description has been created and is being sent to the other peer
+     */
+    export type RTCSessionDescriptionCreated = BaseRTCReport & {
+        type: RTCSdpType
+    }
+
+    /**
+     * A session description has been accepted and added
+     */
+    export type RTCSessionDescriptionAdded = BaseRTCReport & {
+        type: RTCSdpType
+    }
+
+    /**
+     * A session description has been rejected (mostly by an impolite peer)
+     */
+    export type RTCSessionDescriptionIgnored = BaseRTCReport & {
+        type: RTCSdpType
+    }
+
+    /**
+     * No offer has been created for the given reason
+     */
+    export type RTCCreateOfferSkipped = BaseRTCReport & {
+        reason: string
+    }
+
+    /**
+     * Emitted when the ice mechanism is restarted (usually if it fails)
+     */
+    export type RTCIceRestarted = BaseRTCReport
+
+    /**
+     * An ice candidate has been created and is currently on its way to the remote peer
+     */
+    export type RTCIceCandidateCreated = BaseRTCReport & {
+        candidate: RTCIceCandidate | undefined
+    }
+
+    /**
+     * An ice candidate from the remote peer was accepted and added
+     */
+    export type RTCIceCandidateAdded = BaseRTCReport & {
+        candidate: RTCIceCandidate | undefined
+    }
+
+    /**
+     * Could not add the given ice candidate
+     */
+    export type RTCIceCandidateAddFailed = BaseRTCReport & {
+        candidate: RTCIceCandidate | undefined
+        err: Error
+    }
+
+    /**
+     * WebRTC reported an ice candidate error (usually async, so may refer to an ice candidate that has been added seconds before)
+     */
+    export type RTCIceCandidateError = BaseRTCReport & {
         error: RTCPeerConnectionIceErrorEvent
     }
 
-    export type PeerLog = WebRTCConnectionLogEntry
+    /**
+     * Overall statistics
+     */
+    export type RTCPeerConnectionStats = BaseRTCReport & WebRTCStatistics
 
-    export type PeerStats = BasePeerReport & {
-        stats: RTCStatsReport
-    }
-
-    export type RTCStartSendingTrack = BasePeerReport & {
-        /**
-         * Stream ID, is unique for each track. But cannot guarantee uniqueness, but web standards do (but browsers, too?)
-         */
-        streamId: string
-        /**
-         * Optional track ID, may NOT be unique globally, usually every browser generates its own
-         */
-        trackId?: string
-        kind: 'video' | 'audio'
-    }
-
-    export type RTCStopSendingTrack = BasePeerReport & {
-        /**
-         * Stream ID, is unique for each track. But cannot guarantee uniqueness, but web standards do (but browsers, too?)
-         */
-        streamId: string
-        /**
-         * Optional track ID, may NOT be unique globally, usually every browser generates its own
-         */
-        trackId?: string
-        kind: 'video' | 'audio'
-    }
-
-    export type RTCStartReceivingTrack = BasePeerReport & {
-        /**
-         * Stream ID, is unique for each track. But cannot guarantee uniqueness, but web standards do (but browsers, too?)
-         */
-        streamId: string
-        /**
-         * Optional track ID, may NOT be unique globally, usually every browser generates its own
-         */
-        trackId?: string
-        kind: 'video' | 'audio'
-    }
-
-    export type RTCStopReceivingTrack = BasePeerReport & {
-        /**
-         * Stream ID, is unique for each track. But cannot guarantee uniqueness, but web standards do (but browsers, too?)
-         */
-        streamId: string
-        /**
-         * Optional track ID, may NOT be unique globally, usually every browser generates its own
-         */
-        trackId?: string
-        kind: 'video' | 'audio'
-    }
+    export type RTCStartSendingTrack = BaseRTCReport & TrackDescription
+    export type RTCStopSendingTrack = BaseRTCReport & TrackDescription
+    export type RTCStartReceivingTrack = BaseRTCReport & TrackDescription
+    export type RTCStopReceivingTrack = BaseRTCReport & TrackDescription
 
     export type MediasoupConnecting = BaseMediasoupReport
     export type MediasoupConnected = BaseMediasoupReport
@@ -173,4 +232,14 @@ declare namespace ClientLogPayloads {
     }
     export type MediasoupConsumerRemoved = BaseMediasoupConsumerReport
 }
+
+/**
+ * Special entry type for the Admin API inside the log server
+ */
+export type WebRTCLogEntry = ClientLogPayloads.BaseRTCReport & {
+    message?: string
+    warning?: string
+    error?: Error
+} & Partial<WebRTCStatistics>
+
 export { ClientLogPayloads }
