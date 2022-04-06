@@ -28,13 +28,14 @@ import { MediasoupVideoTrack } from './MediasoupVideoTrack'
 import { BrowserStage } from './BrowserStage'
 import { WebMediaDevice } from './WebMediaDevice'
 import { WebRTCError } from './WebRTCError'
-import { WebRTCState } from './WebRTCState'
+import { WebRTCState, WebRTCTrackDescription } from './WebRTCState'
 
 export type {
     BrowserDevice,
     WebRTCVideoTrack,
     WebRTCAudioTrack,
     WebRTCState,
+    WebRTCTrackDescription,
     WebRTCError,
     WebMediaDevice,
     MediasoupAudioTrack,

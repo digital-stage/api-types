@@ -16,5 +16,6 @@ export interface WebRTCStatistics {
      * @see RTCStatsReport
      * @see RTCStats
      */
-    stats: RTCStatsReport
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    stats: Record<string, any>
 }

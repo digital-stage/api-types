@@ -20,7 +20,7 @@
  * SOFTWARE.
  */
 
-import { WebRTCError, WebRTCStatistics } from './model'
+import { WebRTCError, WebRTCState, WebRTCStatistics, WebRTCTrackDescription } from './model'
 
 /**
  * The payloads describes the body of all log REST queries according the central logging service
@@ -58,35 +58,7 @@ declare namespace ClientLogPayloads {
         timestamp: number
     }
 
-    export interface TrackDescription {
-        /**
-         * Stream ID, is unique for each track. But cannot guarantee uniqueness, but web standards do (but browsers, too?)
-         */
-        streamId: string
-        /**
-         * Optional track ID, may NOT be unique globally, usually every browser generates its own
-         */
-        trackId?: string
-        /**
-         * Kind of track, may be video, audio or data (byte array over data channel)
-         */
-        kind: 'video' | 'audio' | 'data'
-    }
-
-    export type BaseRTCReport = BaseReport & {
-        /** Stage Device ID of the other peer * */
-        targetDeviceId: string
-        /** The current connection state */
-        connectionState: RTCPeerConnectionState
-        /** The current ICE connection state */
-        iceState: RTCIceConnectionState
-        /** The current signaling state */
-        signalingState: RTCSignalingState
-        /** Current shortlisting of all tracks sending */
-        sending: TrackDescription[]
-        /** Curretn shortlisting of all tracks receiving */
-        receiving: TrackDescription[]
-    }
+    export type BaseRTCReport = BaseReport & WebRTCState
 
     export type BaseMediasoupReport = BaseReport & {
         routerUrl: string
@@ -108,6 +80,16 @@ declare namespace ClientLogPayloads {
     }
 
     export type Ready = BaseReport
+
+    /**
+     * Emitted when started
+     */
+    export type RTCPeerConnectionStarted = BaseRTCReport
+
+    /**
+     * Emitted when stopped
+     */
+    export type RTCPeerConnectionStopped = BaseRTCReport
 
     /**
      * Emitted when the whole peer connection has been stopped and started again
@@ -208,10 +190,10 @@ declare namespace ClientLogPayloads {
      */
     export type RTCPeerConnectionStats = BaseRTCReport & WebRTCStatistics
 
-    export type RTCStartSendingTrack = BaseRTCReport & TrackDescription
-    export type RTCStopSendingTrack = BaseRTCReport & TrackDescription
-    export type RTCStartReceivingTrack = BaseRTCReport & TrackDescription
-    export type RTCStopReceivingTrack = BaseRTCReport & TrackDescription
+    export type RTCStartSendingTrack = BaseRTCReport & WebRTCTrackDescription
+    export type RTCStopSendingTrack = BaseRTCReport & WebRTCTrackDescription
+    export type RTCStartReceivingTrack = BaseRTCReport & WebRTCTrackDescription
+    export type RTCStopReceivingTrack = BaseRTCReport & WebRTCTrackDescription
 
     export type MediasoupConnecting = BaseMediasoupReport
     export type MediasoupConnected = BaseMediasoupReport

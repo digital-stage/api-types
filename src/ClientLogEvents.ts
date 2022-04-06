@@ -34,6 +34,10 @@ const ClientLogEvents = {
     PeerTrackAdded: 'p-track-added',
     PeerTrackRemoved: 'p-track-added',
 
+    RTCPeerConnectionStarted: 'p-started',
+
+    RTCPeerConnectionStopped: 'p-started',
+
     RTCPeerConnectionRestarted: 'p-restarted',
 
     RTCPeerConnectionRestartRequested: 'p-restart-requested',
