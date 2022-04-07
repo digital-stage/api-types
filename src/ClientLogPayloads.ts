@@ -225,6 +225,7 @@ declare namespace ClientLogPayloads {
  * Special entry type for the Admin API inside the log server
  */
 export type WebRTCLogEntry = ClientLogPayloads.BaseRTCReport & {
+    event: string
     message?: string
     warning?: string
     error?: Error
