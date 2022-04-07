@@ -194,6 +194,12 @@ declare namespace ClientLogPayloads {
     export type RTCStopSendingTrack = BaseRTCReport & WebRTCTrackDescription
     export type RTCStartReceivingTrack = BaseRTCReport & WebRTCTrackDescription
     export type RTCStopReceivingTrack = BaseRTCReport & WebRTCTrackDescription
+    export type RTCReceivingTrackMuted = BaseRTCReport & WebRTCTrackDescription
+    export type RTCReceivingTrackUnMuted = BaseRTCReport & WebRTCTrackDescription
+    export type RTCStartSendingStream = BaseRTCReport & WebRTCTrackDescription
+    export type RTCStopSendingStream = BaseRTCReport & WebRTCTrackDescription
+    export type RTCStartReceivingStream = BaseRTCReport & WebRTCTrackDescription
+    export type RTCStopReceivingStream = BaseRTCReport & WebRTCTrackDescription
 
     export type MediasoupConnecting = BaseMediasoupReport
     export type MediasoupConnected = BaseMediasoupReport
