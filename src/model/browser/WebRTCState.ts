@@ -40,7 +40,7 @@ export interface WebRTCAdditional {
     /**
      * Added on any track or stream related event
      */
-    track?: WebRTCTrackDescription
+    streamId?: string
     /**
      * Added on any session description related event
      */

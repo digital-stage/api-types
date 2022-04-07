@@ -170,16 +170,21 @@ declare namespace ClientLogPayloads {
      */
     export type RTCPeerConnectionStats = BaseRTCReport & Required<Pick<WebRTCAdditional, 'stats'>>
 
-    export type RTCStartSendingTrack = BaseRTCReport & Required<Pick<WebRTCAdditional, 'track'>>
-    export type RTCStopSendingTrack = BaseRTCReport & Required<Pick<WebRTCAdditional, 'track'>>
-    export type RTCStartReceivingTrack = BaseRTCReport & Required<Pick<WebRTCAdditional, 'track'>>
-    export type RTCStopReceivingTrack = BaseRTCReport & Required<Pick<WebRTCAdditional, 'track'>>
-    export type RTCReceivingTrackMuted = BaseRTCReport & Required<Pick<WebRTCAdditional, 'track'>>
-    export type RTCReceivingTrackUnMuted = BaseRTCReport & Required<Pick<WebRTCAdditional, 'track'>>
-    export type RTCStartSendingStream = BaseRTCReport & Required<Pick<WebRTCAdditional, 'track'>>
-    export type RTCStopSendingStream = BaseRTCReport & Required<Pick<WebRTCAdditional, 'track'>>
-    export type RTCStartReceivingStream = BaseRTCReport & Required<Pick<WebRTCAdditional, 'track'>>
-    export type RTCStopReceivingStream = BaseRTCReport & Required<Pick<WebRTCAdditional, 'track'>>
+    export type RTCStartSendingTrack = BaseRTCReport & Required<Pick<WebRTCAdditional, 'streamId'>>
+    export type RTCStopSendingTrack = BaseRTCReport & Required<Pick<WebRTCAdditional, 'streamId'>>
+    export type RTCStartReceivingTrack = BaseRTCReport &
+        Required<Pick<WebRTCAdditional, 'streamId'>>
+    export type RTCStopReceivingTrack = BaseRTCReport & Required<Pick<WebRTCAdditional, 'streamId'>>
+    export type RTCReceivingTrackMuted = BaseRTCReport &
+        Required<Pick<WebRTCAdditional, 'streamId'>>
+    export type RTCReceivingTrackUnMuted = BaseRTCReport &
+        Required<Pick<WebRTCAdditional, 'streamId'>>
+    export type RTCStartSendingStream = BaseRTCReport & Required<Pick<WebRTCAdditional, 'streamId'>>
+    export type RTCStopSendingStream = BaseRTCReport & Required<Pick<WebRTCAdditional, 'streamId'>>
+    export type RTCStartReceivingStream = BaseRTCReport &
+        Required<Pick<WebRTCAdditional, 'streamId'>>
+    export type RTCStopReceivingStream = BaseRTCReport &
+        Required<Pick<WebRTCAdditional, 'streamId'>>
 
     export type MediasoupConnecting = BaseMediasoupReport
     export type MediasoupConnected = BaseMediasoupReport
