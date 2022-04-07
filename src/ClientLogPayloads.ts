@@ -213,6 +213,7 @@ export type WebRTCLogEntry = ClientLogPayloads.BaseRTCReport &
     WebRTCAdditional &
     Partial<WebRTCStatistics> & {
         event: string
+        message?: string
     }
 
 export { ClientLogPayloads }
