@@ -1,3 +1,5 @@
+import { WebRTCStatistics } from '../statistics/WebRTCStatistics'
+
 export interface WebRTCTrackDescription {
     /**
      * Stream ID, is unique for each track. But cannot guarantee uniqueness, but web standards do (but browsers, too?)
@@ -7,6 +9,10 @@ export interface WebRTCTrackDescription {
      * Optional track ID, may NOT be unique globally, usually every browser generates its own
      */
     trackId?: string
+    /**
+     * Indicates if the track is muted
+     */
+    muted?: boolean
     /**
      * Kind of track, may be video, audio or data (byte array over data channel)
      */
@@ -26,6 +32,26 @@ export interface WebRTCState {
     signalingState: RTCSignalingState
     /** Current shortlisting of all tracks sending */
     sending: WebRTCTrackDescription[]
-    /** Curretn shortlisting of all tracks receiving */
+    /** Current shortlisting of all tracks receiving */
     receiving: WebRTCTrackDescription[]
+}
+
+export interface WebRTCAdditional {
+    /**
+     * Added on any track or stream related event
+     */
+    track?: WebRTCTrackDescription
+    /**
+     * Added on any session description related event
+     */
+    type?: RTCSdpType
+    /**
+     * Added by some events (e.g. create-offer-skipped)
+     */
+    reason?: string
+    candidate?: RTCIceCandidateInit | null
+    warning?: string
+    error?: Error
+    iceError?: RTCPeerConnectionIceErrorEvent
+    stats?: WebRTCStatistics
 }

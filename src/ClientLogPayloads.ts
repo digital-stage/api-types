@@ -20,7 +20,8 @@
  * SOFTWARE.
  */
 
-import { WebRTCError, WebRTCState, WebRTCStatistics, WebRTCTrackDescription } from './model'
+import { WebRTCState, WebRTCStatistics } from './model'
+import { WebRTCAdditional } from './model/browser/WebRTCState'
 
 /**
  * The payloads describes the body of all log REST queries according the central logging service
@@ -101,55 +102,41 @@ declare namespace ClientLogPayloads {
      */
     export type RTCPeerConnectionRestartRequested = BaseRTCReport
 
-    export type RTCSignalingStateChanged = BaseRTCReport & {
-        state: RTCSignalingState
-    }
+    export type RTCSignalingStateChanged = BaseRTCReport
 
-    export type RTCIceConnectionStateChanged = BaseRTCReport & {
-        state: RTCIceConnectionState
-    }
+    export type RTCIceConnectionStateChanged = BaseRTCReport
 
-    export type RTCPeerConnectionStateChanged = BaseRTCReport & {
-        state: RTCPeerConnectionState
-    }
+    export type RTCPeerConnectionStateChanged = BaseRTCReport
 
-    export type RTCPeerConnectionWarning = BaseRTCReport & {
-        warning: string
-    }
+    export type RTCPeerConnectionWarning = BaseRTCReport &
+        Required<Pick<WebRTCAdditional, 'warning'>>
 
-    export type RTCPeerConnectionError = BaseRTCReport & {
-        error?: WebRTCError
-    }
+    export type RTCPeerConnectionError = BaseRTCReport & Required<Pick<WebRTCAdditional, 'error'>>
 
     export type RTCNegotiationNeeded = BaseRTCReport
 
     /**
      * When a session description has been created and is being sent to the other peer
      */
-    export type RTCSessionDescriptionCreated = BaseRTCReport & {
-        type: RTCSdpType
-    }
+    export type RTCSessionDescriptionCreated = BaseRTCReport &
+        Required<Pick<WebRTCAdditional, 'type'>>
 
     /**
      * A session description has been accepted and added
      */
-    export type RTCSessionDescriptionAdded = BaseRTCReport & {
-        type: RTCSdpType
-    }
+    export type RTCSessionDescriptionAdded = BaseRTCReport &
+        Required<Pick<WebRTCAdditional, 'type'>>
 
     /**
      * A session description has been rejected (mostly by an impolite peer)
      */
-    export type RTCSessionDescriptionIgnored = BaseRTCReport & {
-        type: RTCSdpType
-    }
+    export type RTCSessionDescriptionIgnored = BaseRTCReport &
+        Required<Pick<WebRTCAdditional, 'type'>>
 
     /**
      * No offer has been created for the given reason
      */
-    export type RTCCreateOfferSkipped = BaseRTCReport & {
-        reason: string
-    }
+    export type RTCCreateOfferSkipped = BaseRTCReport & Required<Pick<WebRTCAdditional, 'reason'>>
 
     /**
      * Emitted when the ice mechanism is restarted (usually if it fails)
@@ -159,47 +146,40 @@ declare namespace ClientLogPayloads {
     /**
      * An ice candidate has been created and is currently on its way to the remote peer
      */
-    export type RTCIceCandidateCreated = BaseRTCReport & {
-        candidate: RTCIceCandidate | undefined
-    }
+    export type RTCIceCandidateCreated = BaseRTCReport &
+        Required<Pick<WebRTCAdditional, 'candidate'>>
 
     /**
      * An ice candidate from the remote peer was accepted and added
      */
-    export type RTCIceCandidateAdded = BaseRTCReport & {
-        candidate: RTCIceCandidate | undefined
-    }
+    export type RTCIceCandidateAdded = BaseRTCReport & Required<Pick<WebRTCAdditional, 'candidate'>>
 
     /**
      * Could not add the given ice candidate
      */
-    export type RTCIceCandidateAddFailed = BaseRTCReport & {
-        candidate: RTCIceCandidate | undefined
-        err: Error
-    }
+    export type RTCIceCandidateAddFailed = BaseRTCReport &
+        Required<Pick<WebRTCAdditional, 'candidate' | 'error'>>
 
     /**
      * WebRTC reported an ice candidate error (usually async, so may refer to an ice candidate that has been added seconds before)
      */
-    export type RTCIceCandidateError = BaseRTCReport & {
-        error: RTCPeerConnectionIceErrorEvent
-    }
+    export type RTCIceCandidateError = BaseRTCReport & Required<Pick<WebRTCAdditional, 'iceError'>>
 
     /**
      * Overall statistics
      */
-    export type RTCPeerConnectionStats = BaseRTCReport & WebRTCStatistics
+    export type RTCPeerConnectionStats = BaseRTCReport & Required<Pick<WebRTCAdditional, 'stats'>>
 
-    export type RTCStartSendingTrack = BaseRTCReport & WebRTCTrackDescription
-    export type RTCStopSendingTrack = BaseRTCReport & WebRTCTrackDescription
-    export type RTCStartReceivingTrack = BaseRTCReport & WebRTCTrackDescription
-    export type RTCStopReceivingTrack = BaseRTCReport & WebRTCTrackDescription
-    export type RTCReceivingTrackMuted = BaseRTCReport & WebRTCTrackDescription
-    export type RTCReceivingTrackUnMuted = BaseRTCReport & WebRTCTrackDescription
-    export type RTCStartSendingStream = BaseRTCReport & WebRTCTrackDescription
-    export type RTCStopSendingStream = BaseRTCReport & WebRTCTrackDescription
-    export type RTCStartReceivingStream = BaseRTCReport & WebRTCTrackDescription
-    export type RTCStopReceivingStream = BaseRTCReport & WebRTCTrackDescription
+    export type RTCStartSendingTrack = BaseRTCReport & Required<Pick<WebRTCAdditional, 'track'>>
+    export type RTCStopSendingTrack = BaseRTCReport & Required<Pick<WebRTCAdditional, 'track'>>
+    export type RTCStartReceivingTrack = BaseRTCReport & Required<Pick<WebRTCAdditional, 'track'>>
+    export type RTCStopReceivingTrack = BaseRTCReport & Required<Pick<WebRTCAdditional, 'track'>>
+    export type RTCReceivingTrackMuted = BaseRTCReport & Required<Pick<WebRTCAdditional, 'track'>>
+    export type RTCReceivingTrackUnMuted = BaseRTCReport & Required<Pick<WebRTCAdditional, 'track'>>
+    export type RTCStartSendingStream = BaseRTCReport & Required<Pick<WebRTCAdditional, 'track'>>
+    export type RTCStopSendingStream = BaseRTCReport & Required<Pick<WebRTCAdditional, 'track'>>
+    export type RTCStartReceivingStream = BaseRTCReport & Required<Pick<WebRTCAdditional, 'track'>>
+    export type RTCStopReceivingStream = BaseRTCReport & Required<Pick<WebRTCAdditional, 'track'>>
 
     export type MediasoupConnecting = BaseMediasoupReport
     export type MediasoupConnected = BaseMediasoupReport
@@ -224,11 +204,8 @@ declare namespace ClientLogPayloads {
 /**
  * Special entry type for the Admin API inside the log server
  */
-export type WebRTCLogEntry = ClientLogPayloads.BaseRTCReport & {
-    event: string
-    message?: string
-    warning?: string
-    error?: Error
-} & Partial<WebRTCStatistics>
+export type WebRTCLogEntry = ClientLogPayloads.BaseRTCReport &
+    WebRTCAdditional &
+    Partial<WebRTCStatistics>
 
 export { ClientLogPayloads }
