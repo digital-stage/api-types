@@ -31,61 +31,70 @@ const ClientLogEvents = {
     Ready: 'ready',
     // WebRTC specific logs
 
-    PeerTrackAdded: 'p-track-added',
-    PeerTrackRemoved: 'p-track-added',
+    RTCPeerConnectionStarted: 'started',
 
-    RTCPeerConnectionStarted: 'p-started',
+    RTCPeerConnectionStopped: 'stopped',
 
-    RTCPeerConnectionStopped: 'p-started',
+    RTCPeerConnectionRestarted: 'restarted',
 
-    RTCPeerConnectionRestarted: 'p-restarted',
-
-    RTCPeerConnectionRestartRequested: 'p-restart-requested',
+    RTCPeerConnectionRestartRequested: 'restart',
 
     /** Called when the signaling state of this peer changed **/
-    RTCSignalingStateChanged: 'p-signaling',
+    RTCSignalingStateChanged: 'signaling-state',
     /** Called when the ice connection state of this peer changed **/
-    RTCIceConnectionStateChanged: 'p-ice-connection',
+    RTCIceConnectionStateChanged: 'ice-connection-state',
     /** Called when the general connection state of this peer changed **/
-    RTCPeerConnectionStateChanged: 'p-connection',
+    RTCPeerConnectionStateChanged: 'connection-state',
 
-    RTCPeerConnectionWarning: 'p-warning',
+    RTCPeerConnectionWarning: 'warning',
 
-    RTCPeerConnectionError: 'p-error',
+    RTCPeerConnectionError: 'error',
 
-    RTCNegotiationNeeded: 'p-negotiation',
+    RTCNegotiationNeeded: 'negotiation-needed',
 
-    RTCSessionDescriptionCreated: 'p-desc-created',
+    RTCSessionDescriptionCreated: 'session-description',
 
-    RTCSessionDescriptionAdded: 'p-desc-added',
+    RTCSessionDescriptionAdded: 'session-description-added',
 
-    RTCSessionDescriptionIgnored: 'p-desc-ignored',
+    RTCSessionDescriptionIgnored: 'session-description-ignored',
 
-    RTCCreateOfferSkipped: 'p-offer-skipped',
+    RTCCreateOfferSkipped: 'create-offer-skipped',
 
-    RTCIceRestarted: 'p-ice-restart',
+    RTCIceRestarted: 'ice-restarted',
 
-    RTCIceCandidateCreated: 'p-ice-created',
+    RTCIceCandidateCreated: 'ice-candidate',
 
-    RTCIceCandidateAdded: 'p-ice-added',
+    RTCIceCandidateAdded: 'ice-candidate-added',
 
-    RTCIceCandidateAddFailed: 'p-ice-failed',
+    RTCIceCandidateAddFailed: 'ice-candidate-failed',
 
     /** Called when an ice candidate error is captured **/
-    IceCandidateError: 'p-ice-error',
+    IceCandidateError: 'ice-candidate-error',
 
     /** General RTC statistics, refer to
      * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_Statistics_API}
      * @see {@link https://www.w3.org/TR/webrtc-stats/} * */
-    RTCPeerConnectionStats: 'p-s',
+    RTCPeerConnectionStats: 'stats',
 
-    RTCStartSendingTrack: 'p-start-sending-track',
+    RTCStartSendingTrack: 'track-started',
 
-    RTCStopSendingTrack: 'p-stop-sending-track',
+    RTCStopSendingTrack: 'track-stopped',
 
-    RTCStartReceivingTrack: 'p-start-receiving-track',
+    RTCStartSendingStream: 'stream-started',
 
-    RTCStopReceivingTrack: 'p-stop-receiving-track',
+    RTCStopSendingStream: 'stream-stopped',
+
+    RTCStartReceivingStream: 'remote-stream-added',
+
+    RTCStopReceivingStream: 'remote-stream-removed',
+
+    RTCStartReceivingTrack: 'remote-track-added',
+
+    RTCStopReceivingTrack: 'remote-track-removed',
+
+    RTCReceivingTrackMuted: 'remote-track-muted',
+
+    RTCReceivingTrackUnmuted: 'remote-track-unmuted',
 
     /**
      * MEDIASOUP CONNECTION ITERATION:
