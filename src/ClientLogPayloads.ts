@@ -211,6 +211,8 @@ declare namespace ClientLogPayloads {
  */
 export type WebRTCLogEntry = ClientLogPayloads.BaseRTCReport &
     WebRTCAdditional &
-    Partial<WebRTCStatistics>
+    Partial<WebRTCStatistics> & {
+        event: string
+    }
 
 export { ClientLogPayloads }
