@@ -48,7 +48,7 @@ import { ItemizedBill } from './ItemizedBill'
 export * from './browser'
 export * from './jammer'
 export * from './ov'
-export * from './statistics'
+export * from './admin'
 
 export type {
     ApiServer,

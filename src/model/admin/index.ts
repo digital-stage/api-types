@@ -2,6 +2,8 @@ import { JammerStagesStatistic, JammerStageStatistic } from './JammerStagesStati
 import { ExtendedStageStatistic, LiveStatistic } from './LiveStatistic'
 import { RouterStatistic } from './RouterStatistic'
 import { StageStatistic } from './StageStatistic'
+import { StageWithStatistic } from './StageWithStatistic'
+import { UserWithStatistic } from './UserWithStatistic'
 import { WebRTCStatistics } from './WebRTCStatistics'
 
 export type {
@@ -12,4 +14,6 @@ export type {
     RouterStatistic,
     LiveStatistic,
     WebRTCStatistics,
+    StageWithStatistic,
+    UserWithStatistic,
 }
