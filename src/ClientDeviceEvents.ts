@@ -67,6 +67,9 @@ const ClientDeviceEvents = {
     RevokeInviteCode: 'revoke-invite',
     DecodeInviteCode: 'decode-invite',
 
+    /**
+     * @deprecated Use initial value of offer to initiate restart of other peer
+     */
     SendP2PRestart: 'send-p2p-restart',
     SendP2POffer: 'send-p2p-offer',
     SendP2PAnswer: 'send-p2p-answer',

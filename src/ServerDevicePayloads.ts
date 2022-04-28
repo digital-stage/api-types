@@ -117,6 +117,9 @@ declare namespace ServerDevicePayloads {
     /* WebRTC related */
     export type TurnServersChanged = string[]
     export type StageDeviceId = IdType
+    /**
+     * @deprecated Use initial value of offer to initiate restart of other peer
+     */
     export type P2PRestart = {
         from: StageDeviceId
         to: StageDeviceId
@@ -125,6 +128,7 @@ declare namespace ServerDevicePayloads {
         from: StageDeviceId
         to: StageDeviceId
         offer: RTCSessionDescriptionInit
+        initial?: boolean
     }
     export type P2PAnswerSent = {
         from: StageDeviceId

@@ -79,6 +79,9 @@ const ServerDeviceEvents = {
     AudioTrackRemoved: 'a-r',
 
     TurnServersChanged: 't',
+    /**
+     * @deprecated Use initial value of offer to initiate restart of other peer
+     */
     P2PRestart: 'p2p-r',
     P2POfferSent: 'p2p-o',
     P2PAnswerSent: 'p2p-a',
