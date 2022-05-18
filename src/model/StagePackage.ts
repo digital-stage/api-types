@@ -34,8 +34,8 @@ interface StagePackage<IdType = string> {
     users: User<IdType>[]
 
     stage?: Stage<IdType>
-    scenes?: StageScene<IdType>
     groups?: Group<IdType>[]
+    scenes?: StageScene<IdType>[]
     customGroups: CustomGroup<IdType>[]
     stageMembers: StageMember<IdType>[]
     stageDevices: StageDevice<IdType>[]

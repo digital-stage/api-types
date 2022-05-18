@@ -28,7 +28,7 @@ import { Device } from './model/Device'
 import { SoundCard } from './model/SoundCard'
 import { VideoTrack } from './model/VideoTrack'
 import { CustomGroup } from './model/CustomGroup'
-import { StageScene } from './model'
+import { StageScene, ThreeDimensionalProperties } from './model'
 
 declare namespace ClientDevicePayloads {
     /* General type definitions */
@@ -67,7 +67,12 @@ declare namespace ClientDevicePayloads {
 
     /* STAGE SCENES */
     export type CreateScene = CreatePayload<StageScene>
-    export type ChangeScene = UpdatePayload<StageScene>
+    export type ChangeScene = {
+        _id: IdType
+        stageMembers: {
+            [id: string]: ThreeDimensionalProperties
+        }
+    }
     export type RemoveScene = DeletePayload<StageScene>
 
     /* GROUP */
@@ -102,6 +107,7 @@ declare namespace ClientDevicePayloads {
         groupId?: IdType
         password?: string
     }
+
     export type StageId = IdType
     export type ForgetStage = StageId
 
