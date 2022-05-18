@@ -71,6 +71,7 @@ declare namespace ClientDevicePayloads {
         stageId: IdType
     }
     export type ChangeScene = Partial<{
+        _id: IdType
         label?: string
     }>
     export type RemoveScene = DeletePayload<StageScene>

@@ -31,6 +31,7 @@ interface StageScene<IdType = string> {
 
     stageMembers: {
         [id: string]: ThreeDimensionalProperties & {
+            index: number
             solo?: boolean
         }
     }
