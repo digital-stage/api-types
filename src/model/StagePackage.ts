@@ -28,11 +28,13 @@ import { AudioTrack } from './AudioTrack'
 import { VideoTrack } from './VideoTrack'
 import { CustomGroup } from './CustomGroup'
 import { StageDevice } from './StageDevice'
+import { StageScene } from './StageScene'
 
 interface StagePackage<IdType = string> {
     users: User<IdType>[]
 
     stage?: Stage<IdType>
+    scenes?: StageScene<IdType>
     groups?: Group<IdType>[]
     customGroups: CustomGroup<IdType>[]
     stageMembers: StageMember<IdType>[]

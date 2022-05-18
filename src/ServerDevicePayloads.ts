@@ -33,6 +33,7 @@ import { ChatMessage } from './model/ChatMessage'
 import { VideoTrack } from './model/VideoTrack'
 import { CustomGroup } from './model/CustomGroup'
 import { StageDevice } from './model/StageDevice'
+import { StageScene } from './model'
 
 declare namespace ServerDevicePayloads {
     /* General type definitions */
@@ -84,6 +85,11 @@ declare namespace ServerDevicePayloads {
         stageMemberId: IdType
         groupId: IdType | null
     } & StagePackage
+
+    /* STAGE SCENE */
+    export type SceneAdded = CreatedPayload<StageScene>
+    export type SceneChanged = UpdatedPayload<StageScene>
+    export type SceneRemoved = DeletedPayload<StageScene>
 
     /* GROUP */
     export type GroupAdded = CreatedPayload<Group>

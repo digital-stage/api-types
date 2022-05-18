@@ -39,6 +39,10 @@ const ClientDeviceEvents = {
     ChangeStage: 'change-stage',
     RemoveStage: 'remove-stage',
 
+    CreateScene: 'create-scene',
+    ChangeScene: 'change-scene',
+    RemoveScene: 'remove-scene',
+
     CreateGroup: 'create-group',
     ChangeGroup: 'change-group',
     RemoveGroup: 'remove-group',

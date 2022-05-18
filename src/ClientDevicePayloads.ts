@@ -28,6 +28,7 @@ import { Device } from './model/Device'
 import { SoundCard } from './model/SoundCard'
 import { VideoTrack } from './model/VideoTrack'
 import { CustomGroup } from './model/CustomGroup'
+import { StageScene } from './model'
 
 declare namespace ClientDevicePayloads {
     /* General type definitions */
@@ -63,6 +64,11 @@ declare namespace ClientDevicePayloads {
     export type CreateStage = CreatePayload<Stage>
     export type ChangeStage = UpdatePayload<Stage>
     export type RemoveStage = DeletePayload<Stage>
+
+    /* STAGE SCENES */
+    export type CreateScene = CreatePayload<StageScene>
+    export type ChangeScene = UpdatePayload<StageScene>
+    export type RemoveScene = DeletePayload<StageScene>
 
     /* GROUP */
     export type CreateGroup = CreatePayload<Group>

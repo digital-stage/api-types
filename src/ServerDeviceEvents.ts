@@ -51,6 +51,10 @@ const ServerDeviceEvents = {
     StageChanged: 's-c',
     StageRemoved: 's-r',
 
+    SceneAdded: 'ss-a',
+    SceneChanged: 'ss-c',
+    SceneRemoved: 'ss-r',
+
     StageJoined: 's-j',
     StageLeft: 's-l',
 

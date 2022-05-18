@@ -20,58 +20,16 @@
  * SOFTWARE.
  */
 
-import { DeviceType } from './Device'
+import { ThreeDimensionalProperties } from './ThreeDimensionalProperties'
 
-interface Stage<IdType = string> {
+interface StageScene<IdType = string> {
     _id: IdType
 
-    /**
-     * Reference to the owning organization
-     */
-    organizationId?: string
+    stageId?: IdType
 
-    /**
-     * The owning AUTH (!) user (is set when no organization is assigned)
-     */
-    authUserId?: string
-
-    createdAt?: number
-
-    name: string
-    description: string
-    password: string | null
-
-    admins: IdType[]
-    soundEditors: IdType[]
-
-    iconUrl: string | null
-
-    videoType: DeviceType[keyof DeviceType]
-    videoRouter: IdType | null
-
-    audioType: DeviceType[keyof DeviceType]
-    audioRouter: IdType | null
-
-    // 3D audio related settings
-    width: number
-    length: number
-    height: number
-    reflection: number
-    absorption: number
-
-    render3DAudio: boolean
-    renderReverb: boolean
-
-    // Video related settings
-    displayMode?: 'boxes' | 'lanes'
-    numBoxes: number
-    numLanes: number
-
-    // Reference to a StageScene
-    sceneId?: IdType
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    [additional: string]: any
+    stageMembers: {
+        [id: string]: ThreeDimensionalProperties
+    }
 }
 
-export { Stage }
+export { StageScene }
