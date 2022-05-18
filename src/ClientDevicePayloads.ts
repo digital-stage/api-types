@@ -66,8 +66,13 @@ declare namespace ClientDevicePayloads {
     export type RemoveStage = DeletePayload<Stage>
 
     /* STAGE SCENES */
-    export type CreateScene = CreatePayload<StageScene>
-    export type ChangeScene = UpdatePayload<StageScene>
+    export type CreateScene = {
+        label: string
+        stageId: IdType
+    }
+    export type ChangeScene = Partial<{
+        label?: string
+    }>
     export type RemoveScene = DeletePayload<StageScene>
 
     /* GROUP */

@@ -30,7 +30,9 @@ interface StageScene<IdType = string> {
     label: string
 
     stageMembers: {
-        [id: string]: ThreeDimensionalProperties
+        [id: string]: ThreeDimensionalProperties & {
+            solo?: boolean
+        }
     }
 }
 
