@@ -68,7 +68,7 @@ interface Stage<IdType = string> {
     numLanes: number
 
     // Reference to a StageScene
-    sceneId?: IdType
+    sceneId?: IdType | null
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [additional: string]: any

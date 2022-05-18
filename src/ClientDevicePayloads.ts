@@ -28,7 +28,7 @@ import { Device } from './model/Device'
 import { SoundCard } from './model/SoundCard'
 import { VideoTrack } from './model/VideoTrack'
 import { CustomGroup } from './model/CustomGroup'
-import { StageScene, ThreeDimensionalProperties } from './model'
+import { StageScene } from './model'
 
 declare namespace ClientDevicePayloads {
     /* General type definitions */
