@@ -67,12 +67,7 @@ declare namespace ClientDevicePayloads {
 
     /* STAGE SCENES */
     export type CreateScene = CreatePayload<StageScene>
-    export type ChangeScene = {
-        _id: IdType
-        stageMembers: {
-            [id: string]: ThreeDimensionalProperties
-        }
-    }
+    export type ChangeScene = UpdatePayload<StageScene>
     export type RemoveScene = DeletePayload<StageScene>
 
     /* GROUP */

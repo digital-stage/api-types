@@ -33,7 +33,7 @@ import { ChatMessage } from './model/ChatMessage'
 import { VideoTrack } from './model/VideoTrack'
 import { CustomGroup } from './model/CustomGroup'
 import { StageDevice } from './model/StageDevice'
-import { StageScene, ThreeDimensionalProperties } from './model'
+import { StageScene } from './model/StageScene'
 
 declare namespace ServerDevicePayloads {
     /* General type definitions */
@@ -88,12 +88,7 @@ declare namespace ServerDevicePayloads {
 
     /* STAGE SCENE */
     export type SceneAdded = CreatedPayload<StageScene>
-    export type SceneChanged = {
-        _id: IdType
-        stageMembers: {
-            [id: string]: ThreeDimensionalProperties
-        }
-    }
+    export type SceneChanged = UpdatedPayload<StageScene>
     export type SceneRemoved = DeletedPayload<StageScene>
 
     /* GROUP */

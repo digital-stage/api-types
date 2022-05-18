@@ -27,6 +27,8 @@ interface StageScene<IdType = string> {
 
     stageId: IdType
 
+    label: string
+
     stageMembers: {
         [id: string]: ThreeDimensionalProperties
     }
