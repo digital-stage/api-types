@@ -25,7 +25,7 @@ import { ThreeDimensionalProperties } from './ThreeDimensionalProperties'
 interface StageScene<IdType = string> {
     _id: IdType
 
-    stageId?: IdType
+    stageId: IdType
 
     stageMembers: {
         [id: string]: ThreeDimensionalProperties
