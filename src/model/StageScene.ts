@@ -22,6 +22,11 @@
 
 import { ThreeDimensionalProperties } from './ThreeDimensionalProperties'
 
+type SceneStageStageMember = ThreeDimensionalProperties & {
+    index: number
+    solo?: boolean
+}
+
 interface StageScene<IdType = string> {
     _id: IdType
 
@@ -30,11 +35,8 @@ interface StageScene<IdType = string> {
     label: string
 
     stageMembers: {
-        [id: string]: ThreeDimensionalProperties & {
-            index: number
-            solo?: boolean
-        }
+        [id: string]: SceneStageStageMember
     }
 }
 
-export { StageScene }
+export { StageScene, SceneStageStageMember }
