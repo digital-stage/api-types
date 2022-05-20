@@ -44,7 +44,7 @@ import { AuthUser } from './AuthUser'
 import { AuthOrganization, Organization } from './Organization'
 import { StageMemberTimer } from './StageMemberTimer'
 import { ItemizedBill } from './ItemizedBill'
-import { StageScene } from './StageScene'
+import { StageScene, StageSceneStageMember } from './StageScene'
 
 export * from './browser'
 export * from './jammer'
@@ -66,6 +66,7 @@ export type {
     SoundCard,
     Stage,
     StageScene,
+    StageSceneStageMember,
     StageMember,
     StageMemberTimer,
     StageDevice,

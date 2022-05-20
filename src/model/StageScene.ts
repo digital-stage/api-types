@@ -22,7 +22,7 @@
 
 import { ThreeDimensionalProperties } from './ThreeDimensionalProperties'
 
-type SceneStageStageMember = ThreeDimensionalProperties & {
+type StageSceneStageMember = ThreeDimensionalProperties & {
     index: number
     solo?: boolean
 }
@@ -35,8 +35,8 @@ interface StageScene<IdType = string> {
     label: string
 
     stageMembers: {
-        [id: string]: SceneStageStageMember
+        [id: string]: StageSceneStageMember
     }
 }
 
-export { StageScene, SceneStageStageMember }
+export { StageScene, StageSceneStageMember }
