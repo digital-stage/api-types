@@ -41,15 +41,15 @@ import { CustomGroup } from './CustomGroup'
 import { StageDevice } from './StageDevice'
 import { ApiServer } from './ApiServer'
 import { AuthUser } from './AuthUser'
-import { AuthOrganization, Organization } from './Organization'
+import { Organization } from './Organization'
 import { StageMemberTimer } from './StageMemberTimer'
-import { ItemizedBill } from './ItemizedBill'
 import { StageScene, StageSceneStageMember } from './StageScene'
 
 export * from './browser'
 export * from './jammer'
 export * from './ov'
 export * from './admin'
+export * from './payment'
 
 export type {
     ApiServer,
@@ -76,9 +76,7 @@ export type {
     VolumeProperties,
     InitialStagePackage,
     Organization,
-    ItemizedBill,
     AuthUser,
-    AuthOrganization,
 }
 
 export { DefaultThreeDimensionalProperties, DefaultVolumeProperties }
