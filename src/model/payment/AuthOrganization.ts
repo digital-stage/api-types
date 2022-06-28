@@ -15,7 +15,20 @@ interface AuthOrganization<IdType = string> extends Organization<IdType> {
      */
     maxStageCount: number
 
+    /**
+     * Current subscription type
+     */
     subscription?: SubscriptionType
+
+    /**
+     * Timestamp for upcoming renewal, if renewalSubscription is null, then this date won't be modified
+     */
+    renewalAt?: number
+
+    /**
+     * Subscription type after renewal, null means canceled subscription
+     */
+    subscriptionAfterRenewal?: SubscriptionType | null
 
     address?: BillingAddress
 
