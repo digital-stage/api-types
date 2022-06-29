@@ -32,6 +32,10 @@ interface AuthOrganization<IdType = string> extends Organization<IdType> {
 
     address?: BillingAddress
 
+    payment?: 'paypal' | 'invoice'
+
+    paypalSubscriptionID?: string
+
     createdAt: string
     updatedAt: string
 }
