@@ -44,6 +44,7 @@ import { AuthUser } from './AuthUser'
 import { Organization } from './Organization'
 import { StageMemberTimer } from './StageMemberTimer'
 import { StageScene, StageSceneStageMember } from './StageScene'
+import { WebRTCStatistics } from './WebRTCStatistics'
 
 export * from './browser'
 export * from './jammer'
@@ -53,13 +54,14 @@ export * from './payment'
 
 export type {
     ApiServer,
+    AuthUser,
+    AudioTrack,
+    AudioTrackType,
     ChatMessage,
     CustomGroup,
     Device,
     DeviceType,
     Group,
-    AudioTrack,
-    AudioTrackType,
     VideoTrack,
     VideoTrackType,
     Router,
@@ -76,7 +78,7 @@ export type {
     VolumeProperties,
     InitialStagePackage,
     Organization,
-    AuthUser,
+    WebRTCStatistics,
 }
 
 export { DefaultThreeDimensionalProperties, DefaultVolumeProperties }

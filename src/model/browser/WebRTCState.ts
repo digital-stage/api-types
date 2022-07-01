@@ -1,4 +1,4 @@
-import { WebRTCStatistics } from '../admin/WebRTCStatistics'
+import { WebRTCStatistics } from '../WebRTCStatistics'
 
 export interface WebRTCTrackDescription {
     /**
