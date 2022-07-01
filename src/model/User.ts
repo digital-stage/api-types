@@ -30,6 +30,11 @@ interface User<IdType = string> {
 
     avatarUrl: string | null
 
+    /**
+     * This value is pure virtual server-side and generated and sent by the api server to clients on request, it won't be stored inside the database
+     */
+    canCreateStages?: number
+
     stageMemberId: IdType | null
 }
 
