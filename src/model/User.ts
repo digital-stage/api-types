@@ -22,20 +22,13 @@
 
 interface User<IdType = string> {
     _id: IdType
+    /**
+     * Reference to the AuthUser's _id
+     */
     uid: string
     name: string
 
     avatarUrl: string | null
-
-    /**
-     * This value is pure virtual server-side and generated and sent to clients on request, it won't be stored inside the database
-     */
-    canCreateStages?: number
-
-    /**
-     * @Deprecated use canCreateStages !== 0 instead
-     */
-    //canCreateStage: boolean
 
     stageMemberId: IdType | null
 }
