@@ -1,3 +1,3 @@
-type SubscriptionType = 'base' | 'ensemble' | 'choir'
+type SubscriptionType = 'quartet' | 'ensemble' | 'choir'
 
 export { SubscriptionType }

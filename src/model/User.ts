@@ -35,7 +35,7 @@ interface User<IdType = string> {
     /**
      * @Deprecated use canCreateStages !== 0 instead
      */
-    canCreateStage: boolean
+    //canCreateStage: boolean
 
     stageMemberId: IdType | null
 }

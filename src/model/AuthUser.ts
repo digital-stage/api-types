@@ -3,14 +3,16 @@ interface AuthUser<IdType = string> {
     name: string
     email: string
     avatarUrl?: string
-    active?: boolean
 
+    /**
+     * Indicates if the user has global admin rights
+     */
     isAdmin?: boolean
 
     /**
      * The assigned organization.
-     * When a user is assigned to an organization,
-     * she might create stages depending on the maxStageCapacity of her organization
+     * An auth user is first activated, when assigned to an organization.
+     * So an organization is required.
      */
     organizationId?: IdType
 

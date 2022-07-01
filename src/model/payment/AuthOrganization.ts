@@ -1,6 +1,7 @@
 import { Organization } from '../Organization'
 import { BillingAddress } from './BillingAddress'
 import { SubscriptionType } from './SubscriptionType'
+import { TrialPhase } from './TrialPhase'
 
 /**
  * The full interface for an organization, visible only for organization users and living on the auth server
@@ -14,6 +15,12 @@ interface AuthOrganization<IdType = string> extends Organization<IdType> {
      * How many stages a organization may create
      */
     maxStageCount: number
+
+    /**
+     * Trial phase indicator. Usually it ends after a defined time range (e.g. 14 days) and will stay on 'ended'.
+     * We use different values here for our mailing notifications during the trial.
+     */
+    trial?: TrialPhase
 
     /**
      * Current subscription type
