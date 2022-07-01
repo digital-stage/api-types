@@ -28,12 +28,7 @@ interface Stage<IdType = string> {
     /**
      * Reference to the owning organization
      */
-    organizationId?: string
-
-    /**
-     * The owning AUTH (!) user (is set when no organization is assigned)
-     */
-    authUserId?: string
+    organizationId: string
 
     createdAt?: number
 
