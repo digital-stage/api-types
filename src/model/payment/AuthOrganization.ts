@@ -43,6 +43,11 @@ interface AuthOrganization<IdType = string> extends Organization<IdType> {
 
     paypalSubscriptionID?: string
 
+    /**
+     * Indicator, if subscription is currently active - meaning it's running and billed
+     */
+    active?: boolean
+
     createdAt: string
     updatedAt: string
 }
